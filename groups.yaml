@@ -1,4 +1,4 @@
-  mellanplan:
+  plan_1:
     name: Bottenvåning
     entities:
       - switch.nexa_3
@@ -22,7 +22,7 @@
       - switch.ovre_belysning
       - switch.nexa_2
 
-  overvaning:
+  plan_2:
     name: Ljus ovanvåning
     entities:
       - group.sams_rum
@@ -32,8 +32,11 @@
   fonster_lampor:
     name:  Fonster Lampor
     entities:
-      - group.overvaning
-      - group.mellanplan
+      - switch.ovre_belysning
+      - switch.nexa_1
+      - switch.nexa_2
+      - switch.sovrum_selma_fonster
+      - switch.sovrum_selma_dor
 
   sensorer:
     name: Sensorer
@@ -81,6 +84,7 @@
    name: Samsung Tv
    entities:
      - media_player.living_room_ue55hu75oo
+     - media_player.samsung_6_series_50_ue50ku6075
 
   mediabox:
     name: Mediaboxe
@@ -90,18 +94,14 @@
 ################
 #### Views #####
 ################
-  mellanplan_view:
+  hus_view:
     view: yes
-    name: Bottenvåning
+    name: Hus
     entities:
-      - group.mellanplan
-
-  overvaning_view:
-    view: yes
-    name: Övervåning
-    entities:
-      - group.selmas_rum
+      - group.plan_1
+      - group.plan_2
       - group.sams_rum
+      - group.selmas_rum
       - group.hall_uppe
 
   verisure_view:
@@ -128,7 +128,7 @@
     view: yes
     name: System
     entities:
+      - group.pi
       - group.all_automations
       - group.all_scripts
       - group.all_switches
-      - group.pi

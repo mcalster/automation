@@ -1,0 +1,134 @@
+  mellanplan:
+    name: Bottenvåning
+    entities:
+      - switch.nexa_3
+
+  sams_rum:
+    name: Sams rum
+    entities:
+      - switch.sam_tv
+      - switch.nexa_1
+  
+  selmas_rum:
+    name: Selmas rum
+    entities:
+      - switch.sovrum_selma_fonster
+      - switch.sovrum_selma_radio
+      - switch.sovrum_selma_dor
+
+  hall_uppe: 
+    name:  Hall Uppe
+    entities:
+      - switch.ovre_belysning
+      - switch.nexa_2
+
+  overvaning:
+    name: Ljus ovanvåning
+    entities:
+      - group.sams_rum
+      - group.selmas_rum
+      - group.hall_uppe
+
+  fonster_lampor:
+    name:  Fonster Lampor
+    entities:
+      - group.overvaning
+      - group.mellanplan
+
+  sensorer:
+    name: Sensorer
+    entities:
+      - sensor.tvattstuga_temperature
+      - sensor.tvattstuga_humidity
+      - sensor.matplats_temperature
+      - sensor.hall_plan2_temperature
+      - sensor.hall_plan2_humidity
+#      - binary_sensor.entre
+#      - binary_sensor.kontor
+
+  pi:
+    name: Hassbian
+    entities:
+      - sensor.ram_available
+      - sensor.ram_used
+      - sensor.disk_used_
+      - sensor.cpu_temp
+      - sensor.cpu_used
+      - sensor.since_last_boot
+
+  verisure:
+    name: Larm / Verisure
+    entities:
+      - alarm_control_panel.skumparp_alarm
+      - binary_sensor.entre
+      - binary_sensor.kontor
+      - sensor.hall_plan2_humidity
+      - sensor.hall_plan2_temperature
+      - sensor.matplats_temperature
+      - sensor.tvattstuga_humidity
+      - sensor.tvattstuga_temperature
+      - switch.sam_tv
+      - switch.ovre_belysning
+
+  sonos:
+    name: Sonos
+    entities:
+      - media_player.playbar
+      - media_player.kkken
+      - media_player.sam__selma
+
+  tv:
+   name: Samsung Tv
+   entities:
+     - media_player.living_room_ue55hu75oo
+
+  mediabox:
+    name: Mediaboxe
+    entities:
+      - media_player.chromecast_vardagsrum
+
+################
+#### Views #####
+################
+  mellanplan_view:
+    view: yes
+    name: Bottenvåning
+    entities:
+      - group.mellanplan
+
+  overvaning_view:
+    view: yes
+    name: Övervåning
+    entities:
+      - group.selmas_rum
+      - group.sams_rum
+      - group.hall_uppe
+
+  verisure_view:
+    view: yes
+    name: Verisure
+    entities:
+      - group.verisure
+
+  media_view:
+    view: yes
+    name: Media
+    entities:
+      - group.sonos
+      - group.tv
+      - group.mediabox
+
+  sensor_view:
+    view: yes
+    name: Sensorer
+    entities:
+      - group.sensorer
+
+  system_view:
+    view: yes
+    name: System
+    entities:
+      - group.all_automations
+      - group.all_scripts
+      - group.all_switches
+      - group.pi

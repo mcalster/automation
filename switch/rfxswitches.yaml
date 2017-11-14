@@ -1,0 +1,15 @@
+ - platform: rfxtrx
+   automatic_add: True
+   devices:
+    0b110001008f26c201010f60:
+      name: sovrum_selma_fonster
+    0b1100fb008f26c202010f60:
+      name: sovrum_selma_radio
+    0b1100fc008f26c203010f60:
+      name: sovrum_selma_dor
+    0b11000001a36f9201030070:
+      name: nexa_1
+    0b11000201a36f9202010f70:
+      name: nexa_2
+    0b11000301a36f9203010f70:
+      name: nexa_3

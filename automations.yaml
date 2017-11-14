@@ -1,0 +1,71 @@
+###################
+## System update ##
+###################
+- alias: Update Available Notifications
+  trigger:
+  - platform: state
+    entity_id: updater.updater
+  action:
+  - service: notify.gmail
+    data:
+      message: 'Update for Home Assistant is available.'
+
+####################
+## Alarm & Lights ##
+####################
+- alias: Turn off lights in kids room when coming home late
+  trigger:
+  - platform: state
+    entity_id: alarm_control_panel.skumparp_alarm
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: alarm_control_panel.skumparp_alarm
+        state: 'disarmed'
+      - condition: time
+        # At least one of the following is required.
+        after: '20:00:00'
+  action:
+    service: homeassistant.turn_off
+    entity_id: group.fonster_lampor
+
+############
+## Lights ##
+############
+
+- alias: Turn off all lights if it's very late and the lights are still on
+  trigger:
+  - platform: time
+    at: '01:00:00'
+  condition:
+    condition: state
+    entity_id: group.fonster_lampor 
+    state: 'on'
+  action:
+    - service: homeassistant.turn_off
+      entity_id: group.all_lights
+    - service: notify.gmail
+      data:
+        message: 'Found some lights still on at 12 PM. Turning them off now...'
+
+- alias: 'Turn on lights at sunset'
+  trigger:
+    platform: sun
+    # Possible values: sunset, sunrise
+    event: sunset
+  action:
+    service: homeassistant.turn_on
+    entity_id: group.fonster_lampor
+
+- alias: 'Turn off lights in Kids room if home'
+  trigger:
+    platform: time
+    at: '20:00:00'
+  condition:
+    condition: state
+    entity_id: alarm_control_panel.skumparp_alarm
+    state: disarmed
+  action:
+    service: homeassistant.turn_off
+    entity_id: group.fonster_lampor

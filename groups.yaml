@@ -114,9 +114,10 @@
     view: yes
     name: Media
     entities:
-      - group.sonos
       - group.tv
       - group.mediabox
+      - group.sonos
+
 
   sensor_view:
     view: yes
@@ -129,6 +130,3 @@
     name: System
     entities:
       - group.pi
-      - group.all_automations
-      - group.all_scripts
-      - group.all_switches

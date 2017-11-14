@@ -34,13 +34,13 @@
 ## Lights ##
 ############
 
-- alias: Turn off all lights if it's very late and the lights are still on
+- alias: 'Turn off all lights if it is very late and the lights are still on'
   trigger:
   - platform: time
     at: '01:00:00'
   condition:
     condition: state
-    entity_id: group.fonster_lampor 
+    entity_id: group.fonster_lampor
     state: 'on'
   action:
     - service: homeassistant.turn_off
@@ -51,21 +51,21 @@
 
 - alias: 'Turn on lights at sunset'
   trigger:
-    platform: sun
+  - platform: sun
     # Possible values: sunset, sunrise
     event: sunset
   action:
-    service: homeassistant.turn_on
-    entity_id: group.fonster_lampor
+    - service: homeassistant.turn_on
+      entity_id: group.fonster_lampor
 
 - alias: 'Turn off lights at sunsrise'
   trigger:
-    platform: sun
+  - platform: sun
     # Possible values: sunset, sunrise
     event: sunrise
   action:
-    service: homeassistant.turn_off
-    entity_id: group.fonster_lampor
+    - service: homeassistant.turn_off
+      entity_id: group.fonster_lampor
 
 - alias: 'Turn off lights in Kids room if home'
   trigger:
@@ -78,19 +78,20 @@
   action:
     service: homeassistant.turn_off
     entity_id: group.fonster_lampor
-    
-- alias: Turn on lights in the morning if before sunrise
+
+- alias: 'Turn on lights in the morning if before sunrise'
   trigger:
   - platform: time
     at: '06:45:00'
   condition:
     condition: and
     conditions:
-      - condition:
-        platform: sun
+      - condition: state
+        entity_id: alarm_control_panel.skumparp_alarm
+        state: 'disarmed'
+      - condition: sun
         after: sunset
-      - condition:
-        platform: sun
+      - condition: sun
         before: sunrise
       - condition: time
         # At least one of the following is required.

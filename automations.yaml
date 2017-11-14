@@ -58,6 +58,15 @@
     service: homeassistant.turn_on
     entity_id: group.fonster_lampor
 
+- alias: 'Turn off lights at sunsrise'
+  trigger:
+    platform: sun
+    # Possible values: sunset, sunrise
+    event: sunrise
+  action:
+    service: homeassistant.turn_off
+    entity_id: group.fonster_lampor
+
 - alias: 'Turn off lights in Kids room if home'
   trigger:
     platform: time
@@ -68,4 +77,29 @@
     state: disarmed
   action:
     service: homeassistant.turn_off
+    entity_id: group.fonster_lampor
+    
+- alias: Turn on lights in the morning if before sunrise
+  trigger:
+  - platform: time
+    at: '06:45:00'
+  condition:
+    condition: and
+    conditions:
+      - condition:
+        platform: sun
+        after: sunset
+      - condition:
+        platform: sun
+        before: sunrise
+      - condition: time
+        # At least one of the following is required.
+        weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+  action:
+    service: homeassistant.turn_on
     entity_id: group.fonster_lampor

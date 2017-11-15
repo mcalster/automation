@@ -1,7 +1,7 @@
 ###################
 ## System update ##
 ###################
-- alias: Update Available Notifications
+- alias: 'Update Available Notifications'
   trigger:
   - platform: state
     entity_id: updater.updater
@@ -13,7 +13,7 @@
 ####################
 ## Alarm & Lights ##
 ####################
-- alias: Turn off lights in kids room when coming home late
+- alias: 'Turn off lights in kids room when coming home late'
   trigger:
   - platform: state
     entity_id: alarm_control_panel.skumparp_alarm
@@ -85,16 +85,10 @@
     at: '06:45:00'
   condition:
     condition: and
-    conditions:
-      - condition: state
-        entity_id: alarm_control_panel.skumparp_alarm
-        state: 'disarmed'
-      - condition: sun
-        after: sunset
+    conditions: 
       - condition: sun
         before: sunrise
-      - condition: time
-        # At least one of the following is required.
+      - condition: time    
         weekday:
         - mon
         - tue

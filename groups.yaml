@@ -8,7 +8,7 @@
     entities:
       - switch.sam_tv
       - switch.nexa_1
-  
+
   selmas_rum:
     name: Selmas rum
     entities:
@@ -16,14 +16,14 @@
       - switch.sovrum_selma_radio
       - switch.sovrum_selma_dor
 
-  hall_uppe: 
+  hall_uppe:
     name:  Hall Uppe
     entities:
       - switch.ovre_belysning
       - switch.nexa_2
 
   plan_2:
-    name: Ljus ovanvåning
+    name: Ovanvåning
     entities:
       - group.sams_rum
       - group.selmas_rum
@@ -37,6 +37,12 @@
       - switch.nexa_2
       - switch.sovrum_selma_fonster
       - switch.sovrum_selma_dor
+
+  ute_belysning:
+    name:  Utebelysning
+    entities:
+      - switch.nexa_ute_nord
+      - switch.nexa_ute_syd
 
   sensorer:
     name: Sensorer
@@ -103,6 +109,7 @@
       - group.sams_rum
       - group.selmas_rum
       - group.hall_uppe
+      - group.ute_belysning
 
   verisure_view:
     view: yes

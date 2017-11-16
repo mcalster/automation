@@ -1,13 +1,13 @@
   plan_1:
     name: Bottenvåning
     entities:
-      - switch.nexa_3
+      - switch.sovrum_fonster_nexa_3
 
   sams_rum:
     name: Sams rum
     entities:
       - switch.sam_tv
-      - switch.nexa_1
+      - switch.sovrum_sam_fonster_nexa_1
 
   selmas_rum:
     name: Selmas rum
@@ -20,7 +20,7 @@
     name:  Hall Uppe
     entities:
       - switch.ovre_belysning
-      - switch.nexa_2
+      - switch.hall_byro_nexa_2
 
   plan_2:
     name: Ovanvåning
@@ -33,8 +33,9 @@
     name:  Fonster Lampor
     entities:
       - switch.ovre_belysning
-      - switch.nexa_1
-      - switch.nexa_2
+      - switch.sovrum_sam_fonster_nexa_1
+      - switch.hall_byro_nexa_2
+      - switch.sovrum_fonster_nexa_3
       - switch.sovrum_selma_fonster
       - switch.sovrum_selma_dor
 

@@ -46,18 +46,27 @@ discovery:
 # Enables support for tracking state changes over time
 history:
 
+#logger:
+#  default: info
+
 # View all events in a logbook
 logbook:
+  exclude:
+    entities:
+      - sensor.since_last_boot
+      - sensor.date
+      - sensor.yr_symbol
 
 # Enables a map showing the location of tracked devices
-map:
+#map:
 
 # Track the sun
 sun:
 
 # Text to speech
-tts:
-  - platform: google
+#tts:
+#  - platform: google
+
 # Notification
 notify: !include service/notify.yaml
 
@@ -68,6 +77,11 @@ verisure: !include verisure.yaml
 rfxtrx: !include rfxtrx.yaml
 
 # Entities
+
+light:
+  platform: rfxtrx
+  automatic_add: True
+
 switch: !include_dir_merge_list switch
 
 sensor: !include_dir_merge_list sensor

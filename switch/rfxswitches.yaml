@@ -13,9 +13,9 @@
       name: hall_byro_nexa_2
     0b11000301a36f9203010f70:
       name: sovrum_fonster_nexa_3
-    0b11000301a36f9203010f71:
-      name: nexa_ute_nord
-    0b11000301a36f9203010f72:
-      name: nexa_ute_syd
-    0b11000301a36f9203010f73:
-      name: nexa_ute_garage
+#    0b11000301a36f9203010f71:
+#      name: nexa_ute_nord
+#    0b11000301a36f9203010f72:
+#      name: nexa_ute_syd
+#    0b11000301a36f9203010f73:
+#      name: nexa_ute_garage

@@ -42,8 +42,8 @@
   ute_belysning:
     name:  Utebelysning
     entities:
-      - switch.nexa_ute_nord
-      - switch.nexa_ute_syd
+      - switch.s1_ute_nord
+      - switch.s2_ute_syd
 
   sensorer:
     name: Sensorer

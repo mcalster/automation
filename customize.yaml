@@ -1,0 +1,28 @@
+group.hus_view:
+  homebridge_hidden: true
+group.media_view:
+  homebridge_hidden: true
+group.mediabox:
+  homebridge_hidden: true
+group.pi:
+  homebridge_hidden: true
+group.plan_1:
+  homebridge_hidden: true
+group.plan_2:
+  homebridge_hidden: true
+group.sensor_view:
+  homebridge_hidden: true
+group.sensorer:
+  homebridge_hidden: true
+group.system_view:
+  homebridge_hidden: true
+group.verisure:
+  homebridge_hidden: true
+group.verisure_view:
+  homebridge_hidden: true
+group.tv:
+  homebridge_hidden: true
+group.all_automations:
+  homebridge_hidden: true
+group.all_switches:
+  homebridge_hidden: true

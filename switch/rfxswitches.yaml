@@ -15,7 +15,10 @@
       name: sovrum_fonster_nexa_3
     0a1411000091fc01010070:
       name: s1_ute_nord
-    0a1411020091fc02010070:
-      name: s2_ute_syd
-#    0b11000301a36f9203010f73:
-#      name: nexa_ute_garage
+    0b11005b019f5d3601010f70:
+      name: kok_fonster_nexa_4
+    0b110063019f5d3602010f60:
+      name: nexa_5
+    0b110067019f5d3603010f70:
+      name: nexa_6
+

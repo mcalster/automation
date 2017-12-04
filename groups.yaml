@@ -38,6 +38,7 @@
       - switch.sovrum_fonster_nexa_3
       - switch.sovrum_selma_fonster
       - switch.sovrum_selma_dor
+      - switch.kok_fonster_nexa_4
 
   ute_belysning:
     name:  Utebelysning

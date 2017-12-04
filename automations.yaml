@@ -10,25 +10,51 @@
     data:
       message: 'Update for Home Assistant is available.'
 
+
+
 ####################
 ## Alarm & Lights ##
 ####################
-- alias: 'Turn off lights in kids room when coming home late'
+- alias: "Change state to Home when Alarm is disarmed"
   trigger:
   - platform: state
     entity_id: alarm_control_panel.skumparp_alarm
+#    from: 'armed'
+    to: 'disarmed'
+  action:
+    service: input_select.select_option
+    data:
+      entity_id: input_select.home_status
+      option: Home
+
+- alias: "Change state to Away when Alarm is armed"
+  trigger:
+  - platform: state
+    entity_id: alarm_control_panel.skumparp_alarm
+    from: 'disarmed'
+    to: 'armed'
+  action:
+    service: input_select.select_option
+    data:
+      entity_id: input_select.home_status
+      option: Away
+
+- alias: 'Turn off lights in kids room when coming home late'
+  trigger:
+  - platform: state
+    entity_id: input_select.home_status
   condition:
     condition: and
     conditions:
       - condition: state
-        entity_id: alarm_control_panel.skumparp_alarm
-        state: 'disarmed'
+        entity_id: input_select.home_status
+        state: 'Home'
       - condition: time
         # At least one of the following is required.
         after: '20:00:00'
   action:
     service: homeassistant.turn_off
-    entity_id: group.fonster_lampor
+    entity_id: group.fonster_lampor_sovrum
 
 ############
 ## Lights ##
@@ -40,11 +66,11 @@
     at: '01:00:00'
   condition:
     condition: state
-    entity_id: group.fonster_lampor
+    entity_id: group.all_fonster_lampor
     state: 'on'
   action:
     - service: homeassistant.turn_off
-      entity_id: group.all_lights
+      entity_id: group.all_fonster_lampor
     - service: notify.gmail
       data:
         message: 'Found some lights still on at 01:00 AM. Turning them off now...'
@@ -56,8 +82,8 @@
     event: sunset
   action:
     - service: homeassistant.turn_on
-      entity_id: group.fonster_lampor
-    - service: homeassistant.turn_off
+      entity_id: group.all_fonster_lampor
+    - service: homeassistant.turn_on
       entity_id: group.ute_belysning
 
 - alias: 'Turn off lights at sunsrise'
@@ -67,7 +93,7 @@
     event: sunrise
   action:
     - service: homeassistant.turn_off
-      entity_id: group.fonster_lampor
+      entity_id: group.all_fonster_lampor
     - service: homeassistant.turn_off
       entity_id: group.ute_belysning
 
@@ -77,16 +103,16 @@
     at: '20:00:00'
   condition:
     condition: state
-    entity_id: alarm_control_panel.skumparp_alarm
-    state: disarmed
+    entity_id: input_select.home_status
+    state: Home
   action:
     service: homeassistant.turn_off
-    entity_id: group.fonster_lampor
+    entity_id: group.fonster_lampor_sovrum
 
 - alias: 'Turn on lights in the morning if before sunrise'
   trigger:
   - platform: time
-    at: '06:45:00'
+    at: '06:00:00'
   condition:
     condition: and
     conditions: 

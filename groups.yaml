@@ -2,6 +2,7 @@
     name: Bottenvåning
     entities:
       - switch.sovrum_fonster_nexa_3
+      - switch.kok_fonster_nexa_4
 
   sams_rum:
     name: Sams rum
@@ -29,16 +30,27 @@
       - group.selmas_rum
       - group.hall_uppe
 
+
   fonster_lampor:
     name:  Fonster Lampor
     entities:
       - switch.ovre_belysning
+      - switch.kok_fonster_nexa_4
+
+  fonster_lampor_sovrum:
+    name: Fonster Lampor i sovrum
+    entities:
       - switch.sovrum_sam_fonster_nexa_1
       - switch.hall_byro_nexa_2
       - switch.sovrum_fonster_nexa_3
       - switch.sovrum_selma_fonster
       - switch.sovrum_selma_dor
-      - switch.kok_fonster_nexa_4
+
+  all_fonster_lampor:
+    name:  Alla Fonster Lampor
+    entities:
+      - group.fonster_lampor
+      - group.fonster_lampor_sovrum
 
   ute_belysning:
     name:  Utebelysning

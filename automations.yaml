@@ -19,7 +19,7 @@
   trigger:
   - platform: state
     entity_id: alarm_control_panel.skumparp_alarm
-#    from: 'armed'
+#    from: 'armed_away'
     to: 'disarmed'
   action:
     service: input_select.select_option
@@ -31,8 +31,8 @@
   trigger:
   - platform: state
     entity_id: alarm_control_panel.skumparp_alarm
-    from: 'disarmed'
-    to: 'armed'
+#    from: 'disarmed'
+    to: 'armed_away'
   action:
     service: input_select.select_option
     data:

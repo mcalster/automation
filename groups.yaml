@@ -2,12 +2,12 @@
     name: Bottenvåning
     entities:
       - switch.sovrum_fonster_nexa_3
-      - switch.kok_fonster_nexa_4
+      - switch.nedre_belysning
 
   sams_rum:
     name: Sams rum
     entities:
-      - switch.sam_tv
+      - switch.sovrum_sam_tv_nexa_4
       - switch.sovrum_sam_fonster_nexa_1
 
   selmas_rum:
@@ -57,6 +57,7 @@
     entities:
       - switch.s1_ute_nord
       - switch.s2_ute_syd
+      - switch.nexa_5
 
   sensorer:
     name: Sensorer

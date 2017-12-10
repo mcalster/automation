@@ -19,7 +19,7 @@
   trigger:
   - platform: state
     entity_id: alarm_control_panel.skumparp_alarm
-#    from: 'armed_away'
+    from: 'armed_away'
     to: 'disarmed'
   action:
     service: input_select.select_option
@@ -31,7 +31,7 @@
   trigger:
   - platform: state
     entity_id: alarm_control_panel.skumparp_alarm
-#    from: 'disarmed'
+    from: 'disarmed'
     to: 'armed_away'
   action:
     service: input_select.select_option
@@ -109,16 +109,16 @@
     service: homeassistant.turn_off
     entity_id: group.fonster_lampor_sovrum
 
-- alias: 'Turn on lights in the morning if before sunrise'
+- alias: 'Turn on bedroom lights in the morning if before sunrise'
   trigger:
   - platform: time
-    at: '06:00:00'
+    at: '06:20:00'
   condition:
     condition: and
-    conditions: 
+    conditions:
       - condition: sun
         before: sunrise
-      - condition: time    
+      - condition: time
         weekday:
         - mon
         - tue
@@ -127,4 +127,19 @@
         - fri
   action:
     service: homeassistant.turn_on
-    entity_id: group.fonster_lampor
+    entity_id: group.fonster_lampor_sovrum
+
+- alias: 'Turn on lights in the morning if before sunrise'
+  trigger:
+  - platform: time
+    at: '06:00:00'
+  condition:
+    condition: and
+    conditions:
+      - condition: sun
+        before: sunrise
+  action:
+    - service: homeassistant.turn_on
+      entity_id: group.fonster_lampor
+    - service: homeassistant.turn_on
+      entity_id: group.ute_belysning

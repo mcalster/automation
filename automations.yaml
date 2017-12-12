@@ -56,6 +56,51 @@
     service: homeassistant.turn_off
     entity_id: group.fonster_lampor_sovrum
 
+
+- alias: 'Turn on  game and tv in Sams room when home and when between 9am and 8pm.'
+  trigger:
+  - platform: state
+    entity_id: input_select.home_status
+  - platform: time
+    at: '09:00:00'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_select.home_status
+        state: 'Home'
+      - condition: time
+        # At least one of the following is required.
+        before: '20:00:00'
+      - condition: time
+        after: '09:00:00'
+  action:
+    service: homeassistant.turn_on
+    entity_id: switch.sovrum_sam_tv_nexa_4
+
+- alias: 'Turn off game and tv in Sams room when not home and when between 8pm and 9am.'
+  trigger:
+  - platform: state
+    entity_id: input_select.home_status
+  - platform: time
+    at: '20:00:00'
+  condition:
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: input_select.home_status
+        state: 'Away'
+      - condition: and
+        conditions:
+          - condition: time
+            after: '20:00:00'
+          - condition: time
+            before: '09:00:00'
+  action:
+    service: homeassistant.turn_off
+    entity_id: switch.sovrum_sam_tv_nexa_4
+
+
 ############
 ## Lights ##
 ############
@@ -80,7 +125,7 @@
   - platform: sun
     # Possible values: sunset, sunrise
     event: sunset
-    offset: "-00:45:00"
+    before_offset: "-00:45:00"
   action:
     - service: homeassistant.turn_on
       entity_id: group.all_fonster_lampor
@@ -92,7 +137,7 @@
   - platform: sun
     # Possible values: sunset, sunrise
     event: sunrise
-    offset: "00:45:00"
+    after_offset: "00:45:00"
   action:
     - service: homeassistant.turn_off
       entity_id: group.all_fonster_lampor

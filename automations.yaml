@@ -80,6 +80,7 @@
   - platform: sun
     # Possible values: sunset, sunrise
     event: sunset
+    offset: "-00:45:00"
   action:
     - service: homeassistant.turn_on
       entity_id: group.all_fonster_lampor
@@ -91,6 +92,7 @@
   - platform: sun
     # Possible values: sunset, sunrise
     event: sunrise
+    offset: "00:45:00"
   action:
     - service: homeassistant.turn_off
       entity_id: group.all_fonster_lampor

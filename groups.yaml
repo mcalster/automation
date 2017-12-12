@@ -35,7 +35,7 @@
     name:  Fonster Lampor
     entities:
       - switch.ovre_belysning
-      - switch.kok_fonster_nexa_4
+      - switch.nedre_belysning
 
   fonster_lampor_sovrum:
     name: Fonster Lampor i sovrum

@@ -57,7 +57,7 @@
     entity_id: group.fonster_lampor_sovrum
 
 
-- alias: 'Turn on  game and tv in Sams room when home and when between 9am and 8pm.'
+- alias: 'Turn on game and tv in Sams room when home and when between 9am and 8pm.'
   trigger:
   - platform: state
     entity_id: input_select.home_status
@@ -73,7 +73,7 @@
         # At least one of the following is required.
         before: '20:00:00'
       - condition: time
-        after: '09:00:00'
+        after: '08:59:00'
   action:
     service: homeassistant.turn_on
     entity_id: switch.sovrum_sam_tv_nexa_4
@@ -93,7 +93,7 @@
       - condition: and
         conditions:
           - condition: time
-            after: '20:00:00'
+            after: '19:59:00'
           - condition: time
             before: '09:00:00'
   action:

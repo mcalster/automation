@@ -1,3 +1,24 @@
+  fonster_lampor:
+    name:  Fonster Lampor
+    entities:
+      - switch.ovre_belysning
+      - switch.nedre_belysning
+
+  fonster_lampor_sovrum:
+    name: Fonster Lampor i sovrum
+    entities:
+      - switch.sovrum_sam_fonster_nexa_1
+      - switch.hall_byro_nexa_2
+      - switch.sovrum_fonster_nexa_3
+      - switch.sovrum_selma_fonster
+      - switch.sovrum_selma_dor
+
+  all_fonster_lampor:
+    name:  Alla Fonster Lampor
+    entities:
+      - group.fonster_lampor
+      - group.fonster_lampor_sovrum
+
   plan_1:
     name: Bottenvåning
     entities:
@@ -29,28 +50,6 @@
       - group.sams_rum
       - group.selmas_rum
       - group.hall_uppe
-
-
-  fonster_lampor:
-    name:  Fonster Lampor
-    entities:
-      - switch.ovre_belysning
-      - switch.nedre_belysning
-
-  fonster_lampor_sovrum:
-    name: Fonster Lampor i sovrum
-    entities:
-      - switch.sovrum_sam_fonster_nexa_1
-      - switch.hall_byro_nexa_2
-      - switch.sovrum_fonster_nexa_3
-      - switch.sovrum_selma_fonster
-      - switch.sovrum_selma_dor
-
-  all_fonster_lampor:
-    name:  Alla Fonster Lampor
-    entities:
-      - group.fonster_lampor
-      - group.fonster_lampor_sovrum
 
   ute_belysning:
     name:  Utebelysning

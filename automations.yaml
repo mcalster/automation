@@ -54,7 +54,7 @@
         after: '20:00:00'
   action:
     service: homeassistant.turn_off
-    entity_id: group.fonster_lampor_sovrum
+    entity_id: group.fonster_lampor_barn_rum
 
 
 - alias: 'Turn on game and tv in Sams room when home and when between 9am and 8pm.'
@@ -154,7 +154,7 @@
     state: Home
   action:
     service: homeassistant.turn_off
-    entity_id: group.fonster_lampor_sovrum
+    entity_id: group.fonster_lampor_barn_rum
 
 - alias: 'Turn on bedroom lights in the morning if before sunrise'
   trigger:
@@ -174,7 +174,7 @@
         - fri
   action:
     service: homeassistant.turn_on
-    entity_id: group.fonster_lampor_sovrum
+    entity_id: group.fonster_lampor_barn_rum
 
 - alias: 'Turn on lights in the morning if before sunrise'
   trigger:

@@ -4,7 +4,7 @@
       - switch.ovre_belysning
       - switch.nedre_belysning
 
-  fonster_lampor_sovrum:
+  fonster_lampor_barn_rum:
     name: Fonster Lampor i sovrum
     entities:
       - switch.sovrum_sam_fonster_nexa_1
@@ -17,7 +17,7 @@
     name:  Alla Fonster Lampor
     entities:
       - group.fonster_lampor
-      - group.fonster_lampor_sovrum
+      - group.fonster_lampor_barn_rum
 
   plan_1:
     name: Bottenvåning

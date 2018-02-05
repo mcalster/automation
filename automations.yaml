@@ -56,6 +56,22 @@
     service: homeassistant.turn_off
     entity_id: group.fonster_lampor_barn_rum
 
+- alias: 'Turn off lights in bedroom when coming home late'
+  trigger:
+  - platform: state
+    entity_id: input_select.home_status
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_select.home_status
+        state: 'Home'
+      - condition: time
+        # At least one of the following is required.
+        after: '21:00:00'
+  action:
+    service: homeassistant.turn_off
+    entity_id: group.fonster_lampor_sovrum
 
 - alias: 'Turn on game and tv in Sams room when home and when between 9am and 8pm.'
   trigger:
@@ -156,10 +172,22 @@
     service: homeassistant.turn_off
     entity_id: group.fonster_lampor_barn_rum
 
+- alias: 'Turn off lights in bedroom if home'
+  trigger:
+    platform: time
+    at: '21:00:00'
+  condition:
+    condition: state
+    entity_id: input_select.home_status
+    state: Home
+  action:
+    service: homeassistant.turn_off
+    entity_id: group.fonster_lampor_sovrum
+
 - alias: 'Turn on bedroom lights in the morning if before sunrise'
   trigger:
   - platform: time
-    at: '06:20:00'
+    at: '07:30:00'
   condition:
     condition: and
     conditions:
@@ -173,8 +201,10 @@
         - thu
         - fri
   action:
-    service: homeassistant.turn_on
-    entity_id: group.fonster_lampor_barn_rum
+    - service: homeassistant.turn_on
+      entity_id: group.fonster_lampor_barn_rum
+    - service: homeassistant.turn_on
+      entity_id: group.fonster_lampor_sovrum
 
 - alias: 'Turn on lights in the morning if before sunrise'
   trigger:

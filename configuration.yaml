@@ -64,8 +64,8 @@ logbook:
 sun:
 
 # Text to speech
-#tts:
-#  - platform: google
+tts:
+  - platform: google
 
 # Notification
 notify: !include service/notify.yaml
@@ -73,6 +73,11 @@ notify: !include service/notify.yaml
 # Verisure
 verisure: !include verisure.yaml
 
+# Mercedes
+mercedesme:
+  username: !secret mercedesme_username
+  password: !secret mercedesme_password
+  
 # RFXtrx
 rfxtrx: !include rfxtrx.yaml
 

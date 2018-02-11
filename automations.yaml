@@ -10,7 +10,22 @@
     data:
       message: 'Update for Home Assistant is available.'
 
-
+###################
+## Sonos Speach ##
+###################
+- alias: 'test'
+  trigger:
+    - platform: state
+      entity_id: input_select.home_status
+      from: 'Away'
+      to: 'Home'
+  action:   
+    - service: script.sonos_say
+      data:
+        sonos_entity: media_player.kkken
+        volume: 0.5
+        message: 'Welcome home!'
+        delay: '00:00:05'
 
 ####################
 ## Alarm & Lights ##

@@ -1,4 +1,3 @@
-script:
   sonos_say:
     alias: "Sonos TTS script"
     sequence:

@@ -27,6 +27,9 @@ http:
    api_password: !secret http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   # base_url: example.duckdns.org:8123
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+  login_attempts_threshold: 5
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -66,6 +69,17 @@ sun:
 # Text to speech
 tts:
   - platform: google
+
+google_assistant:
+  project_id: hassio-186ad
+  client_id: 4/AABtrfYzMovB5-wsk17dVnevfAVsbt_Y47yFicFFMSkOMojwLfG7ZLw
+  access_token: 4AABtrfYzMovB5wsk17dVnevfAVsbtY47yFicFFMSkOMojwLfG7ZLw
+  agent_user_id: kimalster@gmail.com	
+  api_key: AIzaSyBblG3tDmhttdvvhhl2_rhL7g_eozDZFdU
+  exposed_domains:
+    - switch
+    - light
+    - group
 
 # Notification
 notify: !include service/notify.yaml

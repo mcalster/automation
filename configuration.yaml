@@ -97,6 +97,12 @@ google_assistant:
         - kids lights
       type: light
       expose: true
+    group.fonster_lampor_sovrum:
+      name: Bedroom Window Lights
+      aliases:
+        - bedroom lights
+      type: light
+      expose: true
     media_player.kitchen:
       name: Kitchen
       aliases:

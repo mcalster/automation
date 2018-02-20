@@ -72,10 +72,10 @@ tts:
 
 google_assistant:
   project_id: hassio-186ad
-  client_id: 4/AABtrfYzMovB5-wsk17dVnevfAVsbt_Y47yFicFFMSkOMojwLfG7ZLw
-  access_token: 4AABtrfYzMovB5wsk17dVnevfAVsbtY47yFicFFMSkOMojwLfG7ZLw
-  agent_user_id: kimalster@gmail.com	
-  api_key: AIzaSyBblG3tDmhttdvvhhl2_rhL7g_eozDZFdU
+  client_id: !secret ga_client_id
+  access_token: !secret ga_access_token
+  agent_user_id: !secret ga_agent_id	
+  api_key: secret ga_api_key
   exposed_domains:
     - switch
     - light

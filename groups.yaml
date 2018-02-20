@@ -77,11 +77,12 @@
   pi:
     name: Hassbian
     entities:
-      - sensor.ram_available
-      - sensor.ram_used
+      - sensor.memory_free
+      - sensor.memory_use_percent
       - sensor.disk_used_
+      - sensor.disk_use_percent_
       - sensor.cpu_temp
-      - sensor.cpu_used
+      - sensor.processor_use
       - sensor.since_last_boot
 
   verisure:
@@ -102,7 +103,8 @@
     name: Sonos
     entities:
       - media_player.playbar
-      - media_player.kkken
+      - media_player.kitchen
+      - media_player.badevrelse
       - media_player.sam__selma
 
   tv:

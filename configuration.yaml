@@ -97,7 +97,7 @@ google_assistant:
         - kids lights
       type: light
       expose: true
-    media_player.kkken:
+    media_player.kitchen:
       name: Kitchen
       aliases:
         - kitchen radio

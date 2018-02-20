@@ -75,7 +75,7 @@ google_assistant:
   client_id: !secret ga_client_id
   access_token: !secret ga_access_token
   agent_user_id: !secret ga_agent_id	
-  api_key: AIzaSyBblG3tDmhttdvvhhl2_rhL7g_eozDZFdU
+  api_key: secret ga_api_key
   exposed_domains:
     - switch
     - light

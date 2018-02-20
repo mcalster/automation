@@ -115,7 +115,7 @@ google_assistant:
         - tv
         - playbar
       expose: true
-    media_player.sam__selma
+    media_player.sam__selma:
       name: kids room
       aliases:
         - kids room radio

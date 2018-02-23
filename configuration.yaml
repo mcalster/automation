@@ -70,9 +70,6 @@ sun:
 tts:
   - platform: google
 
-media_player:
-  - platform: sonos
-  
 # Google Assistant
 google_assistant: !include service/google_assistant.yaml
 

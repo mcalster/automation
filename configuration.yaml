@@ -87,6 +87,12 @@ mercedesme:
 # RFXtrx
 rfxtrx: !include rfxtrx.yaml
 
+group: !include groups.yaml
+
+automation: !include automations.yaml
+
+script: !include scripts.yaml
+
 # Entities
 switch: !include_dir_merge_list switch
 
@@ -96,8 +102,3 @@ input_select: !include misc/input_select.yaml
 
 input_boolean: !include misc/input_boolean.yaml
 
-group: !include groups.yaml
-
-automation: !include automations.yaml
-
-script: !include scripts.yaml

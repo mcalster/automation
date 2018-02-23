@@ -4,9 +4,3 @@ home_status:
    - "Home"
    - "Away"
   initial: "Home"
-morning_mode:
-  name:  Morning routine enabled
-  options:
-   - "true"
-   - "false"
-  initial: "false"

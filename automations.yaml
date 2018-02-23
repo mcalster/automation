@@ -15,9 +15,9 @@
 ###################
 - alias: 'test'
   trigger:
-    - platform: state
-      entity_id: input_boolean.morning_mode
-      state: 'on'
+  - platform: state
+    entity_id: input_boolean.morning_mode
+    state: 'on'
   action:   
     service: script.turn_on
     entity_id: script.morning_routine

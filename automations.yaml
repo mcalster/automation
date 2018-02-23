@@ -16,16 +16,11 @@
 - alias: 'test'
   trigger:
     - platform: state
-      entity_id: input_select.home_status
-      from: 'Away'
-      to: 'Home'
+      entity_id: input_boolean.morning_mode
+      state: 'on'
   action:   
-    - service: script.sonos_say
-      data:
-        sonos_entity: media_player.kkken
-        volume: 0.5
-        message: 'Welcome home!'
-        delay: '00:00:05'
+    service: script.turn_on
+    entity_id: script.morning_routine
 
 ####################
 ## Alarm & Lights ##

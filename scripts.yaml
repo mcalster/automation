@@ -19,3 +19,14 @@
      - service: media_player.sonos_restore
        data_template:
          entity_id: "{{ sonos_entity|default('media_player.kitchen') }}"
+  
+  morning_routine:
+    alias: 'Stuff to do in the morning'
+    sequence:
+      - service: script.sonos_say
+        data:        
+          sonos_entity: media_player.kitchen
+          volume: 0.7
+          delay: '00:00:04'
+          message: 'Good Morning Glimbergs!'
+        

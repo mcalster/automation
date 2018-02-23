@@ -1,0 +1,62 @@
+  project_id: hassio-186ad
+  client_id: !secret ga_client_id
+  access_token: !secret ga_access_token
+  agent_user_id: !secret ga_agent_id
+  api_key: !secret ga_api_key
+  expose_by_default: false
+  exposed_domains:
+    - media_player
+    - group
+  entity_config:
+    group.all_fonster_lampor:
+      name: All Window Lights
+      aliases:
+        - all lights
+      type: light
+      expose: true
+    group.fonster_lampor:
+      name: Window Lights
+      type: light
+      expose: true
+    group.fonster_lampor_barn_rum:
+      name: Kids Window Lights
+      aliases:
+        - kids lights
+      type: light
+      expose: true
+    group.fonster_lampor_sovrum:
+      name: Bedroom Window Lights
+      aliases:
+        - bedroom lights
+      type: light
+      expose: true
+    group.ute_belysning:
+      name: Outdoor Lights
+      aliases:
+        - garden lights
+      type: light
+      expose: true     
+    media_player.kitchen:
+      name: Kitchen
+      aliases:
+        - kitchen radio
+        - kitchen music
+      expose: true
+    media_player.badevrelse:
+      name: Bathroom
+      aliases:
+        - Bathroom radio
+        - Bathroom music
+      expose: true
+    media_player.playbar:
+      name: living room tv
+      aliases:
+        - tv
+        - playbar
+      expose: true
+    media_player.sam__selma:
+      name: kids room
+      aliases:
+        - kids room radio
+        - kids room music
+      expose: true

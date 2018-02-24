@@ -49,8 +49,10 @@ discovery:
 # Enables support for tracking state changes over time
 history:
 
-#logger:
-#  default: info
+logger:
+  default: info
+  logs:
+    homeassistant.components.media_player: debug
 
 # View all events in a logbook
 logbook:

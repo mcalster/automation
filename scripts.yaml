@@ -32,7 +32,7 @@
       - service: media_player.select_source
         data:
           entity_id: media_player.kitchen
-          source: 'Rix FM'
+          source: 'old'
         
   playradio:
     alias: 'Play Radio on Sonos'

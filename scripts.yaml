@@ -29,10 +29,10 @@
           volume: 0.7
           delay: '00:00:04'
           message: 'Good Morning Glimbergs!'
-      - service: script.playradio
+      - service: media_player.select_source
         data:
-          sonos_entity: media_player.kitchen
-          station: golden_oldies
+          entity_id: media_player.kitchen
+          source: 'Rix FM'
         
   playradio:
     alias: 'Play Radio on Sonos'

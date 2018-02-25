@@ -23,18 +23,15 @@
   morning_routine:
     alias: 'Stuff to do in the morning'
     sequence:
-      - service: script.sonos_say
+      - service: media_player.volume_set
         data:
-          sonos_entity: media_player.kitchen
-          message: 'Good Morning!'
+          entity_id: media_player.kitchen
+          volume: 0.4
+      - service: tts.google_say
+        data:
+          entity_id: media_player.kitchen
+          message: 'Good Morning!'          
       - service: media_player.select_source
         data:
           entity_id: media_player.kitchen
           source: 'RIX FM'
-  jarvis:
-    alias: Jarvis Greeting
-    sequence:
-      - service: tts.google_say
-        data:
-          entity_id: media_player.kitchen
-          message: Hello from Home Assistant

@@ -130,9 +130,8 @@
   action:
     - service: homeassistant.turn_off
       entity_id: group.all_fonster_lampor
-    - service: input_select.select_option
+    - service: input_boolean.turn_off
       entity_id: input_boolean.morning_mode
-      state: 'off'
     - service: notify.gmail
       data:
         message: 'Found some lights still on at 01:00 AM. Turning them off now...'

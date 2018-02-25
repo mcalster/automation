@@ -26,7 +26,8 @@
       - service: media_player.volume_set
         data:
           entity_id: media_player.kitchen
-          volume: 0.4
+          volume: 0.2
+          volume_level: 0.2
       - service: tts.google_say
         data:
           entity_id: media_player.kitchen

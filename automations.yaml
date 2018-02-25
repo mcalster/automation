@@ -10,18 +10,6 @@
     data:
       message: 'Update for Home Assistant is available.'
 
-###################
-## Sonos Speach ##
-###################
-#- alias: 'test'
-#  trigger:
-#  - platform: state
-#    entity_id: input_boolean.morning_mode
-#    state: 'on'
-#  action:
-#  - service: script.turn_on
-#    entity_id: script.morning_routine
-
 ####################
 ## Alarm & Lights ##
 ####################
@@ -142,6 +130,9 @@
   action:
     - service: homeassistant.turn_off
       entity_id: group.all_fonster_lampor
+    - service: input_select.select_option
+      entity_id: input_boolean.morning_mode
+      state: 'off'
     - service: notify.gmail
       data:
         message: 'Found some lights still on at 01:00 AM. Turning them off now...'
@@ -198,18 +189,14 @@
   trigger:
   - platform: time
     at: '07:30:00'
+  - platform: state
+    entity_id: input_boolean.morning_mode
+    state: 'on'
   condition:
     condition: and
     conditions:
       - condition: sun
         before: sunrise
-      - condition: time
-        weekday:
-        - mon
-        - tue
-        - wed
-        - thu
-        - fri
   action:
     - service: homeassistant.turn_on
       entity_id: group.fonster_lampor_barn_rum

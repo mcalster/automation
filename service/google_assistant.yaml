@@ -7,6 +7,7 @@
   exposed_domains:
     - media_player
     - group
+    - script
   entity_config:
     group.all_fonster_lampor:
       name: All Window Lights
@@ -59,4 +60,7 @@
       aliases:
         - kids room radio
         - kids room music
+      expose: true
+    script.morning__routine:
+      name: morning routine
       expose: true

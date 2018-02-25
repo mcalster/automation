@@ -26,7 +26,7 @@
       - service: tts.google_say
         entity_id: media_player.kitchen
         data_template:
-          message: {{ ["Good night.","Good evening.","Sweet dreams.","See you tomorrow. ","Have a wonderful night.","See you soon."]|random }}
+          message: {{ ["Good night.","Good evening.","Sweet dreams.","See you tomorrow.","Have a wonderful night.","See you soon."] | random }}
       - service: media_player.select_source
         data:
           entity_id: media_player.kitchen

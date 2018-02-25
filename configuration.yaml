@@ -2,8 +2,8 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: Skumparp
   # Location required to calculate the time the sun rises and sets
-  latitude: 55.5398837
-  longitude: 12.9652643
+  latitude: !secret ha_latitude
+  longitude: !secret ha_longitude
   # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 4
   # metric for Metric, imperial for Imperial
@@ -26,9 +26,9 @@ http:
   # Secrets are defined in the file secrets.yaml
   api_password: !secret http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  base_url: ha-glimberg.duckdns.org
-  ssl_certificate: /ssl/fullchain.pem
-  ssl_key: /ssl/privkey.pem
+  base_url: !secret http_base_url
+  ssl_certificate: !secret http_ssl_certificate
+  ssl_key: !secret http_ssl_key
   login_attempts_threshold: 5
 
 # Checks for available updates

@@ -63,4 +63,5 @@
       expose: true
     script.morning__routine:
       name: morning routine
+      type: switch
       expose: true

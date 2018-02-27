@@ -55,13 +55,13 @@
         - tv
         - playbar
       expose: true
-    media_player.sam__selma:
+    media_player.brnevrelse:
       name: kids room
       aliases:
         - kids room radio
         - kids room music
       expose: true
-    script.morning__routine:
+    script.morning_routine:
       name: morning routine
       type: switch
       expose: true

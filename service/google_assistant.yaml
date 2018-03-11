@@ -13,29 +13,24 @@
       name: All Window Lights
       aliases:
         - all lights
-      type: light
       expose: true
     group.fonster_lampor:
       name: Window Lights
-      type: light
       expose: true
     group.fonster_lampor_barn_rum:
       name: Kids Window Lights
       aliases:
         - kids lights
-      type: light
       expose: true
     group.fonster_lampor_sovrum:
       name: Bedroom Window Lights
       aliases:
         - bedroom lights
-      type: light
       expose: true
     group.ute_belysning:
       name: Outdoor Lights
       aliases:
         - garden lights
-      type: light
       expose: true     
     media_player.kitchen:
       name: Kitchen
@@ -63,5 +58,4 @@
       expose: true
     script.morning_routine:
       name: morning routine
-      type: switch
       expose: true

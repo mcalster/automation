@@ -11,7 +11,8 @@
       - switch.hall_byro_nexa_2
       - switch.sovrum_selma_fonster
       - switch.sovrum_selma_dor
-  
+      - switch.ovre_belysning
+ 
   fonster_lampor_sovrum:
     name: Fonster Lampor i sovrum
     entities:

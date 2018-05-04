@@ -82,9 +82,9 @@ notify: !include service/notify.yaml
 verisure: !include verisure.yaml
 
 # Mercedes
-mercedesme:
-  username: !secret mercedesme_username
-  password: !secret mercedesme_password
+#mercedesme:
+#  username: !secret mercedesme_username
+#  password: !secret mercedesme_password
   
 # RFXtrx
 rfxtrx: !include rfxtrx.yaml

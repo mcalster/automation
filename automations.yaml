@@ -142,6 +142,14 @@
     # Possible values: sunset, sunrise
     event: sunset
     offset: "-00:45:00"
+  condition:
+    condition: or
+      conditions:
+      - condition: time
+        before: '20:00:00'
+      - condition: state
+        entity_id: input_select.home_status
+        state: Away
   action:
     - service: homeassistant.turn_on
       entity_id: group.all_fonster_lampor

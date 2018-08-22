@@ -14,14 +14,6 @@
 ## Alarm & Lights ##
 ####################
 
-- input_text:
-  lights_out_time:
-    name: When should lights turn off?
-    initial: '19:30:00'
-  lights_on_time:
-    name: When should lights turn on?
-    initial: '06:45:00'
-    
 - alias: "Change state to Home when Alarm is disarmed"
   trigger:
   - platform: state

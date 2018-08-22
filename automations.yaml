@@ -13,6 +13,15 @@
 ####################
 ## Alarm & Lights ##
 ####################
+
+- input_text:
+  lights_out_time:
+    name: When should lights turn off?
+    initial: '19:30:00'
+  lights_on_time:
+    name: When should lights turn on?
+    initial: '06:45:00'
+    
 - alias: "Change state to Home when Alarm is disarmed"
   trigger:
   - platform: state
@@ -49,7 +58,7 @@
         state: 'Home'
       - condition: time
         # At least one of the following is required.
-        after: '20:00:00'
+        after: '19:30:00'
   action:
   - service: homeassistant.turn_off
     entity_id: group.fonster_lampor_barn_rum
@@ -85,7 +94,7 @@
         state: 'Home'
       - condition: time
         # At least one of the following is required.
-        before: '20:00:00'
+        before: '19:30:00'
       - condition: time
         after: '08:59:00'
   action:
@@ -97,7 +106,7 @@
   - platform: state
     entity_id: input_select.home_status
   - platform: time
-    at: '20:00:00'
+    at: '19:30:00'
   condition:
     condition: or
     conditions:
@@ -107,7 +116,7 @@
       - condition: and
         conditions:
           - condition: time
-            after: '19:59:00'
+            after: '19:29:00'
           - condition: time
             before: '09:00:00'
   action:
@@ -146,7 +155,7 @@
     condition: or
     conditions:
     - condition: time
-      before: '20:00:00'
+      before: '19:30:00'
     - condition: state
       entity_id: input_select.home_status
       state: Away
@@ -171,7 +180,7 @@
 - alias: 'Turn off lights in Kids room if home'
   trigger:
   - platform: time
-    at: '20:00:00'
+    at: '19:30:00'
   condition:
     condition: state
     entity_id: input_select.home_status
@@ -195,7 +204,7 @@
 - alias: 'Turn on bedroom lights in the morning if before sunrise'
   trigger:
   - platform: time
-    at: '07:30:00'
+    at: '06:45:00'
   - platform: state
     entity_id: input_boolean.morning_mode
     to: 'on'

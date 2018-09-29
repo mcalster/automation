@@ -96,6 +96,12 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 
 # Entities
+
+binary_sensor:
+  - platform: workday
+    country: DK
+    workdays: [mon, tue, wed, thu, fri]
+
 switch: !include_dir_merge_list switch
 
 sensor: !include_dir_merge_list sensor

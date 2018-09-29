@@ -205,13 +205,9 @@
     conditions:
       - condition: sun
         before: sunrise
-      - condition: time
-        weekday:
-          - mon
-          - tue
-          - wed
-          - thu
-          - fri        
+      - condition: state
+        entity_id: 'binary_sensor.workday_sensor'
+        state: 'on'
   action:
     - service: homeassistant.turn_on
       entity_id: group.fonster_lampor_barn_rum

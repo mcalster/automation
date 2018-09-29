@@ -205,12 +205,19 @@
     conditions:
       - condition: sun
         before: sunrise
+      - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri        
   action:
     - service: homeassistant.turn_on
       entity_id: group.fonster_lampor_barn_rum
     - service: homeassistant.turn_on
       entity_id: group.fonster_lampor_sovrum
-
+      
 - alias: 'Turn on lights in the morning if before sunrise'
   trigger:
   - platform: time

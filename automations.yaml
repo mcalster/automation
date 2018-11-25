@@ -154,8 +154,8 @@
   action:
     - service: homeassistant.turn_on
       entity_id: group.all_fonster_lampor
-#    - service: homeassistant.turn_on
-#      entity_id: group.ute_belysning
+    - service: homeassistant.turn_on
+      entity_id: group.ute_belysning
 
 - alias: 'Turn off lights at sunsrise'
   trigger:
@@ -166,8 +166,8 @@
   action:
   - service: homeassistant.turn_off
     entity_id: group.all_fonster_lampor
-#  - service: homeassistant.turn_off
-#    entity_id: group.ute_belysning
+  - service: homeassistant.turn_off
+    entity_id: group.ute_belysning
 
 - alias: 'Turn off lights in Kids room if home'
   trigger:

@@ -51,8 +51,8 @@ history:
 
 logger:
   default: critical
-  logs:
-    homeassistant.components.media_player: debug
+#  logs:
+#    homeassistant.components.media_player: debug
 
 # View all events in a logbook
 logbook:

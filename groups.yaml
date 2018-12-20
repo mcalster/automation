@@ -17,7 +17,7 @@
     name: Fonster Lampor i sovrum
     entities:
       - switch.sovrum_fonster_nexa_3
-      - light.stue_lampe
+      - light.tvroom
 
   all_fonster_lampor:
     name:  Alla Fonster Lampor

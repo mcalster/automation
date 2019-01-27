@@ -1,99 +1,94 @@
-###################
-## System update ##
-###################
-- alias: 'Update Available Notifications'
+- id: '1548594082873'
+  alias: Update Available Notifications
   trigger:
-  - platform: state
-    entity_id: updater.updater
+  - entity_id: updater.updater
+    platform: state
+  condition: []
   action:
-  - service: notify.gmail  
-    data:
-      message: 'Update for Home Assistant is available.'
-
-####################
-## Alarm & Lights ##
-####################
-
-- alias: "Change state to Home when Alarm is disarmed"
+  - data:
+      message: Update for Home Assistant is available.
+    service: notify.ios_kim_alster_glimberg
+  - data:
+      message: Update for Home Assistant is available.
+    service: notify.gmail
+- alias: Change state to Home when Alarm is disarmed
   trigger:
   - platform: state
     entity_id: alarm_control_panel.skumparp_alarm
-    from: 'armed_away'
-    to: 'disarmed'
+    from: armed_away
+    to: disarmed
   action:
   - service: input_select.select_option
     data:
       entity_id: input_select.home_status
       option: Home
-
-- alias: "Change state to Away when Alarm is armed"
+  id: 5dc21f7b3008473bb014147eb9c4c2fe
+- alias: Change state to Away when Alarm is armed
   trigger:
   - platform: state
     entity_id: alarm_control_panel.skumparp_alarm
-    from: 'disarmed'
-    to: 'armed_away'
+    from: disarmed
+    to: armed_away
   action:
   - service: input_select.select_option
     data:
       entity_id: input_select.home_status
       option: Away
-
-- alias: 'Turn off lights in kids room when coming home late'
+  id: da1d4c57d6744f95bbf9148421ba61b4
+- alias: Turn off lights in kids room when coming home late
   trigger:
   - platform: state
     entity_id: input_select.home_status
   condition:
     condition: and
     conditions:
-      - condition: state
-        entity_id: input_select.home_status
-        state: 'Home'
-      - condition: time
-        # At least one of the following is required.
-        after: '19:30:00'
+    - condition: state
+      entity_id: input_select.home_status
+      state: Home
+    - condition: time
+      after: '19:30:00'
   action:
   - service: homeassistant.turn_off
     entity_id: group.fonster_lampor_barn_rum
-
-- alias: 'Turn off lights in bedroom when coming home late'
+  id: 7a51e31823014c0da831599eb662af08
+- alias: Turn off lights in bedroom when coming home late
   trigger:
   - platform: state
     entity_id: input_select.home_status
   condition:
     condition: and
     conditions:
-      - condition: state
-        entity_id: input_select.home_status
-        state: 'Home'
-      - condition: time
-        # At least one of the following is required.
-        after: '21:00:00'
+    - condition: state
+      entity_id: input_select.home_status
+      state: Home
+    - condition: time
+      after: '21:00:00'
   action:
   - service: homeassistant.turn_off
     entity_id: group.fonster_lampor_sovrum
-
-- alias: 'Turn on game and tv in Sams room when home and when between 9am and 8pm.'
+  id: 58f6acdc48cc4110bcbf9bef28f34bff
+- alias: Turn on game and tv in Sams room when home and when between 9am and 8pm.
   trigger:
   - platform: state
     entity_id: input_select.home_status
   - platform: time
-    at: '09:00:00'
+    at: 09:00:00
   condition:
     condition: and
     conditions:
-      - condition: state
-        entity_id: input_select.home_status
-        state: 'Home'
-      - condition: time
-        # At least one of the following is required.
-        before: '19:30:00'
-      - condition: time
-        after: '08:59:00'
+    - condition: state
+      entity_id: input_select.home_status
+      state: Home
+    - condition: time
+      before: '19:30:00'
+    - condition: time
+      after: 08:59:00
   action:
   - service: homeassistant.turn_on
     entity_id: switch.sovrum_sam_tv_nexa_4
-
-- alias: 'Turn off game and tv in Sams room when not home and when between 8pm and 9am.'
+  id: 96450b1e953d4b248893abafbd308bf4
+- alias: Turn off game and tv in Sams room when not home and when between 8pm and
+    9am.
   trigger:
   - platform: state
     entity_id: input_select.home_status
@@ -102,47 +97,41 @@
   condition:
     condition: or
     conditions:
-      - condition: state
-        entity_id: input_select.home_status
-        state: 'Away'
-      - condition: and
-        conditions:
-          - condition: time
-            after: '19:29:00'
-          - condition: time
-            before: '09:00:00'
+    - condition: state
+      entity_id: input_select.home_status
+      state: Away
+    - condition: and
+      conditions:
+      - condition: time
+        after: '19:29:00'
+      - condition: time
+        before: 09:00:00
   action:
   - service: homeassistant.turn_off
     entity_id: switch.sovrum_sam_tv_nexa_4
-
-
-############
-## Lights ##
-############
-
-- alias: 'Turn off all lights if it is very late and the lights are still on'
+  id: a630bbb6ad27456da3f26f01c62c6cee
+- alias: Turn off all lights if it is very late and the lights are still on
   trigger:
   - platform: time
-    at: '01:00:00'
+    at: 01:00:00
   condition:
     condition: state
     entity_id: group.all_fonster_lampor
     state: 'on'
   action:
-    - service: homeassistant.turn_off
-      entity_id: group.all_fonster_lampor
-    - service: input_boolean.turn_off
-      entity_id: input_boolean.morning_mode
-    - service: notify.gmail
-      data:
-        message: 'Found some lights still on at 01:00 AM. Turning them off now...'
-
-- alias: 'Turn on lights at sunset'
+  - service: homeassistant.turn_off
+    entity_id: group.all_fonster_lampor
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.morning_mode
+  - service: notify.gmail
+    data:
+      message: Found some lights still on at 01:00 AM. Turning them off now...
+  id: ae163c926136455dab10ccb2a479d21d
+- alias: Turn on lights at sunset
   trigger:
   - platform: sun
-    # Possible values: sunset, sunrise
     event: sunset
-    offset: "-00:45:00"
+    offset: -00:45:00
   condition:
     condition: or
     conditions:
@@ -152,24 +141,23 @@
       entity_id: input_select.home_status
       state: Away
   action:
-    - service: homeassistant.turn_on
-      entity_id: group.all_fonster_lampor
-    - service: homeassistant.turn_on
-      entity_id: group.ute_belysning
-
-- alias: 'Turn off lights at sunsrise'
+  - service: homeassistant.turn_on
+    entity_id: group.all_fonster_lampor
+  - service: homeassistant.turn_on
+    entity_id: group.ute_belysning
+  id: 90e4b8a6d24f4e7895b2024d813fa370
+- alias: Turn off lights at sunsrise
   trigger:
   - platform: sun
-    # Possible values: sunset, sunrise
     event: sunrise
-    offset: "00:45:00"
+    offset: 00:45:00
   action:
   - service: homeassistant.turn_off
     entity_id: group.all_fonster_lampor
   - service: homeassistant.turn_off
     entity_id: group.ute_belysning
-
-- alias: 'Turn off lights in Kids room if home'
+  id: 367e8e9bcb0243b1b09bfeb44cb115e9
+- alias: Turn off lights in Kids room if home
   trigger:
   - platform: time
     at: '19:30:00'
@@ -180,8 +168,8 @@
   action:
   - service: homeassistant.turn_off
     entity_id: group.fonster_lampor_barn_rum
-
-- alias: 'Turn off lights in bedroom if home'
+  id: cb67ff6e29444b1cafd6b35dc148b42a
+- alias: Turn off lights in bedroom if home
   trigger:
   - platform: time
     at: '21:00:00'
@@ -192,42 +180,41 @@
   action:
   - service: homeassistant.turn_off
     entity_id: group.fonster_lampor_sovrum
-
-- alias: 'Turn on bedroom lights in the morning if before sunrise'
+  id: 25c78f6df30f4ccaadf90a5a38c113a8
+- alias: Turn on bedroom lights in the morning if before sunrise
   trigger:
   - platform: time
-    at: '06:45:00'
+    at: 06:45:00
   - platform: state
     entity_id: input_boolean.morning_mode
     to: 'on'
   condition:
     condition: and
     conditions:
-      - condition: sun
-        before: sunrise
-      - condition: state
-        entity_id: 'binary_sensor.workday_sensor'
-        state: 'on'
+    - condition: sun
+      before: sunrise
+    - condition: state
+      entity_id: binary_sensor.workday_sensor
+      state: 'on'
   action:
-    - service: homeassistant.turn_on
-      entity_id: group.fonster_lampor_barn_rum
-    - service: homeassistant.turn_on
-      entity_id: group.fonster_lampor_sovrum
-      
-- alias: 'Turn on lights in the morning if before sunrise'
+  - service: homeassistant.turn_on
+    entity_id: group.fonster_lampor_barn_rum
+  - service: homeassistant.turn_on
+    entity_id: group.fonster_lampor_sovrum
+  id: 31d8157fa2424e7d9b7b1a029ae6e8e0
+- alias: Turn on lights in the morning if before sunrise
   trigger:
   - platform: time
-    at: '06:30:00'
+    at: 06:30:00
   condition:
     condition: and
     conditions:
-      - condition: sun
-        before: sunrise
-      - condition: state
-        entity_id: 'binary_sensor.workday_sensor'
-        state: 'on'        
+    - condition: sun
+      before: sunrise
+    - condition: state
+      entity_id: binary_sensor.workday_sensor
+      state: 'on'
   action:
-    - service: homeassistant.turn_on
-      entity_id: group.fonster_lampor
-#    - service: homeassistant.turn_on
-#      entity_id: group.ute_belysning
+  - service: homeassistant.turn_on
+    entity_id: group.fonster_lampor
+  id: 0c912f631cb54be18390f9886f3dc0d1

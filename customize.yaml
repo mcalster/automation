@@ -1,1 +1,12 @@
 
+switch.sovrum_selma_dor:
+  friendly_name: Selma & Saga Mysbelysning
+switch.sovrum_selma_radio: {}
+switch.sovrum_selma_fonster:
+  friendly_name: Selma & Saga Fönsterlampor
+switch.sovrum_sam_tv_nexa_4:
+  friendly_name: Sam's Tv
+switch.sovrum_sam_fonster_nexa_1:
+  friendly_name: Sam's Fönsterlampor
+group.fonster_lampor:
+  friendly_name: Fonster Lampor (Uppe + Nere)

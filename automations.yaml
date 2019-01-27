@@ -123,7 +123,7 @@
     entity_id: group.all_fonster_lampor
   - service: input_boolean.turn_off
     entity_id: input_boolean.morning_mode
-  - service: notify.gmail
+  - service: notify.ios_kim_alster_glimberg
     data:
       message: Found some lights still on at 01:00 AM. Turning them off now...
   id: ae163c926136455dab10ccb2a479d21d

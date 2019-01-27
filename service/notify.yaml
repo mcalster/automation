@@ -9,5 +9,4 @@
     password: !secret gmail_password
     recipient:
       - kimalster@gmail.com
-      - kim@alster.dk
     sender_name: Glimbergs Home Assistant

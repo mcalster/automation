@@ -50,9 +50,11 @@ discovery:
 history:
 
 logger:
-  default: critical
+  default: error
 #  logs:
-#    homeassistant.components.media_player: debug
+#    homeassistant.components.zha: debug
+#    zigpy_deconz.zigbee: debug
+#    zigpy_deconz: debug
 
 # View all events in a logbook
 logbook:
@@ -109,4 +111,3 @@ sensor: !include_dir_merge_list sensor
 input_select: !include misc/input_select.yaml
 
 input_boolean: !include misc/input_boolean.yaml
-

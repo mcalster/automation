@@ -17,7 +17,7 @@
     name: Fonster Lampor i sovrum
     entities:
       - switch.sovrum_fonster_nexa_3
-      - light.tvroom
+      - light.ikea_of_sweden_tradfri_bulb_e27_ws_opal_980lm_fe156ce1_1
 
   all_fonster_lampor:
     name:  Alla Fonster Lampor

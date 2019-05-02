@@ -73,6 +73,10 @@ sun:
 # Text to speech
 tts:
   - platform: google
+# Octopi
+octoprint:
+  host: http://octopi.local
+  api_key: !secret octopi_api_key
 
 # Google Assistant
 google_assistant: !include service/google_assistant.yaml

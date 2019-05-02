@@ -77,6 +77,11 @@ tts:
 octoprint:
   host: http://octopi.local
   api_key: !secret octopi_api_key
+camera:
+  - platform: mjpeg
+    name: OctoPrint
+    still_image_url: http://octopi.local/webcam/?action=snapshot
+    mjpeg_url: http://octopi.local/webcam/?action=stream
 
 # Google Assistant
 google_assistant: !include service/google_assistant.yaml

@@ -81,7 +81,7 @@ stream:
 
 # Octopi
 octoprint:
-  host: http://octopi.local
+  host: octopi.local
   api_key: !secret octopi_api_key
   bed: true
   number_of_tools: 1

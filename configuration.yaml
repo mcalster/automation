@@ -89,8 +89,8 @@ octoprint:
 camera:
   - platform: mjpeg
     name: OctoPrint
-    still_image_url: http://octopi.local/webcam/?action=snapshot
-    mjpeg_url: http://octopi.local/webcam/?action=stream
+    still_image_url: !secret octopi_still_image_url
+    mjpeg_url: !secret octopi_mjpeg_url
 
 # Google Assistant
 google_assistant: !include service/google_assistant.yaml

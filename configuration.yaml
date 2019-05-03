@@ -73,12 +73,16 @@ sun:
 # Text to speech
 tts:
   - platform: google
+
+stream:
+
 # Octopi
 octoprint:
   host: http://octopi.local
   api_key: !secret octopi_api_key
   bed: true
   number_of_tools: 1
+
 camera:
   - platform: mjpeg
     name: OctoPrint

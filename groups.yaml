@@ -63,7 +63,7 @@
     entities:
       - switch.s1_ute_nord
       - switch.s2_ute_syd
-      - switch.nexa_5
+#      - switch.nexa_5
       
   tracking:
    name: Devices

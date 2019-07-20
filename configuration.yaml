@@ -91,7 +91,7 @@ rest_command:
     url: !secret octopi_shutdown_url
     method: POST
     headers:
-      authorization: !secret octopi_api_key
+      X-Api-Key: !secret octopi_api_key
 
 camera:
   - platform: mjpeg

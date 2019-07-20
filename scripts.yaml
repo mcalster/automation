@@ -45,5 +45,4 @@
     - service: rest_command.shut_down_octoprint
     - delay: 00:00:30
     - service: homeassistant.turn_off
-    entity_id: switch.nexa_6
-  id: '1563627826205'
+      entity_id: switch.nexa_6

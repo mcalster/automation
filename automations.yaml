@@ -218,3 +218,12 @@
   - service: homeassistant.turn_on
     entity_id: group.fonster_lampor
   id: 0c912f631cb54be18390f9886f3dc0d1
+- alias: Shut Down Octopi when Print Complete
+  trigger:
+  - entity_id: sensor.octoprint_job_percentage
+    platform: state
+    to: '100'
+  condition: []
+  action:
+  - service: script.shutdown_octoprint
+  id: '1563627826205'

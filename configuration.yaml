@@ -86,6 +86,13 @@ octoprint:
   bed: true
   number_of_tools: 1
 
+rest_command:
+  shut_down_octoprint:
+    url: !secret octopi_shutdown_url
+    method: POST
+    headers:
+      authorization: !secret octopi_api_key
+
 camera:
   - platform: mjpeg
     name: OctoPrint

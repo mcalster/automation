@@ -47,4 +47,4 @@
         entity_id: switch.nexa_6
       - service: notify.ios_kim_alster_glimberg
         data:
-        message: 'Octoprint and Creality Ender 3 has been shutdown gracefully'
+          message: 'Octoprint and Creality Ender 3 has been shutdown gracefully'

@@ -37,14 +37,14 @@
       - service: media_player.select_source
         data:
           entity_id: media_player.kitchen
-shutdown_octoprint:
-  alias: Stop 3D printer gracefully
-  sequence:
-  - delay: 00:00:02
-  - service: rest_command.shut_down_octoprint
-  - delay: 00:00:05
-  - service: homeassistant.turn_off
-    entity_id: switch.nexa_6
-  - service: notify.ios_kim_alster_glimberg
-    data:
-      message: 'Octoprint and Creality Ender 3 has been shutdown gracefully'
+  shutdown_octoprint:
+    alias: Stop 3D printer gracefully
+    sequence:
+      - delay: 00:00:02
+      - service: rest_command.shut_down_octoprint
+      - delay: 00:00:05
+      - service: homeassistant.turn_off
+        entity_id: switch.nexa_6
+      - service: notify.ios_kim_alster_glimberg
+        data:
+        message: 'Octoprint and Creality Ender 3 has been shutdown gracefully'

@@ -29,9 +29,9 @@ http:
   # Secrets are defined in the file secrets.yaml
   api_password: !secret http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-#  base_url: !secret http_base_url
-#  ssl_certificate: !secret http_ssl_certificate
-#  ssl_key: !secret http_ssl_key
+  base_url: !secret http_base_url
+  ssl_certificate: !secret http_ssl_certificate
+  ssl_key: !secret http_ssl_key
   login_attempts_threshold: 5
 
 

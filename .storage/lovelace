@@ -1,0 +1,285 @@
+{
+    "data": {
+        "config": {
+            "title": "Skumparp",
+            "views": [
+                {
+                    "badges": [
+                        {
+                            "entity": "binary_sensor.workday_sensor"
+                        },
+                        {
+                            "entity": "binary_sensor.updater"
+                        },
+                        {
+                            "entity": "sensor.yr_symbol"
+                        },
+                        {
+                            "entity": "sun.sun"
+                        }
+                    ],
+                    "cards": [
+                        {
+                            "entity": "weather.home",
+                            "type": "weather-forecast"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.ovre_belysning"
+                                },
+                                {
+                                    "entity": "switch.nedre_belysning"
+                                },
+                                {
+                                    "entity": "switch.sovrum_fonster_nexa_3"
+                                }
+                            ],
+                            "show_header_toggle": true,
+                            "title": "F\u00f6nster Lampor",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "",
+                    "path": "default_view",
+                    "title": "Main"
+                },
+                {
+                    "badges": [
+                        {
+                            "entity": "binary_sensor.kontor"
+                        },
+                        {
+                            "entity": "binary_sensor.verisure_ethernet_status"
+                        },
+                        {
+                            "entity": "binary_sensor.entre"
+                        }
+                    ],
+                    "cards": [
+                        {
+                            "entity": "alarm_control_panel.skumparp_alarm",
+                            "type": "alarm-panel"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "device_tracker.caroline_glimberg_s_iphone"
+                                },
+                                {
+                                    "entity": "sensor.battery_level_2"
+                                },
+                                {
+                                    "entity": "sensor.distance_2"
+                                },
+                                {
+                                    "entity": "sensor.floors_ascended_2"
+                                },
+                                {
+                                    "entity": "sensor.battery_state_2"
+                                },
+                                {
+                                    "entity": "sensor.bssid_2"
+                                },
+                                {
+                                    "entity": "sensor.ssid_2"
+                                },
+                                {
+                                    "entity": "sensor.steps_2"
+                                },
+                                {
+                                    "entity": "sensor.connection_type_2"
+                                },
+                                {
+                                    "entity": "sensor.geocoded_location_2"
+                                },
+                                {
+                                    "entity": "sensor.sim_1_2"
+                                },
+                                {
+                                    "entity": "sensor.last_update_trigger_2"
+                                },
+                                {
+                                    "entity": "sensor.average_active_pace_2"
+                                },
+                                {
+                                    "entity": "sensor.floors_descended_2"
+                                },
+                                {
+                                    "entity": "sensor.activity_2"
+                                },
+                                {
+                                    "entity": "device_tracker.kim_alster_glimberg"
+                                },
+                                {
+                                    "entity": "sensor.average_active_pace"
+                                },
+                                {
+                                    "entity": "sensor.floors_ascended"
+                                },
+                                {
+                                    "entity": "sensor.floors_descended"
+                                },
+                                {
+                                    "entity": "sensor.sim_1"
+                                },
+                                {
+                                    "entity": "sensor.ssid"
+                                },
+                                {
+                                    "entity": "sensor.steps"
+                                },
+                                {
+                                    "entity": "sensor.activity"
+                                },
+                                {
+                                    "entity": "sensor.geocoded_location"
+                                },
+                                {
+                                    "entity": "sensor.last_update_trigger"
+                                },
+                                {
+                                    "entity": "sensor.battery_level"
+                                },
+                                {
+                                    "entity": "sensor.battery_state"
+                                },
+                                {
+                                    "entity": "sensor.distance"
+                                },
+                                {
+                                    "entity": "sensor.bssid"
+                                }
+                            ],
+                            "show_header_toggle": true,
+                            "title": "Devices",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.tvattstuga_temperature"
+                                },
+                                {
+                                    "entity": "sensor.hall_plan2_temperature"
+                                },
+                                {
+                                    "entity": "sensor.matplats_temperature"
+                                },
+                                {
+                                    "entity": "sensor.tvattstuga_humidity"
+                                },
+                                {
+                                    "entity": "sensor.hall_plan2_humidity"
+                                }
+                            ],
+                            "show_header_toggle": true,
+                            "title": "Hus-sensorer",
+                            "type": "entities"
+                        },
+                        {
+                            "entity": "media_player.chromecast_vardagsrum",
+                            "type": "media-control"
+                        },
+                        {
+                            "entity": "media_player.playbar",
+                            "type": "media-control"
+                        },
+                        {
+                            "entity": "media_player.outside",
+                            "type": "media-control"
+                        },
+                        {
+                            "entity": "media_player.upstairs",
+                            "type": "media-control"
+                        },
+                        {
+                            "entity": "media_player.kokken",
+                            "type": "media-control"
+                        },
+                        {
+                            "entities": [
+                                "automation.turn_on_lights_in_the_morning_if_before_sunrise",
+                                "automation.turn_off_game_and_tv_in_sams_room_when_not_home_and_when_between_8pm_and_9am",
+                                "automation.update_available_notifications",
+                                "automation.turn_off_all_lights_if_it_is_very_late_and_the_lights_are_still_on",
+                                "automation.change_state_to_home_when_alarm_is_disarmed",
+                                "automation.shut_down_octopi_when_print_complete",
+                                "automation.turn_on_lights_at_sunset",
+                                "automation.change_state_to_away_when_alarm_is_armed",
+                                "automation.turn_off_lights_at_sunsrise",
+                                "automation.turn_off_lights_in_kids_room_when_coming_home_late",
+                                "automation.turn_off_lights_in_kids_room_if_home",
+                                "automation.turn_off_lights_in_bedroom_when_coming_home_late",
+                                "automation.turn_off_lights_in_bedroom_if_home",
+                                "automation.turn_on_game_and_tv_in_sams_room_when_home_and_when_between_9am_and_8pm",
+                                "automation.turn_on_bedroom_lights_in_the_morning_if_before_sunrise",
+                                "script.shutdown_octoprint",
+                                "script.morning_routine",
+                                "script.sonos_say"
+                            ],
+                            "title": "Automation",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "sensor.memory_free",
+                                "sensor.cpu_temp",
+                                "sensor.memory_use_percent",
+                                "sensor.processor_use",
+                                "sensor.disk_use_percent",
+                                "sensor.last_boot",
+                                "sensor.disk_free",
+                                "sensor.connection_type"
+                            ],
+                            "title": "System Data",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "",
+                    "path": "house",
+                    "title": "House"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                "binary_sensor.octoprint_printing",
+                                "binary_sensor.octoprint_printing_error",
+                                "camera.octoprint",
+                                "script.shutdown_octoprint",
+                                "sensor.octoprint_actual_bed_temp",
+                                "sensor.octoprint_actual_tool0_temp",
+                                "sensor.octoprint_current_state",
+                                "sensor.octoprint_job_percentage",
+                                "sensor.octoprint_target_bed_temp",
+                                "sensor.octoprint_target_tool0_temp",
+                                "sensor.octoprint_time_elapsed",
+                                "sensor.octoprint_time_remaining"
+                            ],
+                            "title": "All Octoprint relatated",
+                            "type": "entities"
+                        },
+                        {
+                            "entity": "camera.octoprint",
+                            "type": "picture-entity"
+                        }
+                    ],
+                    "icon": "mdi:printer",
+                    "path": "3d-printing",
+                    "title": "3D Printing"
+                },
+                {
+                    "badges": [],
+                    "cards": [],
+                    "icon": "mdi:house",
+                    "path": "house",
+                    "title": "House"
+                }
+            ]
+        }
+    },
+    "key": "lovelace",
+    "version": 1
+}

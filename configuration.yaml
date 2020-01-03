@@ -11,7 +11,7 @@ homeassistant:
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Stockholm
   # Customization file
-  customize: !include customize.yaml
+  customize: !include customize.yaml 
 
 # https://www.home-assistant.io/integrations/default_config 
 default_config: 
@@ -74,7 +74,7 @@ notify: !include service/notify.yaml
 
 # Verisure
 verisure: !include verisure.yaml
-  
+
 # RFXtrx
 rfxtrx: !include rfxtrx.yaml
 

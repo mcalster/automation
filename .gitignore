@@ -4,3 +4,5 @@ secrets.yaml
 *.db
 .uuid
 .HA_VERSION
+.storage
+ip_bans.yaml

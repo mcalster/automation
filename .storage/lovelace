@@ -53,6 +53,105 @@
                             "show_header_toggle": false,
                             "title": "TV",
                             "type": "entities"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "script.sonos_say",
+                                    "hold_action": {
+                                        "action": "call-service",
+                                        "service": "zha.issue_zigbee_group_command",
+                                        "service_data": {
+                                            "cluster_id": 6,
+                                            "command": 0,
+                                            "group": 1
+                                        }
+                                    },
+                                    "icon": "mdi:lightbulb-multiple-outline",
+                                    "name": "Lampar vid parkingen",
+                                    "show_icon": true,
+                                    "show_name": true,
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "zha.issue_zigbee_group_command",
+                                        "service_data": {
+                                            "cluster_id": 6,
+                                            "command": 2,
+                                            "group": 1
+                                        }
+                                    },
+                                    "type": "entity-button"
+                                },
+                                {
+                                    "entity": "script.sonos_say",
+                                    "hold_action": {
+                                        "action": "call-service",
+                                        "service": "zha.issue_zigbee_group_command",
+                                        "service_data": {
+                                            "cluster_id": 6,
+                                            "command": 0,
+                                            "group": 2
+                                        }
+                                    },
+                                    "icon": "mdi:lightbulb-multiple-outline",
+                                    "name": "Lampar vid huvudd\u00f6rr",
+                                    "show_icon": true,
+                                    "show_name": true,
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "zha.issue_zigbee_group_command",
+                                        "service_data": {
+                                            "cluster_id": 6,
+                                            "command": 2,
+                                            "group": 2
+                                        }
+                                    },
+                                    "type": "entity-button"
+                                },
+                                {
+                                    "entity": "script.sonos_say",
+                                    "hold_action": {
+                                        "action": "call-service",
+                                        "service": "zha.issue_zigbee_group_command",
+                                        "service_data": {
+                                            "cluster_id": 6,
+                                            "command": 0,
+                                            "group": 3
+                                        }
+                                    },
+                                    "icon": "mdi:lightbulb-multiple-outline",
+                                    "name": "Lampar mot tr\u00e4dg\u00e5rden",
+                                    "show_icon": true,
+                                    "show_name": true,
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "zha.issue_zigbee_group_command",
+                                        "service_data": {
+                                            "cluster_id": 6,
+                                            "command": 2,
+                                            "group": 3
+                                        }
+                                    },
+                                    "type": "entity-button"
+                                }
+                            ],
+                            "title": "Utebelysning (Hus)",
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.sovrum_selma_dor"
+                                },
+                                {
+                                    "entity": "switch.sovrum_selma_fonster"
+                                },
+                                {
+                                    "entity": "switch.sovrum_sam_fonster_nexa_1"
+                                }
+                            ],
+                            "title": "Mysbelysning Barnen",
+                            "type": "entities"
                         }
                     ],
                     "icon": "",

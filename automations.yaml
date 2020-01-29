@@ -247,22 +247,37 @@
   - service: homeassistant.turn_on
     entity_id: group.fonster_lampor_sovrum
   id: 31d8157fa2424e7d9b7b1a029ae6e8e0
-- alias: Turn on lights in the morning if before sunrise
+- id: 0c912f631cb54be18390f9886f3dc0d1
+  alias: Turn on lights in the morning if before sunrise
   trigger:
-  - platform: time
-    at: 06:30:00
+  - at: 06:30:00
+    platform: time
   condition:
-    condition: and
+  - condition: and
     conditions:
-    - condition: sun
-      before: sunrise
+    - before: sunrise
+      condition: sun
     - condition: state
       entity_id: binary_sensor.workday_sensor
       state: 'on'
   action:
-  - service: homeassistant.turn_on
-    entity_id: group.fonster_lampor
-  id: 0c912f631cb54be18390f9886f3dc0d1
+  - entity_id: group.fonster_lampor
+    service: homeassistant.turn_on
+  - data:
+      cluster_id: 6
+      command: 1
+      group: 1
+    service: zha.issue_zigbee_group_command
+  - data:
+      cluster_id: 6
+      command: 1
+      group: 2
+    service: zha.issue_zigbee_group_command
+  - data:
+      cluster_id: 6
+      command: 1
+      group: 3
+    service: zha.issue_zigbee_group_command
 - id: '1563627826205'
   alias: Shut Down Octopi when Print Complete
   trigger:
@@ -272,3 +287,17 @@
   condition: []
   action:
   - service: script.shutdown_octoprint
+- id: '1580318781531'
+  alias: Notify me when the lights become unavailable
+  description: Notify me when the lights become unavailable
+  trigger:
+  - platform: template
+    value_template: "{{ states.light | selectattr('state', 'in', ['unavailable', 'unknown',\
+      \ 'none']) \n                | list\n                | length > 0  }}\n"
+  condition: []
+  action:
+  - data_template:
+      message: "Unavailable light detected: \n {{ states.light | selectattr('state',\
+        \ 'in', ['unavailable', 'unknown', 'none'])\n                 | map(attribute='name')\
+        \ \n                 | list \n                 | join('\\n')}}\n"
+    service: notify.mobile_app_kim_alster_glimberg

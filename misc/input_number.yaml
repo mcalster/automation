@@ -1,0 +1,28 @@
+pool_temperature:
+  name: Pool Temperature
+  min: 0
+  max: 100
+  step: 0.1
+  unit_of_measurement: '°C'
+pool_ph:
+  name: Pool pH
+  min: 1
+  max: 15
+  step: 0.1
+pool_orp:
+  name: Pool ORP
+  min: 0
+  max: 2000
+  step: 1
+  unit_of_measurement: 'mV'
+pool_salinity:
+  name: Pool Salinity
+  min: 0
+  max: 10
+  step: .001
+  unit_of_measurement: 'ppt'
+pool_conductivity:
+  name: Pool Conductivity
+  min: 0
+  max: 10000
+  step: 1

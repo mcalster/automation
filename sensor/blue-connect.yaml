@@ -1,0 +1,20 @@
+  - platform: template
+    sensors:
+      pool_temperature:
+        friendly_name: "Pool Temperature"
+        unit_of_measurement: '°C'
+        value_template: "{{ states('input_number.pool_temperature') }}"
+      pool_ph:
+        friendly_name: "Pool pH"
+        value_template: "{{ states('input_number.pool_ph') }}"
+      pool_orp:
+        friendly_name: "Pool ORP"
+        unit_of_measurement: 'mV'
+        value_template: "{{ states('input_number.pool_orp') }}"
+      pool_salinity:
+        friendly_name: "Pool Salinity"
+        unit_of_measurement: 'ppm'
+        value_template: "{{ states('input_number.pool_salinity') | float * 1000 }}"
+      pool_conductivity:
+        friendly_name: "Pool Conductivity"
+        value_template: "{{ states('input_number.pool_conductivity') }}"

@@ -20,3 +20,6 @@
         friendly_name: "Pool Conductivity"
         unit_of_measurement: "µS"
         value_template: "{{ states('input_number.pool_conductivity') }}"
+      pool_is_open:
+        friendly_name: "Pool is Open"
+        value_template: "{{ (states('input_number.pool_ph')| float >= 7.0 ) and (states('input_number.pool_ph')| float <= 7.4) and (states('input_number.pool_orp')| float >= 500 ) and (states('input_number.pool_orp')| float <= 750)}}"

@@ -510,12 +510,29 @@
                         },
                         {
                             "entity": "sensor.pool_ph",
-                            "graph": "none",
-                            "title": "Spa pH",
+                            "graph": "line",
                             "type": "sensor"
                         },
                         {
                             "entity": "sensor.pool_orp",
+                            "graph": "line",
+                            "hours_to_show": 720,
+                            "type": "sensor"
+                        },
+                        {
+                            "entity": "sensor.pool_temperature",
+                            "graph": "line",
+                            "hours_to_show": 720,
+                            "type": "sensor"
+                        },
+                        {
+                            "entity": "sensor.pool_salinity",
+                            "graph": "line",
+                            "hours_to_show": 720,
+                            "type": "sensor"
+                        },
+                        {
+                            "entity": "sensor.pool_conductivity",
                             "graph": "line",
                             "hours_to_show": 720,
                             "type": "sensor"

@@ -301,3 +301,31 @@
         \ 'in', ['unavailable', 'unknown', 'none'])\n                 | map(attribute='name')\
         \ \n                 | list \n                 | join('\\n')}}\n"
     service: notify.mobile_app_kim_alster_glimberg
+- id: '1585489737608'
+  alias: Receive Blue Connect Meassurements
+  description: Receive data from Blue Connect via IFTTT webhook
+  trigger:
+  - platform: webhook
+    webhook_id: blueconnect
+  condition: []
+  action:
+  - service: input_number.set_value
+    data_template:
+      entity_id: input_number.pool_temperature
+      value: '{{trigger.json.temperature | float}}'
+  - service: input_number.set_value
+    data_template:
+      entity_id: input_number.pool_ph
+      value: '{{trigger.json.ph | float}}'
+  - service: input_number.set_value
+    data_template:
+      entity_id: input_number.pool_orp
+      value: '{{trigger.json.orp | float}}'
+  - service: input_number.set_value
+    data_template:
+      entity_id: input_number.pool_salinity
+      value: '{{trigger.json.salinity | float}}'
+  - service: input_number.set_value
+    data_template:
+      entity_id: input_number.pool_conductivity
+      value: '{{trigger.json.conductivity | float}}'

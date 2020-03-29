@@ -487,6 +487,66 @@
                     "badges": [],
                     "cards": [
                         {
+                            "card": {
+                                "hold_action": {
+                                    "action": "none"
+                                },
+                                "image": "https://www.safetysign.com/images/source/large-images/F7675.png",
+                                "tap_action": {
+                                    "action": "none"
+                                },
+                                "type": "picture"
+                            },
+                            "conditions": [
+                                {
+                                    "entity": "sensor.pool_is_open",
+                                    "state": "False"
+                                }
+                            ],
+                            "type": "conditional"
+                        },
+                        {
+                            "card": {
+                                "hold_action": {
+                                    "action": "none"
+                                },
+                                "image": "https://www.safetysign.com/images/source/large-images/F7674.png",
+                                "tap_action": {
+                                    "action": "none"
+                                },
+                                "type": "picture"
+                            },
+                            "conditions": [
+                                {
+                                    "entity": "sensor.pool_is_open",
+                                    "state": "True"
+                                }
+                            ],
+                            "type": "conditional"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.pool_ph",
+                                    "name": "ph ok mellem 7.0 og 7.4"
+                                },
+                                {
+                                    "entity": "sensor.pool_orp",
+                                    "name": "Renhed ok mellem 550 og 750"
+                                },
+                                {
+                                    "entity": "sensor.pool_conductivity",
+                                    "name": "Ledningsevne ok mellem 1000 og 10000"
+                                },
+                                {
+                                    "entity": "sensor.pool_salinity"
+                                }
+                            ],
+                            "hours_to_show": 80,
+                            "refresh_interval": 0,
+                            "type": "history-graph"
+                        },
+                        {
                             "entities": [
                                 {
                                     "entity": "sensor.pool_conductivity"
@@ -507,35 +567,6 @@
                             "show_header_toggle": false,
                             "title": "Spa M\u00e5linger",
                             "type": "entities"
-                        },
-                        {
-                            "entity": "sensor.pool_ph",
-                            "graph": "line",
-                            "type": "sensor"
-                        },
-                        {
-                            "entity": "sensor.pool_orp",
-                            "graph": "line",
-                            "hours_to_show": 720,
-                            "type": "sensor"
-                        },
-                        {
-                            "entity": "sensor.pool_temperature",
-                            "graph": "line",
-                            "hours_to_show": 720,
-                            "type": "sensor"
-                        },
-                        {
-                            "entity": "sensor.pool_salinity",
-                            "graph": "line",
-                            "hours_to_show": 720,
-                            "type": "sensor"
-                        },
-                        {
-                            "entity": "sensor.pool_conductivity",
-                            "graph": "line",
-                            "hours_to_show": 720,
-                            "type": "sensor"
                         }
                     ],
                     "icon": "mdi:waves",

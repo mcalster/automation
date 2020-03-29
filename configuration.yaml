@@ -67,7 +67,7 @@ camera:
     mjpeg_url: !secret octopi_mjpeg_url
 
 # Google Assistant
-google_assistant: !include service/google_assistant.yaml
+# google_assistant: !include service/google_assistant.yaml
 
 # Notification
 notify: !include service/notify.yaml

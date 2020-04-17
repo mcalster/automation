@@ -18,6 +18,15 @@
                 "show_in_sidebar": true,
                 "title": "Garage",
                 "url_path": "lovelace-garage"
+            },
+            {
+                "icon": "mdi:home",
+                "id": "lovelace_house",
+                "mode": "storage",
+                "require_admin": false,
+                "show_in_sidebar": true,
+                "title": "House",
+                "url_path": "lovelace-house"
             }
         ]
     },

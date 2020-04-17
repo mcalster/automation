@@ -1,0 +1,101 @@
+{
+    "data": {
+        "config": {
+            "title": "Skumparp's Pool",
+            "views": [
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "elements": [
+                                {
+                                    "entity": "sensor.pool_has_warnings",
+                                    "image": "",
+                                    "state_image": {
+                                        "True": "https://png.pngtree.com/svg/20170904/message_alert_218567.png"
+                                    },
+                                    "style": {
+                                        "left": "90%",
+                                        "top": "90%"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "sensor.pool_is_open",
+                                    "image": "https://www.safetysign.com/images/source/large-images/F7674.png",
+                                    "state_image": {
+                                        "False": "https://www.safetysign.com/images/source/large-images/F7675.png",
+                                        "True": "https://www.safetysign.com/images/source/large-images/F7674.png"
+                                    },
+                                    "style": {
+                                        "transform": "translate(0%, 0%)"
+                                    },
+                                    "type": "image"
+                                }
+                            ],
+                            "image": "https://www.safetysign.com/images/source/large-images/F7674.png",
+                            "type": "picture-elements"
+                        },
+                        {
+                            "card": {
+                                "hold_action": {
+                                    "action": "none"
+                                },
+                                "image": "https://www.safetysign.com/images/source/large-images/F7675.png",
+                                "tap_action": {
+                                    "action": "none"
+                                },
+                                "type": "picture"
+                            },
+                            "conditions": [
+                                {
+                                    "entity": "sensor.pool_is_open",
+                                    "state": "False"
+                                }
+                            ],
+                            "type": "conditional"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.pool_conductivity"
+                                },
+                                {
+                                    "entity": "sensor.pool_orp"
+                                },
+                                {
+                                    "entity": "sensor.pool_ph"
+                                },
+                                {
+                                    "entity": "sensor.pool_salinity"
+                                },
+                                {
+                                    "entity": "sensor.pool_temperature"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Spa M\u00e5linger",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.pool_is_open"
+                                },
+                                {
+                                    "entity": "sensor.pool_has_warnings"
+                                }
+                            ],
+                            "type": "glance"
+                        }
+                    ],
+                    "icon": "mdi:waves",
+                    "path": "default_view",
+                    "title": "SPA"
+                }
+            ]
+        }
+    },
+    "key": "lovelace.lovelace_pool",
+    "version": 1
+}

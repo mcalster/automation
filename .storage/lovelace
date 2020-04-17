@@ -1,7 +1,7 @@
 {
     "data": {
         "config": {
-            "title": "Skumparp",
+            "title": "Skumparp's House",
             "views": [
                 {
                     "badges": [
@@ -50,6 +50,7 @@
                                     "entity": "switch.sovrum_sam_fonster_nexa_1"
                                 }
                             ],
+                            "show_header_toggle": false,
                             "title": "Mysbelysning Barnen",
                             "type": "entities"
                         },
@@ -154,12 +155,40 @@
                             "type": "vertical-stack"
                         }
                     ],
-                    "icon": "",
+                    "icon": "mdi:lightbulb-outline",
                     "path": "default_view",
-                    "title": "Main"
+                    "title": "Lights"
                 },
                 {
-                    "badges": null,
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entity": "media_player.chromecast_vardagsrum",
+                            "type": "media-control"
+                        },
+                        {
+                            "entity": "media_player.playbar",
+                            "type": "media-control"
+                        },
+                        {
+                            "entity": "media_player.outside",
+                            "type": "media-control"
+                        },
+                        {
+                            "entity": "media_player.upstairs",
+                            "type": "media-control"
+                        },
+                        {
+                            "entity": "media_player.kokken",
+                            "type": "media-control"
+                        }
+                    ],
+                    "icon": "mdi:music",
+                    "path": "media",
+                    "title": "Media"
+                },
+                {
+                    "badges": [],
                     "cards": [
                         {
                             "entity": "weather.home",
@@ -259,7 +288,7 @@
                                     "entity": "sensor.bssid"
                                 }
                             ],
-                            "show_header_toggle": true,
+                            "show_header_toggle": false,
                             "title": "Devices",
                             "type": "entities"
                         },
@@ -293,26 +322,6 @@
                             "show_header_toggle": true,
                             "title": "Hus-sensorer",
                             "type": "entities"
-                        },
-                        {
-                            "entity": "media_player.chromecast_vardagsrum",
-                            "type": "media-control"
-                        },
-                        {
-                            "entity": "media_player.playbar",
-                            "type": "media-control"
-                        },
-                        {
-                            "entity": "media_player.outside",
-                            "type": "media-control"
-                        },
-                        {
-                            "entity": "media_player.upstairs",
-                            "type": "media-control"
-                        },
-                        {
-                            "entity": "media_player.kokken",
-                            "type": "media-control"
                         },
                         {
                             "entities": [
@@ -353,225 +362,9 @@
                             "type": "entities"
                         }
                     ],
-                    "icon": "",
+                    "icon": "mdi:home",
                     "path": "house",
                     "title": "House"
-                },
-                {
-                    "badges": [],
-                    "cards": [
-                        {
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.octoprint_printing"
-                                },
-                                {
-                                    "entity": "binary_sensor.octoprint_printing_error"
-                                },
-                                {
-                                    "entity": "camera.octoprint"
-                                },
-                                {
-                                    "entity": "script.shutdown_octoprint"
-                                },
-                                {
-                                    "entity": "sensor.octoprint_actual_bed_temp"
-                                },
-                                {
-                                    "entity": "sensor.octoprint_actual_tool0_temp"
-                                },
-                                {
-                                    "entity": "sensor.octoprint_current_state"
-                                },
-                                {
-                                    "entity": "sensor.octoprint_job_percentage"
-                                },
-                                {
-                                    "entity": "sensor.octoprint_target_bed_temp"
-                                },
-                                {
-                                    "entity": "sensor.octoprint_target_tool0_temp"
-                                },
-                                {
-                                    "entity": "sensor.octoprint_time_elapsed"
-                                },
-                                {
-                                    "entity": "sensor.octoprint_time_remaining"
-                                },
-                                {
-                                    "entity": "switch.nexa_6"
-                                }
-                            ],
-                            "title": "All Octoprint relatated",
-                            "type": "entities"
-                        },
-                        {
-                            "card": {
-                                "aspect_ratio": "0%",
-                                "camera_image": "camera.octoprint",
-                                "camera_view": "live",
-                                "entities": [],
-                                "hold_action": {
-                                    "action": "none"
-                                },
-                                "tap_action": {
-                                    "action": "none"
-                                },
-                                "title": "Creality Ender 3",
-                                "type": "picture-glance"
-                            },
-                            "conditions": [
-                                {
-                                    "entity": "switch.nexa_6",
-                                    "state": "on"
-                                }
-                            ],
-                            "type": "conditional"
-                        },
-                        {
-                            "cards": [
-                                {
-                                    "card": {
-                                        "entity": "script.shutdown_octoprint",
-                                        "hold_action": {
-                                            "action": "none"
-                                        },
-                                        "name": "Turn Off Printer",
-                                        "show_icon": false,
-                                        "show_name": true,
-                                        "tap_action": {
-                                            "action": "call-service",
-                                            "service": "script.shutdown_octoprint"
-                                        },
-                                        "type": "entity-button"
-                                    },
-                                    "conditions": [
-                                        {
-                                            "entity": "switch.nexa_6",
-                                            "state": "on"
-                                        }
-                                    ],
-                                    "type": "conditional"
-                                },
-                                {
-                                    "card": {
-                                        "entity": "switch.nexa_6",
-                                        "hold_action": {
-                                            "action": "none"
-                                        },
-                                        "name": "Turn On Printer",
-                                        "show_icon": false,
-                                        "show_name": true,
-                                        "tap_action": {
-                                            "action": "toggle"
-                                        },
-                                        "type": "entity-button"
-                                    },
-                                    "conditions": [
-                                        {
-                                            "entity": "switch.nexa_6",
-                                            "state_not": "on"
-                                        }
-                                    ],
-                                    "type": "conditional"
-                                }
-                            ],
-                            "type": "vertical-stack"
-                        }
-                    ],
-                    "icon": "mdi:printer",
-                    "path": "3d-printing",
-                    "title": "3D Printing"
-                },
-                {
-                    "badges": [],
-                    "cards": [
-                        {
-                            "card": {
-                                "hold_action": {
-                                    "action": "none"
-                                },
-                                "image": "https://www.safetysign.com/images/source/large-images/F7675.png",
-                                "tap_action": {
-                                    "action": "none"
-                                },
-                                "type": "picture"
-                            },
-                            "conditions": [
-                                {
-                                    "entity": "sensor.pool_is_open",
-                                    "state": "False"
-                                }
-                            ],
-                            "type": "conditional"
-                        },
-                        {
-                            "card": {
-                                "hold_action": {
-                                    "action": "none"
-                                },
-                                "image": "https://www.safetysign.com/images/source/large-images/F7674.png",
-                                "tap_action": {
-                                    "action": "none"
-                                },
-                                "type": "picture"
-                            },
-                            "conditions": [
-                                {
-                                    "entity": "sensor.pool_is_open",
-                                    "state": "True"
-                                }
-                            ],
-                            "type": "conditional"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.pool_ph",
-                                    "name": "ph ok mellem 7.0 og 7.4"
-                                },
-                                {
-                                    "entity": "sensor.pool_orp",
-                                    "name": "Renhed ok mellem 550 og 750"
-                                },
-                                {
-                                    "entity": "sensor.pool_conductivity",
-                                    "name": "Ledningsevne ok mellem 1000 og 10000"
-                                },
-                                {
-                                    "entity": "sensor.pool_salinity"
-                                }
-                            ],
-                            "hours_to_show": 80,
-                            "refresh_interval": 0,
-                            "type": "history-graph"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.pool_conductivity"
-                                },
-                                {
-                                    "entity": "sensor.pool_orp"
-                                },
-                                {
-                                    "entity": "sensor.pool_ph"
-                                },
-                                {
-                                    "entity": "sensor.pool_salinity"
-                                },
-                                {
-                                    "entity": "sensor.pool_temperature"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Spa M\u00e5linger",
-                            "type": "entities"
-                        }
-                    ],
-                    "icon": "mdi:waves",
-                    "path": "spa",
-                    "title": "SPA"
                 }
             ]
         }

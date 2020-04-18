@@ -332,9 +332,8 @@
   - service: input_number.set_value
     data_template:
       entity_id: input_number.pool_analyzed_at
-      value: '{{as_timestamp(strptime(trigger.json.analyzedAt,"%d/%m/%Y %H:%M:%S")) | float}}'     
+      value: '{{as_timestamp(strptime(trigger.json.analyzedAt,"%d/%m/%Y %H:%M:%S"))}}'     
   - service: input_number.set_value
     data_template:
       entity_id: input_number.blue_connect_time_delay
-      value: '{{(as_timestamp(utcnow()) - as_timestamp(strptime(trigger.json.analyzedAt,"%d/%m/%Y %H:%M:%S")))/60 | float}}
-'
+      value: '{{(as_timestamp(utcnow()) - as_timestamp(strptime(trigger.json.analyzedAt,"%d/%m/%Y %H:%M:%S")))/60 | float}}'

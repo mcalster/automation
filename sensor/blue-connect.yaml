@@ -29,7 +29,7 @@
       pool_meassurement_delay:
         friendly_name: "Pool Delay"
         unit_of_measurement: "Minutes"
-        value_template: "{{ states('input_number.blue_connect_time_delay') }}"
+        value_template: "{{ states('input_number.blue_connect_time_delay') | int}}"
       pool_analyzed_at:
         friendly_name: "Pool Latest Meassurement"
         value_template: "{{ states('input_number.pool_analyzed_at')| int | timestamp_local | timestamp_custom('%d/%m/%Y %H:%M:%S') }}"

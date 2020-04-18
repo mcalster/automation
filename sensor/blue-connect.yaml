@@ -32,4 +32,4 @@
         value_template: "{{ states('input_number.blue_connect_time_delay') }}"
       pool_analyzed_at:
         friendly_name: "Pool Latest Meassurement"
-        value_template: "{{ states('input_number.pool_analyzed_at')| timestamp_custom('%d/%m/%Y %H:%M:%S') }}"
+        value_template: "{{ states('input_number.pool_analyzed_at')| int | timestamp_local | timestamp_custom('%d/%m/%Y %H:%M:%S') }}"

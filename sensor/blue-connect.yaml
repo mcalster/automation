@@ -26,3 +26,10 @@
       pool_has_warnings:
         friendly_name: "Pool is Open but with Warnings"
         value_template: "{{ (states('input_number.pool_ph')| float < 7.2 ) or (states('input_number.pool_ph')| float > 7.6) or (states('input_number.pool_orp')| float < 650 ) or (states('input_number.pool_orp')| float > 750)}}"
+      pool_meassurement_delay:
+        friendly_name: "Pool Delay"
+        unit_of_measurement: "Minutes"
+        value_template: "{{ states('input_number.blue_connect_time_delay') }}"
+      pool_analyzed_at:
+        friendly_name: "Pool Latest Meassurement"
+        value_template: "{{ states('input_number.pool_analyzed_at')| timestamp_custom("%d/%m/%Y %H:%M:%S") }}"

@@ -42,6 +42,9 @@
                         {
                             "entities": [
                                 {
+                                    "entity": "sensor.pool_analyzed_at"
+                                },
+                                {
                                     "entity": "sensor.pool_conductivity"
                                 },
                                 {
@@ -55,6 +58,9 @@
                                 },
                                 {
                                     "entity": "sensor.pool_temperature"
+                                },
+                                {
+                                    "entity": "sensor.pool_meassurement_delay"
                                 }
                             ],
                             "show_header_toggle": false,

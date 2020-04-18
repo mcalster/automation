@@ -29,6 +29,12 @@ pool_conductivity:
 blue_connect_time_delay:
   name: Update Delay
   step: 1
+  min: 0
+  max: 3600
+
 pool_analyzed_at:
   name: Timestamp with meassurement time
   step: 1
+  min: 0
+  max: 9999999999999
+

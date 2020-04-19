@@ -336,4 +336,4 @@
   - service: input_number.set_value
     data_template:
       entity_id: input_number.blue_connect_time_delay
-      value: '{{(as_timestamp(utcnow()) - as_timestamp(strptime(trigger.json.analyzedAt,"%B %d, %Y at %I:%M%p")))}}'
+      value: '{{(as_timestamp(utcnow()) - as_timestamp(strptime(trigger.json.analyzedAt,"%B %d, %Y at %I:%M%p"))/60)| int}}'

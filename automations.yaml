@@ -167,7 +167,7 @@
   - data:
       cluster_id: 6
       command: 1
-      group: 3
+      group: 6
     service: zha.issue_zigbee_group_command
   - entity_id: group.ute_belysning
     service: homeassistant.turn_on
@@ -195,7 +195,7 @@
   - data:
       cluster_id: 6
       command: 0
-      group: 3
+      group: 6
     service: zha.issue_zigbee_group_command
 - id: cb67ff6e29444b1cafd6b35dc148b42a
   alias: Turn off lights in Kids room if home
@@ -276,7 +276,7 @@
   - data:
       cluster_id: 6
       command: 1
-      group: 3
+      group: 6
     service: zha.issue_zigbee_group_command
 - id: '1563627826205'
   alias: Shut Down Octopi when Print Complete
@@ -361,7 +361,7 @@
   - data:
       cluster_id: 6
       command: 1
-      group: 3
+      group: 6
     service: zha.issue_zigbee_group_command
   - data: {}
     entity_id: switch.nedre_belysning

@@ -136,7 +136,7 @@
     service: zha.issue_zigbee_group_command
   - data:
       message: Found some lights still on at 01:00 AM. Turning them off now...
-    service: notify.ios_kim_alster_glimberg
+    service: notify.mobile_app_kim_alster_glimberg
 - id: 90e4b8a6d24f4e7895b2024d813fa370
   alias: Turn on lights at sunset
   trigger:

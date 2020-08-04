@@ -7,16 +7,16 @@
   fonster_lampor_barn_rum:
     name: Fonster Lampor i barnens rum
     entities:
-      - switch.sovrum_sam_fonster_nexa_1
+      - switch.ac_1a36f92_1 #switch.sovrum_sam_fonster_nexa_1
 #      - switch.hall_byro_nexa_2
-      - switch.sovrum_selma_fonster
-      - switch.sovrum_selma_dor
+      - switch.ac_08f26c2_1 #switch.sovrum_selma_fonster
+      - switch.ac_08f26c2_3 #switch.sovrum_selma_dor
       - switch.ovre_belysning
  
   fonster_lampor_sovrum:
     name: Fonster Lampor i sovrum
     entities:
-      - switch.sovrum_fonster_nexa_3
+      - switch.ac_1a36f92_3 #switch.sovrum_fonster_nexa_3
       - light.ikea_of_sweden_tradfri_bulb_e27_ws_opal_980lm_fe156ce1_1
 
   all_fonster_lampor:
@@ -29,48 +29,12 @@
   plan_1:
     name: Bottenvåning
     entities:
-      - switch.sovrum_fonster_nexa_3
+      - switch.ac_1a36f92_3 #switch.sovrum_fonster_nexa_3
       - switch.nedre_belysning
-
-  sams_rum:
-    name: Sams rum
-    entities:
-      - switch.sovrum_sam_tv_nexa_4
-      - switch.sovrum_sam_fonster_nexa_1
-
-  selmas_rum:
-    name: Selmas rum
-    entities:
-      - switch.sovrum_selma_fonster
-      - switch.sovrum_selma_radio
-      - switch.sovrum_selma_dor
-
-  hall_uppe:
-    name:  Hall Uppe
-    entities:
-      - switch.ovre_belysning
-#      - switch.hall_byro_nexa_2
-
-  plan_2:
-    name: Ovanvåning
-    entities:
-      - group.sams_rum
-      - group.selmas_rum
-      - group.hall_uppe
-
+    
   ute_belysning:
     name:  Utebelysning
     entities:
       - switch.s1_ute_nord
       - switch.s2_ute_syd
 #      - switch.nexa_5
-      
-  tracking:
-   name: Devices
-   entities:
-     - device_tracker.caroline_glimbergs_iphone
-     - sensor.caroline_glimbergs_iphone_battery_level
-     - sensor.caroline_glimbergs_iphone_battery_state
-     - device_tracker.kim_alster_glimberg
-     - sensor.kim_alster_glimberg_battery_level
-     - sensor.kim_alster_glimberg_battery_state

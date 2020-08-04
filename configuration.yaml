@@ -91,7 +91,7 @@ binary_sensor:
     country: DK
     workdays: [mon, tue, wed, thu, fri]
 
-switch: !include_dir_merge_list switch
+# switch: !include_dir_merge_list switch
 
 sensor: !include_dir_merge_list sensor
 

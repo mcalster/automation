@@ -1,2 +1,14 @@
 device: /dev/ttyUSB0
 debug: True
+automatic_add: True
+devices:
+  0b110001008f26c201010f60 #name: sovrum_selma_fonster
+  0b1100fb008f26c202010f60 #name: sovrum_selma_radio
+  0b1100fc008f26c203010f60 #name: sovrum_selma_dor
+  0b11000001a36f9201030070 #name: sovrum_sam_fonster_nexa_1
+  0b11000201a36f9202010f70 #name: hall_byro_nexa_2
+  0b11000301a36f9203010f70 #name: sovrum_fonster_nexa_3
+  0a1411000091fc01010070 #name: s1_ute_nord
+  0b11005b019f5d3601010f70 #name: sovrum_sam_tv_nexa_4
+  0b110063019f5d3602010f60 #name: nexa_5
+  0b110067019f5d3603010f70 #name: nexa_6

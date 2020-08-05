@@ -1,0 +1,447 @@
+{
+    "data": {
+        "config": {
+            "title": "Skumparp's House",
+            "views": [
+                {
+                    "badges": [
+                        {
+                            "entity": "binary_sensor.workday_sensor"
+                        },
+                        {
+                            "entity": "binary_sensor.updater"
+                        },
+                        {
+                            "entity": "sensor.yr_symbol"
+                        },
+                        {
+                            "entity": "sun.sun"
+                        }
+                    ],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.ac_19f5d36_1"
+                                },
+                                {
+                                    "entity": "switch.ac_19f5d36_2"
+                                },
+                                {
+                                    "entity": "switch.ac_1a36f92_2"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "TV",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.ovre_belysning"
+                                },
+                                {
+                                    "entity": "switch.nedre_belysning"
+                                },
+                                {
+                                    "entity": "group.fonster_lampor_sovrum"
+                                },
+                                {
+                                    "entity": "light.ikea_of_sweden_tradfri_bulb_e27_ws_opal_980lm_e16c15fe_level_light_color_on_off"
+                                },
+                                {
+                                    "entity": "light.ikea_of_sweden_tradfri_bulb_e27_ww_806lm_d54435fe_level_on_off"
+                                },
+                                {
+                                    "entity": "light.ikea_of_sweden_tradfri_bulb_e14_ws_470lm_5b2f9ffe_level_light_color_on_off"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "F\u00f6nster Lampor",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.ac_08f26c2_3"
+                                },
+                                {
+                                    "entity": "switch.ac_08f26c2_1"
+                                },
+                                {
+                                    "entity": "switch.ac_1a36f92_1"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Mysbelysning Barnen",
+                            "type": "entities"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "script.sonos_say",
+                                    "hold_action": {
+                                        "action": "call-service",
+                                        "service": "zha.issue_zigbee_group_command",
+                                        "service_data": {
+                                            "cluster_id": 6,
+                                            "command": 0,
+                                            "group": 1
+                                        }
+                                    },
+                                    "icon": "mdi:lightbulb-multiple-outline",
+                                    "name": "Lampor vid parkingen",
+                                    "show_icon": true,
+                                    "show_name": true,
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "zha.issue_zigbee_group_command",
+                                        "service_data": {
+                                            "cluster_id": 6,
+                                            "command": 2,
+                                            "group": 1
+                                        }
+                                    },
+                                    "type": "entity-button"
+                                },
+                                {
+                                    "entity": "script.sonos_say",
+                                    "hold_action": {
+                                        "action": "call-service",
+                                        "service": "zha.issue_zigbee_group_command",
+                                        "service_data": {
+                                            "cluster_id": 6,
+                                            "command": 0,
+                                            "group": 2
+                                        }
+                                    },
+                                    "icon": "mdi:lightbulb-multiple-outline",
+                                    "name": "Lampor vid huvudd\u00f6rr",
+                                    "show_icon": true,
+                                    "show_name": true,
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "zha.issue_zigbee_group_command",
+                                        "service_data": {
+                                            "cluster_id": 6,
+                                            "command": 2,
+                                            "group": 2
+                                        }
+                                    },
+                                    "type": "entity-button"
+                                },
+                                {
+                                    "entity": "script.sonos_say",
+                                    "hold_action": {
+                                        "action": "call-service",
+                                        "service": "zha.issue_zigbee_group_command",
+                                        "service_data": {
+                                            "cluster_id": 6,
+                                            "command": 0,
+                                            "group": 3
+                                        }
+                                    },
+                                    "icon": "mdi:lightbulb-multiple-outline",
+                                    "name": "Lampor mot tr\u00e4dg\u00e5rden",
+                                    "show_icon": true,
+                                    "show_name": true,
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "zha.issue_zigbee_group_command",
+                                        "service_data": {
+                                            "cluster_id": 6,
+                                            "command": 2,
+                                            "group": 3
+                                        }
+                                    },
+                                    "type": "entity-button"
+                                }
+                            ],
+                            "title": "Utebelysning (Hus)",
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.all_skyfacing_zha_group_0x0005"
+                                },
+                                {
+                                    "entity": "light.estate_zha_group_0x0003"
+                                },
+                                {
+                                    "entity": "light.front_door_zha_group_0x0002"
+                                },
+                                {
+                                    "entity": "light.parking_zha_group_0x0001"
+                                },
+                                {
+                                    "entity": "light.garden_zha_group_0x0006"
+                                },
+                                {
+                                    "entity": "light.skyfacing_zha_group_0x0004"
+                                }
+                            ],
+                            "title": "Zigbee Lights",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:lightbulb-outline",
+                    "path": "default_view",
+                    "title": "Lights"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entity": "media_player.chromecast_vardagsrum",
+                            "type": "media-control"
+                        },
+                        {
+                            "entity": "media_player.playbar",
+                            "type": "media-control"
+                        },
+                        {
+                            "entity": "media_player.outside",
+                            "type": "media-control"
+                        },
+                        {
+                            "entity": "media_player.upstairs",
+                            "type": "media-control"
+                        },
+                        {
+                            "entity": "media_player.kokken",
+                            "type": "media-control"
+                        },
+                        {
+                            "entity": "media_player.samsung_ue50ku6075",
+                            "type": "media-control"
+                        }
+                    ],
+                    "icon": "mdi:music",
+                    "path": "media",
+                    "title": "Media"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entity": "weather.home",
+                            "type": "weather-forecast"
+                        },
+                        {
+                            "entity": "alarm_control_panel.skumparp_alarm",
+                            "type": "alarm-panel"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "device_tracker.caroline_glimberg_s_iphone"
+                                },
+                                {
+                                    "entity": "sensor.battery_level_2"
+                                },
+                                {
+                                    "entity": "sensor.distance_2"
+                                },
+                                {
+                                    "entity": "sensor.floors_ascended_2"
+                                },
+                                {
+                                    "entity": "sensor.battery_state_2"
+                                },
+                                {
+                                    "entity": "sensor.bssid_2"
+                                },
+                                {
+                                    "entity": "sensor.ssid_2"
+                                },
+                                {
+                                    "entity": "sensor.steps_2"
+                                },
+                                {
+                                    "entity": "sensor.connection_type_2"
+                                },
+                                {
+                                    "entity": "sensor.geocoded_location_2"
+                                },
+                                {
+                                    "entity": "sensor.sim_1_2"
+                                },
+                                {
+                                    "entity": "sensor.last_update_trigger_2"
+                                },
+                                {
+                                    "entity": "sensor.average_active_pace_2"
+                                },
+                                {
+                                    "entity": "sensor.floors_descended_2"
+                                },
+                                {
+                                    "entity": "sensor.activity_2"
+                                },
+                                {
+                                    "entity": "device_tracker.kim_alster_glimberg"
+                                },
+                                {
+                                    "entity": "sensor.average_active_pace"
+                                },
+                                {
+                                    "entity": "sensor.floors_ascended"
+                                },
+                                {
+                                    "entity": "sensor.floors_descended"
+                                },
+                                {
+                                    "entity": "sensor.sim_1"
+                                },
+                                {
+                                    "entity": "sensor.ssid"
+                                },
+                                {
+                                    "entity": "sensor.steps"
+                                },
+                                {
+                                    "entity": "sensor.activity"
+                                },
+                                {
+                                    "entity": "sensor.geocoded_location"
+                                },
+                                {
+                                    "entity": "sensor.last_update_trigger"
+                                },
+                                {
+                                    "entity": "sensor.battery_level"
+                                },
+                                {
+                                    "entity": "sensor.battery_state"
+                                },
+                                {
+                                    "entity": "sensor.distance"
+                                },
+                                {
+                                    "entity": "sensor.bssid"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Devices",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.kontor"
+                                },
+                                {
+                                    "entity": "binary_sensor.verisure_ethernet_status"
+                                },
+                                {
+                                    "entity": "binary_sensor.entre"
+                                },
+                                {
+                                    "entity": "sensor.tvattstuga_temperature"
+                                },
+                                {
+                                    "entity": "sensor.hall_plan2_temperature"
+                                },
+                                {
+                                    "entity": "sensor.matplats_temperature"
+                                },
+                                {
+                                    "entity": "sensor.tvattstuga_humidity"
+                                },
+                                {
+                                    "entity": "sensor.hall_plan2_humidity"
+                                }
+                            ],
+                            "show_header_toggle": true,
+                            "title": "Hus-sensorer",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "automation.turn_on_lights_in_the_morning_if_before_sunrise"
+                                },
+                                {
+                                    "entity": "automation.turn_off_game_and_tv_in_sams_room_when_not_home_and_when_between_8pm_and_9am"
+                                },
+                                {
+                                    "entity": "automation.update_available_notifications"
+                                },
+                                {
+                                    "entity": "automation.turn_off_all_lights_if_it_is_very_late_and_the_lights_are_still_on"
+                                },
+                                {
+                                    "entity": "automation.change_state_to_home_when_alarm_is_disarmed"
+                                },
+                                {
+                                    "entity": "automation.shut_down_octopi_when_print_complete"
+                                },
+                                {
+                                    "entity": "automation.turn_on_lights_at_sunset"
+                                },
+                                {
+                                    "entity": "automation.change_state_to_away_when_alarm_is_armed"
+                                },
+                                {
+                                    "entity": "automation.turn_off_lights_at_sunsrise"
+                                },
+                                {
+                                    "entity": "automation.turn_off_lights_in_kids_room_when_coming_home_late"
+                                },
+                                {
+                                    "entity": "automation.turn_off_lights_in_kids_room_if_home"
+                                },
+                                {
+                                    "entity": "automation.turn_off_lights_in_bedroom_when_coming_home_late"
+                                },
+                                {
+                                    "entity": "automation.turn_off_lights_in_bedroom_if_home"
+                                },
+                                {
+                                    "entity": "automation.turn_on_game_and_tv_in_sams_room_when_home_and_when_between_9am_and_8pm"
+                                },
+                                {
+                                    "entity": "automation.turn_on_bedroom_lights_in_the_morning_if_before_sunrise"
+                                },
+                                {
+                                    "entity": "script.shutdown_octoprint"
+                                },
+                                {
+                                    "entity": "script.morning_routine"
+                                },
+                                {
+                                    "entity": "script.sonos_say"
+                                },
+                                {
+                                    "entity": "automation.turn_on_window_lights_at_sunset"
+                                }
+                            ],
+                            "title": "Automation",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "sensor.memory_free",
+                                "sensor.cpu_temp",
+                                "sensor.memory_use_percent",
+                                "sensor.processor_use",
+                                "sensor.disk_use_percent",
+                                "sensor.last_boot",
+                                "sensor.disk_free",
+                                "sensor.connection_type"
+                            ],
+                            "title": "System Data",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:home",
+                    "path": "house",
+                    "title": "House"
+                }
+            ]
+        }
+    },
+    "key": "lovelace.lovelace_house",
+    "version": 1
+}

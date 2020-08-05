@@ -93,7 +93,7 @@
                                     },
                                     "conditions": [
                                         {
-                                            "entity": "switch.nexa_6",
+                                            "entity": "switch.ac_19f5d36_3",
                                             "state": "on"
                                         }
                                     ],
@@ -101,7 +101,7 @@
                                 },
                                 {
                                     "card": {
-                                        "entity": "switch.nexa_6",
+                                        "entity": "switch.ac_19f5d36_3",
                                         "hold_action": {
                                             "action": "none"
                                         },
@@ -115,7 +115,7 @@
                                     },
                                     "conditions": [
                                         {
-                                            "entity": "switch.nexa_6",
+                                            "entity": "switch.ac_19f5d36_3",
                                             "state_not": "on"
                                         }
                                     ],

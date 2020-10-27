@@ -1,5 +1,9 @@
 name: Yaml Lint
-on: [push]
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 jobs:
   lintAllTheThings:
     runs-on: ubuntu-latest

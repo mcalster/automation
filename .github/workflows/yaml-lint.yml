@@ -13,3 +13,13 @@ jobs:
       uses: ibiqlik/action-yamllint@v2
       with:
         file_or_dir: ./*.yaml
+  lintAllThingsYaml:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: yaml-lint
+      id: yamllint
+      uses: jacobtomlinson/gha-lint-yaml@master
+    - name: Check outputs
+      run: |
+        echo "There were ${{ steps.yamllint.outputs.warnings }} YAML linting warnings." 

@@ -20,6 +20,8 @@ jobs:
     - name: yaml-lint
       id: yamllint
       uses: jacobtomlinson/gha-lint-yaml@master
+      with:
+        path: ./*.yaml
     - name: Check outputs
       run: |
         echo "There were ${{ steps.yamllint.outputs.warnings }} YAML linting warnings." 

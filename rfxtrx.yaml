@@ -1,5 +1,4 @@
 device: /dev/ttyUSB0
-debug: True
 automatic_add: True
 devices:
   0b110001008f26c201010f60: #name: sovrum_selma_fonster

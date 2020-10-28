@@ -215,6 +215,23 @@
                         {
                             "entity": "media_player.samsung_ue50ku6075",
                             "type": "media-control"
+                        },
+                        {
+                            "entities": [
+                                "sensor.onhub_b_received",
+                                "sensor.onhub_b_sent",
+                                "sensor.onhub_kib_s_received",
+                                "sensor.onhub_kib_s_sent",
+                                "sensor.onhub_packets_received",
+                                "sensor.onhub_packets_sent",
+                                "sensor.onhub_packets_s_received",
+                                "sensor.onhub_packets_s_sent"
+                            ],
+                            "type": "entities"
+                        },
+                        {
+                            "entity": "media_player.samsung_ue50ku6075",
+                            "type": "media-control"
                         }
                     ],
                     "icon": "mdi:music",
@@ -320,6 +337,12 @@
                                 },
                                 {
                                     "entity": "sensor.bssid"
+                                },
+                                {
+                                    "entity": "sensor.caroline_glimberg_s_iphone_activity"
+                                },
+                                {
+                                    "entity": "device_tracker.caroline_glimberg_s_iphone_2"
                                 }
                             ],
                             "show_header_toggle": false,

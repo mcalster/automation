@@ -51,11 +51,10 @@
   action:
   - entity_id: group.fonster_lampor_barn_rum
     service: homeassistant.turn_off
-  - data:
-      cluster_id: 6
-      command: 0
-      group: 4
-    service: zha.issue_zigbee_group_command
+  - data: {}
+    entity_id: light.skyfacing_zha_group_0x0004
+    service: homeassistant.turn_off
+  mode: single
 - alias: Turn off lights in bedroom when coming home late
   trigger:
   - platform: state
@@ -203,11 +202,10 @@
   action:
   - entity_id: group.fonster_lampor_barn_rum
     service: homeassistant.turn_off
-  - data:
-      cluster_id: 6
-      command: 0
-      group: 4
-    service: zha.issue_zigbee_group_command
+  - data: {}
+    entity_id: light.skyfacing_zha_group_0x0004
+    service: homeassistant.turn_off
+  mode: single
 - alias: Turn off lights in bedroom if home
   trigger:
   - platform: time

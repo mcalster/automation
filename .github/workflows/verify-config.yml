@@ -1,0 +1,40 @@
+name: CI
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  lint-config:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v1
+      - name: Lint yaml files
+        run: yamllint -d relaxed -f standard .
+  check-config:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Prepare secrets and dependencies
+        env:
+          SECRETS_PROPERTIES: ${{ secrets.SECRETS_YAML }}
+          SECRETS_FULLCHAIN: ${{ secrets.FULLCHAIN_PEM }}
+          SECRETS_PRIVKEY: ${{ secrets.PRIVKEY_PEM }}
+        run: |
+          echo "$SECRETS_PROPERTIES" | base64 -d > ./secrets.yaml
+          mkdir ./ssl
+          echo "$SECRETS_FULLCHAIN" | base64 -d > ./ssl/fullchain.pem
+          echo "$PRIVKEY_PEM" | base64 -d > ./ssl/privkey.pem
+      - name: Start Hassio and check config
+        run: |
+          docker run -d --name="home-assistant" -v $GITHUB_WORKSPACE:/config --net=host homeassistant/home-assistant:stable
+          docker exec home-assistant python -m homeassistant --script check_config --config /config
+      - name: Noticy Hassio of the valid configuration
+        run: echo "All checks and balances have been met!

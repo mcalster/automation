@@ -7,6 +7,8 @@ on:
     branches: [master]
   pull_request:
     branches: [master]
+  schedule:
+    - cron: 0 12 * * *
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -19,6 +21,7 @@ jobs:
         run: yamllint -d relaxed -f standard .
   check-config:
     runs-on: ubuntu-latest
+    needs: [lint-config]
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
@@ -36,5 +39,9 @@ jobs:
         run: |
           docker run -d --name="home-assistant" -v $GITHUB_WORKSPACE:/config --net=host homeassistant/home-assistant:stable
           docker exec home-assistant python -m homeassistant --script check_config --config /config
+  notify-hassio:
+    runs-on: ubuntu-latest
+    needs: [check-config]
+    steps:
       - name: Notify Hassio of the valid configuration
         run: echo "All checks and balances have been met!"

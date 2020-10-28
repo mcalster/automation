@@ -1,3 +1,0 @@
-# Weather prediction
-#sensor:
-  - platform: weather_data

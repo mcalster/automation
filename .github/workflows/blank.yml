@@ -27,6 +27,11 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+      
+    - name: Decode secrets.yaml
+      env:
+        SECRETS_PROPERTIES: ${{ secrets.SECRETS_YAML }}
+      run: echo "$SECRETS_PROPERTIES" | base64 -d > ./secrets.yaml
 
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script

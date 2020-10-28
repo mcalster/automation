@@ -1,3 +1,4 @@
+--- Customize Entities ---
 switch.sovrum_selma_dor:
   friendly_name: Selma & Saga Mysbelysning
 switch.sovrum_selma_radio: {}

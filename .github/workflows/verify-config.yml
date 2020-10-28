@@ -41,7 +41,11 @@ jobs:
           docker exec home-assistant python -m homeassistant --script check_config --config /config
   notify-hassio:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
     needs: [check-config]
     steps:
-      - name: Notify Hassio of the valid configuration
-        run: echo "All checks and balances have been met!"
+      - name: Invoke deployment hook
+        uses: distributhor/workflow-webhook@v1
+        env:
+          webhook_url: ${{ secrets.WEBHOOK_URL }}
+          webhook_secret: ${{ secrets.WEBHOOK_SECRET }}

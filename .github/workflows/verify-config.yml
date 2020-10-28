@@ -36,5 +36,5 @@ jobs:
         run: |
           docker run -d --name="home-assistant" -v $GITHUB_WORKSPACE:/config --net=host homeassistant/home-assistant:stable
           docker exec home-assistant python -m homeassistant --script check_config --config /config
-      - name: Noticy Hassio of the valid configuration
-        run: echo "All checks and balances have been met!
+      - name: Notify Hassio of the valid configuration
+        run: echo "All checks and balances have been met!"

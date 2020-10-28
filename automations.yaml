@@ -378,11 +378,10 @@
   description: Receive data from Blue Connect via IFTTT webhook
   trigger:
     platform: webhook
-    webhook_id: 2F548886-D37B-45F6-BC25-E0EF57167741
+    webhook_id: !secret github_web_hook_id
   action:
     - service: hassio.addon_restart
       data:
         addon: core_git_pull
     - delay: 0:02
     - service: homeassistant.restart
-    

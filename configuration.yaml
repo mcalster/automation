@@ -10,8 +10,8 @@ homeassistant:
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Stockholm
-  external_url: !secret http_base_url
-  internal_url: "http://hassio.local:8123"
+  external_url: !secret external_url
+  internal_url: !secret internal_url
   # Customization file
   customize: !include customize.yaml
 

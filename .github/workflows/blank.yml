@@ -31,7 +31,13 @@ jobs:
     - name: Decode secrets.yaml
       env:
         SECRETS_PROPERTIES: ${{ secrets.SECRETS_YAML }}
-      run: echo "$SECRETS_PROPERTIES" | base64 -d > ./secrets.yaml
+        SECRETS_FULLCHAIN: ${{ secrets.FULLCHAIN_PEM }}
+        SECRETS_PRIVKEY: ${{ secrets.PRIVKEY_PEM }}
+      run: |
+        echo "$SECRETS_PROPERTIES" | base64 -d > ./secrets.yaml
+        mkdir /ssl
+        echo "$SECRETS_FULLCHAIN" | base64 -d > /ssl/fullchain.pem
+        echo "$PRIVKEY_PEM" | base64 -d > /ssl/privkey.pem
 
     # Runs a set of commands using the runners shell
     - name: Start Hassio and check config

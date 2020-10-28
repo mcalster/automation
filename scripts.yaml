@@ -1,50 +1,50 @@
-  sonos_say:
-    alias: "Sonos TTS script"
-    sequence:
-     - service: media_player.sonos_snapshot
-       data_template:
-         entity_id: "{{ sonos_entity|default('media_player.kitchen') }}"
-     - service: media_player.sonos_unjoin
-       data_template:
-         entity_id: "{{ sonos_entity|default('media_player.kitchen') }}"
-     - service: media_player.volume_set
-       data_template:
-         entity_id: "{{ sonos_entity|default('media_player.kitchen') }}"
-         volume_level: "{{ volume }}"
-     - service: tts.google_say
-       data_template:
-         entity_id: "{{ sonos_entity|default('media_player.kitchen') }}"
-         message: "{{ message }}"
-     - delay: "{{ delay }}"
-     - service: media_player.sonos_restore
-       data_template:
-         entity_id: "{{ sonos_entity|default('media_player.kitchen') }}"
-  
-  morning_routine:
-    alias: 'Stuff to do in the morning'
-    sequence:
-      - service: input_boolean.turn_on
-        entity_id: input_boolean.morning_mode
-      - service: media_player.volume_set
-        data:
-          entity_id: media_player.kitchen
-          volume: 0.2
-          volume_level: 0.2
-      - service: tts.google_say
-        data:
-          entity_id: media_player.kitchen
-          message: 'Good Morning!'          
-      - service: media_player.select_source
-        data:
-          entity_id: media_player.kitchen
-  shutdown_octoprint:
-    alias: Stop 3D printer gracefully
-    sequence:
-      - delay: 00:00:02
-      - service: rest_command.shut_down_octoprint
-      - delay: 00:00:05
-      - service: homeassistant.turn_off
-        entity_id: switch.nexa_6
-      - service: notify.ios_kim_alster_glimberg
-        data:
-          message: 'Octoprint and Creality Ender 3 has been shutdown gracefully'
+sonos_say:
+  alias: "Sonos TTS script"
+  sequence:
+    - service: media_player.sonos_snapshot
+      data_template:
+        entity_id: "{{ sonos_entity|default('media_player.kitchen') }}"
+    - service: media_player.sonos_unjoin
+      data_template:
+        entity_id: "{{ sonos_entity|default('media_player.kitchen') }}"
+    - service: media_player.volume_set
+      data_template:
+        entity_id: "{{ sonos_entity|default('media_player.kitchen') }}"
+        volume_level: "{{ volume }}"
+    - service: tts.google_say
+      data_template:
+        entity_id: "{{ sonos_entity|default('media_player.kitchen') }}"
+        message: "{{ message }}"
+    - delay: "{{ delay }}"
+    - service: media_player.sonos_restore
+      data_template:
+        entity_id: "{{ sonos_entity|default('media_player.kitchen') }}"
+
+morning_routine:
+  alias: "Stuff to do in the morning"
+  sequence:
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.morning_mode
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.kitchen
+        volume: 0.2
+        volume_level: 0.2
+    - service: tts.google_say
+      data:
+        entity_id: media_player.kitchen
+        message: "Good Morning!"
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.kitchen
+shutdown_octoprint:
+  alias: Stop 3D printer gracefully
+  sequence:
+    - delay: 00:00:02
+    - service: rest_command.shut_down_octoprint
+    - delay: 00:00:05
+    - service: homeassistant.turn_off
+      entity_id: switch.nexa_6
+    - service: notify.ios_kim_alster_glimberg
+      data:
+        message: "Octoprint and Creality Ender 3 has been shutdown gracefully"

@@ -1,6 +1,6 @@
 home_status:
-  name:  Home Status
+  name: Home Status
   options:
-   - "Home"
-   - "Away"
+    - "Home"
+    - "Away"
   initial: "Home"

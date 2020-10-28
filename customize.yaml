@@ -1,7 +1,6 @@
---- Customize Entities ---
 switch.sovrum_selma_dor:
   friendly_name: Selma & Saga Mysbelysning
-switch.sovrum_selma_radio: {}
+switch.sovrum_selma_radio:
 switch.sovrum_selma_fonster:
   friendly_name: Selma & Saga Fönsterlampor
 switch.sovrum_sam_tv_nexa_4:

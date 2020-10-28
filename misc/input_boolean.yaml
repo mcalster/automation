@@ -1,4 +1,4 @@
-  morning_mode:
-    name: 'morning mode enabled'
-    initial: off
-    icon: mdi:security
+morning_mode:
+  name: "morning mode enabled"
+  initial: off
+  icon: mdi:security

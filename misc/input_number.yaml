@@ -3,7 +3,7 @@ pool_temperature:
   min: 0
   max: 100
   step: 0.1
-  unit_of_measurement: '°C'
+  unit_of_measurement: "°C"
 pool_ph:
   name: Pool pH
   min: 1
@@ -14,13 +14,13 @@ pool_orp:
   min: 0
   max: 2000
   step: 1
-  unit_of_measurement: 'mV'
+  unit_of_measurement: "mV"
 pool_salinity:
   name: Pool Salinity
   min: 0
   max: 10
   step: .001
-  unit_of_measurement: 'ppt'
+  unit_of_measurement: "ppt"
 pool_conductivity:
   name: Pool Conductivity
   min: 0
@@ -37,4 +37,3 @@ pool_analyzed_at:
   step: 1
   min: 0
   max: 9999999999999
-

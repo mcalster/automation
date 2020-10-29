@@ -3,6 +3,7 @@ name: CI
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
+  workflow_dispatch:
   push:
     branches: [master]
   pull_request:
@@ -41,7 +42,7 @@ jobs:
           docker exec home-assistant python -m homeassistant --script check_config --config /config
   notify-hassio:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/master'  && github.event.schedule
     needs: [check-config]
     steps:
       - name: Invoke deployment hook

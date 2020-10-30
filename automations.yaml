@@ -389,9 +389,21 @@
   alias: Config changed listener
   description: Watching for changed files in config folder
   trigger:
-    platform: event
-    event_type: folder_watcher
-    event_data:
-      event_type: created
+    - platform: event
+      event_type: folder_watcher
+      event_data:
+        event_type: created 
+    - platform: event
+      event_type: folder_watcher
+      event_data:
+        event_type: deleted
+    - platform: event
+      event_type: folder_watcher
+      event_data:
+        event_type: modified 
+    - platform: event
+      event_type: folder_watcher
+      event_data:
+        event_type: moved 
   action:
     service: shell_command.commit_config

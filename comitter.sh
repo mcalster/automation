@@ -33,4 +33,4 @@ then
   git push --set-upstream origin $CURRENT_BRANCH
   git push
 fi
-} &> comitter.log
+} &>> comitter.log

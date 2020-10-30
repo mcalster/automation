@@ -1,4 +1,5 @@
 #!/bin/bash
+{
 #make sure the process is in the correct folder
 cd /config
 
@@ -32,3 +33,4 @@ then
   git push --set-upstream origin $CURRENT_BRANCH
   git push
 fi
+} &> comitter.log

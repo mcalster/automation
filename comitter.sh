@@ -2,7 +2,8 @@
 {
 #make sure the process is in the correct folder
 cd /config
-
+whoami
+eho "Running as $USER"
 UNTRACKED=$(git ls-files --others --exclude-standard)
 
 if [[ (${UNTRACKED[@]:+${UNTRACKED[@]}} || -n "$( git status --porcelain)")]]
@@ -10,7 +11,7 @@ then
   echo "Repo has uncomitted changes"
   git status --porcelain
   git ls-files --others --exclude-standard
-  
+
   CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
   echo "Currently on $CURRENT_BRANCH"
   if [ $CURRENT_BRANCH = "master" ]

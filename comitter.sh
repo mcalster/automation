@@ -7,9 +7,10 @@ then
   echo "Repo has uncomitted changes"
 
   CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+  echo "Currently on $CURRENT_BRANCH"
   if [ $CURRENT_BRANCH = "master" ]
   then
-    echo "Currently on $CURRENT_BRANCH creating new branch"
+    echo "Creating new branch"
     CURRENT_BRANCH="hassio/auto-created-$(date +'%d-%m-%y-%H-%M')"
     git checkout -b $CURRENT_BRANCH
   fi

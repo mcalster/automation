@@ -2,6 +2,8 @@ secrets.yaml
 *.bak
 *.log
 *.db
+*.db-shm
+*.db-wal
 .uuid
 .HA_VERSION
 ip_bans.yaml

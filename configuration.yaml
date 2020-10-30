@@ -106,4 +106,5 @@ folder_watcher:
   - folder: /config/.storage
 
 shell_command:
-  commit_config: ./comitter.sh
+  commit_config: comitter
+  debug: touch "here i am"

@@ -101,4 +101,4 @@ input_number: !include misc/input_number.yaml
 input_boolean: !include misc/input_boolean.yaml
 
 shell_command:
-  watch_config: '/config/watcher'`
+  watch_config: '/config/watch_cmd'

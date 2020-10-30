@@ -10,7 +10,7 @@ then
   if [ $CURRENT_BRANCH = "master" ]
   then
     echo "Currently on $CURRENT_BRANCH creating new branch"
-    CURRENT_BRANCH="hassio/auto-created-$(date +'%d-%m-%y')"
+    CURRENT_BRANCH="hassio/auto-created-$(date +'%d-%m-%y-%H-%M')"
     git checkout -b $CURRENT_BRANCH
   fi
 

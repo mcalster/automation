@@ -42,7 +42,7 @@ jobs:
           docker exec home-assistant python -m homeassistant --script check_config --config /config
   notify-hassio:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'  && github.event.schedule
+    if: github.ref == 'refs/heads/master' && !github.event.schedule && !github.event.pull_request
     needs: [check-config]
     steps:
       - name: Invoke deployment hook

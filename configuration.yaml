@@ -16,6 +16,7 @@ homeassistant:
   customize: !include customize.yaml
   whitelist_external_dirs:
     - /config
+
 # https://www.home-assistant.io/integrations/default_config
 default_config:
 
@@ -105,4 +106,4 @@ folder_watcher:
   - folder: /config/.storage
 
 shell_command:
-  commit_config: '/config/comitter'
+  commit_config: ./comitter.sh

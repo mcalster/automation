@@ -27,4 +27,5 @@ then
   echo "Committing uncomitted changes"
   git commit -sam "Commit added automatically due to file changed"
   git push --set-upstream origin $CURRENT_BRANCH
+  git push
 fi

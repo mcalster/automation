@@ -7,3 +7,10 @@ secrets.yaml
 ip_bans.yaml
 tts/
 .storage/core.*
+.storage/http*
+.storage/auth*
+.storage/frontend*
+.storage/hassio
+.storage/onboarding
+.storage/person
+.storage/zha*

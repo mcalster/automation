@@ -3,7 +3,7 @@
 #make sure the process is in the correct folder
 cd /config
 whoami
-eho "Running as $USER"
+echo "Running as $USER"
 UNTRACKED=$(git ls-files --others --exclude-standard)
 
 if [[ (${UNTRACKED[@]:+${UNTRACKED[@]}} || -n "$( git status --porcelain)")]]

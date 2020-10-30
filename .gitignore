@@ -11,6 +11,7 @@ tts/
 .storage/auth*
 .storage/frontend*
 .storage/hassio
+.storage/mobile_app
 .storage/onboarding
 .storage/person
 .storage/zha*

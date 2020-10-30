@@ -385,3 +385,13 @@
         addon: core_git_pull
     - delay: 0:02
     - service: homeassistant.restart
+- id: "1585489737608cxxx"
+  alias: Config changed listener
+  description: Watching for changed files in config folder
+  trigger:
+    platform: event
+    event_type: folder_watcher
+    event_data:
+      event_type: created
+  action:
+    service: shell_command.commit_config

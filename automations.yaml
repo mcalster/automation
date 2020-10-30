@@ -406,5 +406,4 @@
       event_data:
         event_type: moved
   action:
-    - service: shell_command.debug
     - service: shell_command.commit_config

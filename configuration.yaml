@@ -103,8 +103,7 @@ input_number: !include misc/input_number.yaml
 input_boolean: !include misc/input_boolean.yaml
 
 folder_watcher:
-  - folder: /config/.storage
+  - folder: /config
 
 shell_command:
-  commit_config: comitter
-  debug: touch "here i am"
+  commit_config: /config/comitter.sh

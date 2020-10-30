@@ -1,4 +1,6 @@
 #!/bin/bash
+#make sure the process is in the correct folder
+cd /config
 
 UNTRACKED=$(git ls-files --others --exclude-standard)
 

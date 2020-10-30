@@ -2,8 +2,11 @@
 {
 #make sure the process is in the correct folder
 cd /config
+ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+echo "Running as:"
+id -u -n
 whoami
-echo "Running as $USER"
+
 UNTRACKED=$(git ls-files --others --exclude-standard)
 
 if [[ (${UNTRACKED[@]:+${UNTRACKED[@]}} || -n "$( git status --porcelain)")]]

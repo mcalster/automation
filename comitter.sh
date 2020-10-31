@@ -1,15 +1,15 @@
 #!/bin/bash
 {
-pwd
 #make sure the process is in the correct folder
-cd /config
-
 UNTRACKED=$(git ls-files --others --exclude-standard)
 
 if [[ (${UNTRACKED[@]:+${UNTRACKED[@]}} || -n "$( git status --porcelain)")]]
 then
-  echo "Repo has uncomitted changes"
+  echo "Repo has uncomitted changes:"
+
+  echo "Tracked changes"
   git status --porcelain
+  echo "Untracked changes"
   git ls-files --others --exclude-standard
 
   CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
@@ -34,13 +34,15 @@ then
   #ssh-add ~/.ssh/id_rsa
   #ssh-add -l -E sha256
   id
-  ls -al /root/.ssh/id_rsa
-  ls -al .ssh/id_rsa
-  ls -al /data/.ssh/id_rsa
-  
+  ls -al /root/.ssh/
+  ls -al .ssh/
+  ls -al /data/.ssh/
+  ls -al /data/
+
   cat .ssh/id_rsa
 
   cat /data/.ssh/id_rsa
+  
   echo "Committing uncomitted changes"
   git commit -sam "Commit added automatically due to file changed"
   git push --set-upstream origin $CURRENT_BRANCH

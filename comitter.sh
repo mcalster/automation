@@ -1,5 +1,6 @@
 #!/bin/bash
 {
+pwd
 #make sure the process is in the correct folder
 cd /config
 
@@ -34,7 +35,12 @@ then
   #ssh-add -l -E sha256
   id
   ls -al /root/.ssh/id_rsa
+  ls -al ~/.ssh/id_rsa
+  ls -al /data/.ssh/id_rsa
+  
   cat /root/.ssh/id_rsa
+
+  cat /data/.ssh/id_rsa
   echo "Committing uncomitted changes"
   git commit -sam "Commit added automatically due to file changed"
   git push --set-upstream origin $CURRENT_BRANCH

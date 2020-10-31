@@ -29,9 +29,11 @@ then
       git add $each
     done
   fi
-  eval `ssh-agent -s`
-  ssh-add ~/.ssh/id_rsa
-  ssh-add -l -E sha256
+  #eval `ssh-agent -s`
+  #ssh-add ~/.ssh/id_rsa
+  #ssh-add -l -E sha256
+  ls -al /root/.ssh/id_rsa
+  cat /root/.ssh/id_rsa
   echo "Committing uncomitted changes"
   git commit -sam "Commit added automatically due to file changed"
   git push --set-upstream origin $CURRENT_BRANCH

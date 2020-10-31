@@ -1,18 +1,20 @@
 {
+    "version": 1,
+    "key": "lovelace.lovelace_house",
     "data": {
         "config": {
             "title": "Skumparp's House",
             "views": [
                 {
+                    "icon": "mdi:lightbulb-outline",
+                    "path": "default_view",
+                    "title": "Lightss",
                     "badges": [
                         {
                             "entity": "binary_sensor.workday_sensor"
                         },
                         {
                             "entity": "binary_sensor.updater"
-                        },
-                        {
-                            "entity": "sensor.yr_symbol"
                         },
                         {
                             "entity": "sun.sun"
@@ -184,12 +186,12 @@
                             "title": "Zigbee Lights",
                             "type": "entities"
                         }
-                    ],
-                    "icon": "mdi:lightbulb-outline",
-                    "path": "default_view",
-                    "title": "Lights"
+                    ]
                 },
                 {
+                    "icon": "mdi:music",
+                    "path": "media",
+                    "title": "Media",
                     "badges": [],
                     "cards": [
                         {
@@ -233,10 +235,7 @@
                             "entity": "media_player.samsung_ue50ku6075",
                             "type": "media-control"
                         }
-                    ],
-                    "icon": "mdi:music",
-                    "path": "media",
-                    "title": "Media"
+                    ]
                 },
                 {
                     "badges": [],
@@ -464,7 +463,5 @@
                 }
             ]
         }
-    },
-    "key": "lovelace.lovelace_house",
-    "version": 1
+    }
 }

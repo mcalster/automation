@@ -34,15 +34,10 @@ then
   #ssh-add ~/.ssh/id_rsa
   #ssh-add -l -E sha256
   id
-  ls -al /root/.ssh/
   ls -al .ssh/
-  ls -al /data/.ssh/
-  ls -al /data/
 
   cat .ssh/id_rsa
 
-  cat /data/.ssh/id_rsa
-  
   echo "Committing uncomitted changes"
   git commit -sam "Commit added automatically due to file changed"
   git push --set-upstream origin $CURRENT_BRANCH

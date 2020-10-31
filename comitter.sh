@@ -35,10 +35,10 @@ then
   #ssh-add -l -E sha256
   id
   ls -al /root/.ssh/id_rsa
-  ls -al ~/.ssh/id_rsa
+  ls -al .ssh/id_rsa
   ls -al /data/.ssh/id_rsa
   
-  cat /root/.ssh/id_rsa
+  cat .ssh/id_rsa
 
   cat /data/.ssh/id_rsa
   echo "Committing uncomitted changes"

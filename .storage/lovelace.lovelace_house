@@ -230,10 +230,6 @@
                                 "sensor.onhub_packets_s_sent"
                             ],
                             "type": "entities"
-                        },
-                        {
-                            "entity": "media_player.samsung_ue50ku6075",
-                            "type": "media-control"
                         }
                     ]
                 },

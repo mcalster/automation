@@ -30,13 +30,9 @@ then
       git add $each
     done
   fi
-  #eval `ssh-agent -s`
-  #ssh-add ~/.ssh/id_rsa
-  #ssh-add -l -E sha256
-  id
-  ls -al .ssh/
-
-  cat .ssh/id_rsa
+  eval `ssh-agent -s`
+  ssh-add .ssh/id_rsa
+  ssh-add -l -E sha256
 
   echo "Committing uncomitted changes"
   git commit -sam "Commit added automatically due to file changed"

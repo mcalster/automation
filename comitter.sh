@@ -2,10 +2,6 @@
 {
 #make sure the process is in the correct folder
 cd /config
-ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-echo "Running as:"
-id -u -n
-whoami
 
 UNTRACKED=$(git ls-files --others --exclude-standard)
 
@@ -33,7 +29,9 @@ then
       git add $each
     done
   fi
-
+  eval `ssh-agent -s`
+  ssh-add ~/.ssh/id_rsa
+  ssh-add -l -E sha256
   echo "Committing uncomitted changes"
   git commit -sam "Commit added automatically due to file changed"
   git push --set-upstream origin $CURRENT_BRANCH

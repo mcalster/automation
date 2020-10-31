@@ -32,6 +32,7 @@ then
   #eval `ssh-agent -s`
   #ssh-add ~/.ssh/id_rsa
   #ssh-add -l -E sha256
+  id
   ls -al /root/.ssh/id_rsa
   cat /root/.ssh/id_rsa
   echo "Committing uncomitted changes"

@@ -8,7 +8,7 @@
                 {
                     "icon": "mdi:lightbulb-outline",
                     "path": "default_view",
-                    "title": "Lightss",
+                    "title": "Lights",
                     "badges": [
                         {
                             "entity": "binary_sensor.workday_sensor"

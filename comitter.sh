@@ -38,5 +38,13 @@ then
   git commit -sam "Commit added automatically due to file changed"
   git push --set-upstream origin $CURRENT_BRANCH
   git push
+
+  echo "Do some git house Keeping"
+  git fetch --prune
+  git remote prune origin
+  # remove all branches not present remote if merged
+  git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d
+  git gc
+  echo "Git house Keeping done :-)"
 fi
 } &>> comitter.log

@@ -78,9 +78,6 @@ notify: !include service/notify.yaml
 # Verisure
 verisure: !include verisure.yaml
 
-# RFXtrx
-rfxtrx: !include rfxtrx.yaml
-
 group: !include groups.yaml
 
 automation: !include automations.yaml
@@ -88,7 +85,6 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 
 # Entities
-
 binary_sensor:
   - platform: workday
     country: DK
@@ -104,6 +100,9 @@ input_boolean: !include misc/input_boolean.yaml
 
 folder_watcher:
   - folder: /config
+    patterns:
+      - 'lovelace*'
+      - '*.yaml'
 
 shell_command:
   commit_config: /config/comitter.sh

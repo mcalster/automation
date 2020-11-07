@@ -406,4 +406,8 @@
       event_data:
         event_type: moved
   action:
+    - service: notify.notify
+      data:
+        title: New image captured!
+        message: "{{trigger.event.type}}  {{ trigger.event.data.file }} in {{ trigger.event.data.folder }}"
     - service: shell_command.commit_config

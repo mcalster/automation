@@ -14,7 +14,7 @@ homeassistant:
   internal_url: !secret internal_url
   # Customization file
   customize: !include customize.yaml
-  whitelist_external_dirs:
+  allowlist_external_dirs:
     - /config
 
 # https://www.home-assistant.io/integrations/default_config

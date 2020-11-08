@@ -284,8 +284,10 @@
   description: Notify me when the lights become unavailable
   trigger:
   - platform: template
-    value_template: "{{ states.light | selectattr('state', 'in', ['unavailable', 'unknown',\
-      \ 'none']) \n                | list\n                | length > 0  }}\n"
+    value_template: '{{ states.light | rejectattr(''state'', ''in'', [''on'', ''off''])
+      | list | length > 0  }}
+
+      '
   condition: []
   action:
   - data_template:
@@ -299,6 +301,7 @@
 
         '')}} '
     service: notify.mobile_app_kim_alster_glimberg
+  mode: single
 - id: '1585489737608'
   alias: Receive Blue Connect Meassurements
   description: Receive data from Blue Connect via IFTTT webhook

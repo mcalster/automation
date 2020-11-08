@@ -292,9 +292,17 @@
   action:
     - data_template:
         message:
-          "Unavailable light detected: \n {{ states.light | selectattr('state',\
-          \ 'in', ['unavailable', 'unknown', 'none'])\n                 | map(attribute='name')\
-          \ \n                 | list \n                 | join('\\n')}}\n"
+           "{% set data = namespace(ignore_list=[]) %}
+            {% for light in states.light %}
+            {% set matched = light | regex_search('zha_group_0x0', ignorecase=False) %}
+              {% if matched %} 
+                {% set tmp =  light.attributes['friendly_name']%}
+                {% set data.ignore_list = data.ignore_list + [tmp] %}
+              {% endif %}
+            {% endfor %}
+            Unavailable light detected: 
+            {{ states.light | rejectattr('name','in', data.ignore_list) | rejectattr('state','in', ['on', 'off']) | map(attribute='name') | list | join('\n')}}
+"
       service: notify.mobile_app_kim_alster_glimberg
 - id: "1585489737608"
   alias: Receive Blue Connect Meassurements

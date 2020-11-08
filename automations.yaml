@@ -387,7 +387,7 @@
   - service: hassio.addon_restart
     data:
       addon: core_git_pull
-  - delay: 0:01
+  - delay: 0:02
   - service: homeassistant.restart
   mode: single
 - id: 1585489737608cxxx

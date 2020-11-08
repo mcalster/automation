@@ -381,14 +381,15 @@
   alias: Receive successful build
   description: Receive successful build from Github Actions
   trigger:
-    platform: webhook
+  - platform: webhook
     webhook_id: 2F548886-D37B-45F6-BC25-E0EF57167741
   action:
   - service: hassio.addon_restart
     data:
       addon: core_git_pull
-  - delay: 0:02
+  - delay: 0:01
   - service: homeassistant.restart
+  mode: single
 - id: 1585489737608cxxx
   alias: Config changed listener
   description: Watching for changed files in config folder

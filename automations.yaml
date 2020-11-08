@@ -410,7 +410,7 @@
   - service: notify.notify
     data:
       title: File change captured!
-      message: '{{trigger.event.type}}  {{ trigger.event.data.file }} in {{ trigger.event.data.folder
-        }}'
+      message: 'Event: {{trigger.event.type}} File:  {{ trigger.event.data.file }}
+        in {{ trigger.event.data.folder }}'
   - service: shell_command.commit_config
   mode: single

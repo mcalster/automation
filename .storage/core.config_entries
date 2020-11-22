@@ -1,0 +1,1943 @@
+{
+    "version": 1,
+    "key": "core.config_entries",
+    "data": {
+        "entries": [
+            {
+                "entry_id": "0f77e4bd4637475f86af4f9322c84797",
+                "version": 1,
+                "domain": "met",
+                "title": "Home",
+                "data": {
+                    "track_home": true
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "onboarding",
+                "connection_class": "cloud_poll",
+                "unique_id": null
+            },
+            {
+                "entry_id": "a78a7f9dc34745499b9554469381dd4c",
+                "version": 1,
+                "domain": "sonos",
+                "title": "Sonos",
+                "data": {},
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "ssdp",
+                "connection_class": "local_push",
+                "unique_id": null
+            },
+            {
+                "entry_id": "d6953ed688d1453b86c2e8ac787ffaf6",
+                "version": 1,
+                "domain": "cast",
+                "title": "Google Cast",
+                "data": {
+                    "user_id": "87d2d2e2495e4b3c889610b1824decfd"
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "zeroconf",
+                "connection_class": "local_push",
+                "unique_id": null
+            },
+            {
+                "entry_id": "b3ea497a3e5641f88b3f558834f66b9b",
+                "version": 2,
+                "domain": "zha",
+                "title": "/dev/ttyUSB1",
+                "data": {
+                    "device": {
+                        "path": "/dev/ttyUSB1"
+                    },
+                    "radio_type": "deconz"
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "user",
+                "connection_class": "local_push",
+                "unique_id": null
+            },
+            {
+                "entry_id": "475b779ba14d4477bde27424c37d791d",
+                "version": 1,
+                "domain": "ipp",
+                "title": "SEC8425190638BD",
+                "data": {
+                    "base_path": "/ipp/print",
+                    "host": "192.168.86.60",
+                    "name": "Samsung C48x Series (SEC8425190638BD)",
+                    "port": 631,
+                    "ssl": false,
+                    "uuid": "16a65700-007c-1000-bb49-8425190638bd",
+                    "verify_ssl": false
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "zeroconf",
+                "connection_class": "local_poll",
+                "unique_id": "16a65700-007c-1000-bb49-8425190638bd"
+            },
+            {
+                "entry_id": "987ad20b8a2c4b1189a130b92fb00ed7",
+                "version": 1,
+                "domain": "upnp",
+                "title": "Ignored",
+                "data": {},
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "ignore",
+                "connection_class": "local_poll",
+                "unique_id": "uuid:58693537-3777-4de3-9690-d09e6ea33dab::urn:schemas-upnp-org:device:InternetGatewayDevice:2"
+            },
+            {
+                "entry_id": "59591478af8f4848925b46a6cf941f90",
+                "version": 1,
+                "domain": "upnp",
+                "title": "Ignored",
+                "data": {},
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "ignore",
+                "connection_class": "local_poll",
+                "unique_id": "uuid:30024a2c-80ba-4804-af01-eaa4016d4146::urn:schemas-upnp-org:device:InternetGatewayDevice:2"
+            },
+            {
+                "entry_id": "aa1ca0702084490fa784f6726130ebb9",
+                "version": 1,
+                "domain": "rfxtrx",
+                "title": "RFXTRX",
+                "data": {
+                    "host": null,
+                    "port": null,
+                    "device": "/dev/ttyUSB0",
+                    "debug": false,
+                    "automatic_add": true,
+                    "devices": {
+                        "0b110001008f26c201010f60": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "11",
+                                "0",
+                                "08f26c2:1"
+                            ]
+                        },
+                        "0b1100fb008f26c202010f60": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "11",
+                                "0",
+                                "08f26c2:2"
+                            ]
+                        },
+                        "0b1100fc008f26c203010f60": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "11",
+                                "0",
+                                "08f26c2:3"
+                            ]
+                        },
+                        "0b11000001a36f9201030070": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "11",
+                                "0",
+                                "1a36f92:1"
+                            ]
+                        },
+                        "0b11000201a36f9202010f70": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "11",
+                                "0",
+                                "1a36f92:2"
+                            ]
+                        },
+                        "0b11000301a36f9203010f70": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "11",
+                                "0",
+                                "1a36f92:3"
+                            ]
+                        },
+                        "0a1411000091fc01010070": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "14",
+                                "11",
+                                "0091fc:1"
+                            ]
+                        },
+                        "0b11005b019f5d3601010f70": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "11",
+                                "0",
+                                "19f5d36:1"
+                            ]
+                        },
+                        "0b110063019f5d3602010f60": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "11",
+                                "0",
+                                "19f5d36:2"
+                            ]
+                        },
+                        "0b110067019f5d3603010f70": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "11",
+                                "0",
+                                "19f5d36:3"
+                            ]
+                        },
+                        "085001000e01005f59": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "50",
+                                "1",
+                                "0e:01"
+                            ]
+                        },
+                        "0913000100000000f840": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "000000"
+                            ]
+                        },
+                        "08200a060080000649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "008000:32"
+                            ]
+                        },
+                        "08200a090000000649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "000000:32"
+                            ]
+                        },
+                        "08200a0c0800000649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "080000:32"
+                            ]
+                        },
+                        "082000180000000249": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "000000:32"
+                            ]
+                        },
+                        "08200a778000000649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "800000:32"
+                            ]
+                        },
+                        "0820008a0800000249": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "080000:32"
+                            ]
+                        },
+                        "0a1411b800911111000040": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "14",
+                                "11",
+                                "009111:17"
+                            ]
+                        },
+                        "08200abc0008000649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "000800:32"
+                            ]
+                        },
+                        "082000c20400000249": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "040000:32"
+                            ]
+                        },
+                        "091300d580000000fa40": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "800000"
+                            ]
+                        },
+                        "08200adc01c0000649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "01c000:32"
+                            ]
+                        },
+                        "091300f100100000f840": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "001000"
+                            ]
+                        },
+                        "08200a140003000649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "000300:32"
+                            ]
+                        },
+                        "08200a280040000649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "004000:32"
+                            ]
+                        },
+                        "0913002f000c2400ec40": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "000c24"
+                            ]
+                        },
+                        "0a14113f00908111000040": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "14",
+                                "11",
+                                "009081:17"
+                            ]
+                        },
+                        "08200a450100000649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "010000:32"
+                            ]
+                        },
+                        "0913009b100000014030": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "100000"
+                            ]
+                        },
+                        "091300b500200000f340": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "002000"
+                            ]
+                        },
+                        "0a1411d700911108000040": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "14",
+                                "11",
+                                "009111:8"
+                            ]
+                        },
+                        "08200ade0000400649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "000040:32"
+                            ]
+                        },
+                        "0913001600000400fa40": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "000004"
+                            ]
+                        },
+                        "08200a354000000639": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "400000:32"
+                            ]
+                        },
+                        "08200a0b1020000639": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "102000:32"
+                            ]
+                        },
+                        "082000100040000239": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "004000:32"
+                            ]
+                        },
+                        "08200a010002010649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "000201:32"
+                            ]
+                        },
+                        "08200a060000040649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "000004:32"
+                            ]
+                        },
+                        "08200a090004000649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "000400:32"
+                            ]
+                        },
+                        "0820000d2100000249": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "210000:32"
+                            ]
+                        },
+                        "0820000b4000000249": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "400000:32"
+                            ]
+                        },
+                        "082000101010000239": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "101000:32"
+                            ]
+                        },
+                        "0820002c8000000d39": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "800000:32"
+                            ]
+                        },
+                        "082000072840000239": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "284000:32"
+                            ]
+                        },
+                        "0710014e41010140": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "10",
+                                "1",
+                                "A1"
+                            ]
+                        },
+                        "091300d4002001013450": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "002001"
+                            ]
+                        },
+                        "082000090000900940": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "000090:32"
+                            ]
+                        },
+                        "08200a520001000639": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "000100:32"
+                            ]
+                        },
+                        "091300b9004221019340": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "004221"
+                            ]
+                        },
+                        "0913003b003300010640": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "003300"
+                            ]
+                        },
+                        "0913009201000000f840": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "010000"
+                            ]
+                        },
+                        "0820000b0100000249": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "010000:32"
+                            ]
+                        },
+                        "0913003c20000000ea40": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "200000"
+                            ]
+                        },
+                        "08500a4ec301074139": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "50",
+                                "a",
+                                "c3:01"
+                            ]
+                        },
+                        "09130058030000013b40": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "030000"
+                            ]
+                        },
+                        "0913000f02000000f840": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "020000"
+                            ]
+                        },
+                        "08200a110440000649": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "044000:32"
+                            ]
+                        },
+                        "08200a2f0200000649": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "020000:32"
+                            ]
+                        },
+                        "0913008600200800fd40": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "002008"
+                            ]
+                        },
+                        "08200a910400000649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "040000:32"
+                            ]
+                        },
+                        "091300a3000101015540": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "000101"
+                            ]
+                        },
+                        "091300b2002100014740": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "002100"
+                            ]
+                        },
+                        "08200ab90016000649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "001600:32"
+                            ]
+                        },
+                        "08200ac38200000649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "820000:32"
+                            ]
+                        },
+                        "08200af400c0000649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "00c000:32"
+                            ]
+                        },
+                        "08500a2e8001810049": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "50",
+                                "a",
+                                "80:01"
+                            ]
+                        },
+                        "082000332000000249": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "200000:32"
+                            ]
+                        },
+                        "08200a3e0000180649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "000018:32"
+                            ]
+                        },
+                        "08200a428400000649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "840000:32"
+                            ]
+                        },
+                        "0a14115500911301000040": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "14",
+                                "11",
+                                "009113:1"
+                            ]
+                        },
+                        "08200068a000000249": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "a00000:32"
+                            ]
+                        },
+                        "08200a8500000c0649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "00000c:32"
+                            ]
+                        },
+                        "08200ace0180000649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "018000:32"
+                            ]
+                        },
+                        "08500a64e001819049": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "50",
+                                "a",
+                                "e0:01"
+                            ]
+                        },
+                        "08200a87080c000649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "080c00:32"
+                            ]
+                        },
+                        "08500aad4001063739": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "50",
+                                "a",
+                                "40:01"
+                            ]
+                        },
+                        "0a14110000913411000040": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "14",
+                                "11",
+                                "009134:17"
+                            ]
+                        },
+                        "0913001b00010000f640": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "000100"
+                            ]
+                        },
+                        "0913003604000000f140": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "040000"
+                            ]
+                        },
+                        "08200a601000000649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "100000:32"
+                            ]
+                        },
+                        "08200ab02000000649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "200000:32"
+                            ]
+                        },
+                        "08200a854002000649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "400200:32"
+                            ]
+                        },
+                        "0913003240000000f840": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "400000"
+                            ]
+                        },
+                        "08200a0ac000000649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "c00000:32"
+                            ]
+                        },
+                        "08200a410000200649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "000020:32"
+                            ]
+                        },
+                        "09130099a0000000f350": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "a00000"
+                            ]
+                        },
+                        "091300c900040000ff50": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "000400"
+                            ]
+                        },
+                        "091300f8c0000000ef50": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "c00000"
+                            ]
+                        },
+                        "082000e61000000249": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "100000:32"
+                            ]
+                        },
+                        "08200ae82070000659": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "207000:32"
+                            ]
+                        },
+                        "0a14112500111111000050": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "14",
+                                "11",
+                                "001111:17"
+                            ]
+                        },
+                        "08500a460301075349": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "50",
+                                "a",
+                                "03:01"
+                            ]
+                        },
+                        "0a14116200915211000040": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "14",
+                                "11",
+                                "009152:17"
+                            ]
+                        },
+                        "08200a6a5000000649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "500000:32"
+                            ]
+                        },
+                        "0913001908000000f350": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "080000"
+                            ]
+                        },
+                        "09130048004000014440": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "004000"
+                            ]
+                        },
+                        "08200af50010000659": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "001000:32"
+                            ]
+                        },
+                        "0913006d00001000ef50": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "000010"
+                            ]
+                        },
+                        "091300af00380000f650": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "003800"
+                            ]
+                        },
+                        "082000fa9000000259": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "900000:32"
+                            ]
+                        },
+                        "0913000e00080000f350": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "000800"
+                            ]
+                        },
+                        "08200a8d000c000649": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "000c00:32"
+                            ]
+                        },
+                        "08200a930020000659": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "002000:32"
+                            ]
+                        },
+                        "08200ac80000800659": {
+                            "fire_event": false,
+                            "signal_repetitions": 1,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "000080:32"
+                            ]
+                        },
+                        "091300f102001000f650": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "020010"
+                            ]
+                        },
+                        "08200a798020000659": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "802000:32"
+                            ]
+                        },
+                        "09130036008000013250": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "008000"
+                            ]
+                        },
+                        "0913001810800000f350": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "108000"
+                            ]
+                        },
+                        "08200a7e1060000659": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "106000:32"
+                            ]
+                        },
+                        "08200ab22008000659": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "200800:32"
+                            ]
+                        },
+                        "08200a390000010649": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "000001:32"
+                            ]
+                        },
+                        "08500a700001807149": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "50",
+                                "a",
+                                "00:01"
+                            ]
+                        },
+                        "08200a040002000659": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "000200:32"
+                            ]
+                        },
+                        "0913002f00340000f650": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "003400"
+                            ]
+                        },
+                        "08200a5b0000080659": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "000008:32"
+                            ]
+                        },
+                        "091300af00020000f650": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "000200"
+                            ]
+                        },
+                        "08200a038080000659": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "808000:32"
+                            ]
+                        },
+                        "0a14111a009f1111000050": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "14",
+                                "11",
+                                "009f11:17"
+                            ]
+                        },
+                        "08200a03000e000659": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "000e00:32"
+                            ]
+                        },
+                        "091300a180000400f350": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "800004"
+                            ]
+                        },
+                        "0913005310001000f350": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "100010"
+                            ]
+                        },
+                        "0913009588000000f850": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "880000"
+                            ]
+                        },
+                        "091300ff00e00000f650": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "00e000"
+                            ]
+                        },
+                        "0a14115e00952111000050": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "14",
+                                "11",
+                                "009521:17"
+                            ]
+                        },
+                        "08200a5e00f8000659": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "00f800:32"
+                            ]
+                        },
+                        "091300bc004040015240": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "004040"
+                            ]
+                        },
+                        "08200a94e000000659": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "e00000:32"
+                            ]
+                        },
+                        "08200a37a000000659": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "a00000:32"
+                            ]
+                        },
+                        "09130051004c0000f650": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "004c00"
+                            ]
+                        },
+                        "08200a680c00000659": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "0c0000:32"
+                            ]
+                        },
+                        "08200a842800000659": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "280000:32"
+                            ]
+                        },
+                        "091300df00030800ec40": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "000308"
+                            ]
+                        },
+                        "091300f91c000000f650": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "1c0000"
+                            ]
+                        },
+                        "0913003690000000f340": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "900000"
+                            ]
+                        },
+                        "08200a618000100649": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "800010:32"
+                            ]
+                        },
+                        "08200a890000060659": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "000006:32"
+                            ]
+                        },
+                        "0913002500804000f840": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "008040"
+                            ]
+                        },
+                        "09130079000c0000fa40": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "000c00"
+                            ]
+                        },
+                        "0a1411830091110e010040": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "14",
+                                "11",
+                                "009111:14"
+                            ]
+                        },
+                        "08200aa20000100649": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "000010:32"
+                            ]
+                        },
+                        "0913003600002000f340": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "000020"
+                            ]
+                        },
+                        "08200aff0800800649": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "080080:32"
+                            ]
+                        },
+                        "0913000000006000f840": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "000060"
+                            ]
+                        },
+                        "08200ae60403000649": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "040300:32"
+                            ]
+                        },
+                        "082000e80001800249": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "000180:32"
+                            ]
+                        },
+                        "08200a27020b000649": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "020b00:32"
+                            ]
+                        },
+                        "091300a283000000f640": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "830000"
+                            ]
+                        },
+                        "0820008e9815000d49": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "981500:32"
+                            ]
+                        },
+                        "08200ab82001000649": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "200100:32"
+                            ]
+                        },
+                        "082000d7000c200249": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "000c20:32"
+                            ]
+                        },
+                        "08200ad52080100649": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "208010:32"
+                            ]
+                        },
+                        "082000e40100200249": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "010020:32"
+                            ]
+                        },
+                        "08200aff1200000649": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "120000:32"
+                            ]
+                        },
+                        "082000210000800249": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "000080:32"
+                            ]
+                        },
+                        "09130027018045014b40": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "018045"
+                            ]
+                        },
+                        "08200a290000020649": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "000002:32"
+                            ]
+                        },
+                        "08200a2db490000649": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "b49000:32"
+                            ]
+                        },
+                        "0913003b000001013240": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "000001"
+                            ]
+                        },
+                        "0913005d0d100900ef40": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "0d1009"
+                            ]
+                        },
+                        "08200a612300400649": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "230040:32"
+                            ]
+                        },
+                        "0913006800014900f840": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "000149"
+                            ]
+                        },
+                        "08200a870180200649": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "018020:32"
+                            ]
+                        },
+                        "082000e6000c000249": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "000c00:32"
+                            ]
+                        },
+                        "091300f600008000f340": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "000080"
+                            ]
+                        },
+                        "082000010020000b49": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "002000:32"
+                            ]
+                        },
+                        "08200aee0600000649": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "060000:32"
+                            ]
+                        },
+                        "08200003c000000249": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "c00000:32"
+                            ]
+                        },
+                        "082000081800000249": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "0",
+                                "180000:32"
+                            ]
+                        },
+                        "0913009200004000f840": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "000040"
+                            ]
+                        },
+                        "08500a55c001819039": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "50",
+                                "a",
+                                "c0:01"
+                            ]
+                        },
+                        "0913003c000003019a40": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "000003"
+                            ]
+                        },
+                        "08200a6d0080800649": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "20",
+                                "a",
+                                "008080:32"
+                            ]
+                        },
+                        "09130033000002015b40": {
+                            "signal_repetitions": 1,
+                            "fire_event": false,
+                            "device_id": [
+                                "13",
+                                "0",
+                                "000002"
+                            ]
+                        }
+                    }
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "import",
+                "connection_class": "local_push",
+                "unique_id": "rfxtrx"
+            },
+            {
+                "entry_id": "9f1d466212d0481e81b613f0bdde7b5c",
+                "version": 1,
+                "domain": "samsungtv",
+                "title": "Ignored",
+                "data": {
+                    "id": "676b9fdf-3c47-4ef9-8e2a-2fce86d7307f",
+                    "manufacturer": "Samsung Electronics",
+                    "model": "UE50KU6075"
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "ignore",
+                "connection_class": "local_poll",
+                "unique_id": "192.168.86.180"
+            },
+            {
+                "entry_id": "b358066b515b4652955e1753999946cd",
+                "version": 1,
+                "domain": "mobile_app",
+                "title": "Caroline Glimberg's Iphone",
+                "data": {
+                    "app_data": {
+                        "push_token": "cTkSxDT6eXic4UYCwsSpj8:APA91bHqjoRPLFuCYvyeG9uIO8AR3ncz_Jw64PjYDQM8hBnsesjn5C0zXobtBJL9thRFJkb7FzB-0CkHtVaKep-GoY_kLiRhp4BrRdpJhE0bvk7OV4-E9MIwBL7xR3K49699bpKifCtF",
+                        "push_url": "https://mobile-apps.home-assistant.io/api/sendPushNotification"
+                    },
+                    "app_id": "io.robbie.HomeAssistant",
+                    "app_name": "Home Assistant",
+                    "app_version": "2020.7 (11)",
+                    "device_id": "9CE804AA-0B2A-4F12-AF06-18A543D87D5A",
+                    "device_name": "Caroline Glimberg's Iphone",
+                    "manufacturer": "Apple",
+                    "model": "iPhone10,4",
+                    "os_name": "iOS",
+                    "os_version": "14.2",
+                    "secret": "0a69b2ad773e73cc5a68901b2f3328811bc28c47a12ce56560de19d0a59f458a",
+                    "supports_encryption": true,
+                    "user_id": "a23bf54c2af24917a1355af7d81dcf7c",
+                    "webhook_id": "569bed82d67c08d0624827ac84e3c03fa246cd116ec657af7fc01b8348da2fd8"
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "registration",
+                "connection_class": "cloud_push",
+                "unique_id": "io.robbie.HomeAssistant-9CE804AA-0B2A-4F12-AF06-18A543D87D5A"
+            },
+            {
+                "entry_id": "631dac4fe42641ec9fd86e0f8841c5de",
+                "version": 1,
+                "domain": "samsungtv",
+                "title": "Ignored",
+                "data": {},
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "ignore",
+                "connection_class": "local_poll",
+                "unique_id": "192.168.86.207"
+            },
+            {
+                "entry_id": "2dddc5740f3f4f44a054ea0d5f6da527",
+                "version": 1,
+                "domain": "upnp",
+                "title": "OnHub",
+                "data": {
+                    "st": "urn:schemas-upnp-org:device:InternetGatewayDevice:2",
+                    "udn": "uuid:80b6d32d-cd6e-47b0-ac6c-65021cbacb69"
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "ssdp",
+                "connection_class": "local_poll",
+                "unique_id": "uuid:a80ba348-6a6c-4e31-900b-16a10fa9e512::urn:schemas-upnp-org:device:InternetGatewayDevice:2"
+            },
+            {
+                "entry_id": "2a28d1bd74fc4319ae5a9cc61c312b3e",
+                "version": 1,
+                "domain": "samsungtv",
+                "title": "Ignored",
+                "data": {},
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "ignore",
+                "connection_class": "local_poll",
+                "unique_id": "192.168.86.229"
+            },
+            {
+                "entry_id": "7e583af23f45480f9a5704c8bcc9868c",
+                "version": 1,
+                "domain": "syncthru",
+                "title": "Samsung C48x Series",
+                "data": {
+                    "name": "Samsung C48x Series",
+                    "url": "http://192.168.86.60/"
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "ssdp",
+                "connection_class": "local_poll",
+                "unique_id": "uuid:16a65700-007c-1000-bb49-8425190638bd"
+            },
+            {
+                "entry_id": "c44ccc6d6f7942e3805fa2ea36dc7e17",
+                "version": 1,
+                "domain": "samsungtv",
+                "title": "Ignored",
+                "data": {
+                    "id": "676b9fdf-3c47-4ef9-8e2a-2fce86d7307f",
+                    "manufacturer": "Samsung Electronics",
+                    "model": "UE50KU6075"
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "ignore",
+                "connection_class": "local_poll",
+                "unique_id": "192.168.86.25"
+            },
+            {
+                "entry_id": "7a6bab791909479a8aa5dd8816328d5e",
+                "version": 1,
+                "domain": "samsungtv",
+                "title": "Ignored",
+                "data": {},
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "ignore",
+                "connection_class": "local_poll",
+                "unique_id": "192.168.86.26"
+            },
+            {
+                "entry_id": "bc955792116d11eb93587d98bdfffa00",
+                "version": 1,
+                "domain": "upnp",
+                "title": "Ignored",
+                "data": {},
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "ignore",
+                "connection_class": "local_poll",
+                "unique_id": "uuid:a5cec4ee-157b-4928-9df7-c804f40e127b::urn:schemas-upnp-org:device:InternetGatewayDevice:2"
+            },
+            {
+                "entry_id": "97bd42fe1a0f11eb8fcb153b214172d1",
+                "version": 1,
+                "domain": "upnp",
+                "title": "Ignored",
+                "data": {},
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "ignore",
+                "connection_class": "local_poll",
+                "unique_id": "uuid:e1e49ec9-f4cf-4373-8cfb-3530d5c531a6::urn:schemas-upnp-org:device:InternetGatewayDevice:2"
+            },
+            {
+                "entry_id": "b0987cd29a6eb470b9aecf512da026ba",
+                "version": 1,
+                "domain": "upnp",
+                "title": "Ignored",
+                "data": {},
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "ignore",
+                "connection_class": "local_poll",
+                "unique_id": "uuid:67d75726-ee81-4aa0-83a1-bb1776f9c6ea::urn:schemas-upnp-org:device:InternetGatewayDevice:2"
+            },
+            {
+                "entry_id": "e1ce546e57effa3c20f033441e666f03",
+                "version": 1,
+                "domain": "mobile_app",
+                "title": "Kim Alster Glimberg",
+                "data": {
+                    "device_name": "Kim Alster Glimberg",
+                    "model": "iPhone10,4",
+                    "app_name": "Home Assistant",
+                    "supports_encryption": true,
+                    "manufacturer": "Apple",
+                    "app_id": "io.robbie.HomeAssistant",
+                    "os_name": "iOS",
+                    "device_id": "840FC033-0533-4D6C-97AF-28C7443E377F",
+                    "app_data": {
+                        "push_token": "dKphxZfB56IYzZj5RGjleP:APA91bHM-4XPIeEiXvt7q9aw8DyuhU1mok-0j76yY2aLj0FnOLR1x5aF8m5-Saiv0i0ejdOZMEXloD5yZWrNoUf-tuMUx-Fj-cZyeiDT8ysBxDc-3-96sa2r_vVmvNL--SzGCoFUcWQI",
+                        "push_url": "https://mobile-apps.home-assistant.io/api/sendPushNotification"
+                    },
+                    "app_version": "2020.7 (11)",
+                    "os_version": "14.2",
+                    "webhook_id": "9b28c252f2bd5c854213f1ff90f802d29f1d494e10f2dfeb2abf46d7d6c7d284",
+                    "secret": "7f454d246b5878f41bfcc0689f058af6a4096f29c278e6c01ad26cb92661abe7",
+                    "user_id": "da633a07c280406289ba1868230bca92"
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "registration",
+                "connection_class": "cloud_push",
+                "unique_id": "io.robbie.HomeAssistant-840FC033-0533-4D6C-97AF-28C7443E377F"
+            },
+            {
+                "entry_id": "08967e531f530b368a94695c4170610c",
+                "version": 1,
+                "domain": "upnp",
+                "title": "Ignored",
+                "data": {},
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "ignore",
+                "connection_class": "local_poll",
+                "unique_id": "uuid:35795d21-adc4-425b-a4a9-0c5948a88681::urn:schemas-upnp-org:device:InternetGatewayDevice:2"
+            }
+        ]
+    }
+}

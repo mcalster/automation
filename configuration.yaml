@@ -12,8 +12,6 @@ homeassistant:
   time_zone: Europe/Stockholm
   external_url: !secret external_url
   internal_url: !secret internal_url
-  # Customization file
-  customize: !include customize.yaml
   allowlist_external_dirs:
     - /config
 
@@ -34,14 +32,6 @@ logger:
 #    homeassistant.components.zha: debug
 #    zigpy_deconz.zigbee: debug
 #    zigpy_deconz: debug
-
-# View all events in a logbook
-#logbook:
-#  exclude:
-#    entities:
-#      - sensor.since_last_boot
-#      - sensor.date
-#      - sensor.yr_symbol
 
 # Text to speech
 tts:

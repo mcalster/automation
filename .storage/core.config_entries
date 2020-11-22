@@ -184,15 +184,6 @@
                                 "1a36f92:3"
                             ]
                         },
-                        "0a1411000091fc01010070": {
-                            "fire_event": false,
-                            "signal_repetitions": 1,
-                            "device_id": [
-                                "14",
-                                "11",
-                                "0091fc:1"
-                            ]
-                        },
                         "0b11005b019f5d3601010f70": {
                             "fire_event": false,
                             "signal_repetitions": 1,

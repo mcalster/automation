@@ -1180,23 +1180,6 @@
                 "original_icon": null
             },
             {
-                "entity_id": "binary_sensor.kangtai_0091fc_1",
-                "config_entry_id": "aa1ca0702084490fa784f6726130ebb9",
-                "device_id": "cd56742307584d0da3f69f2ee2bcbff2",
-                "area_id": null,
-                "unique_id": "14_11_0091fc:1",
-                "platform": "rfxtrx",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "Kangtai 0091fc:1",
-                "original_icon": null
-            },
-            {
                 "entity_id": "binary_sensor.ac_19f5d36_1",
                 "config_entry_id": "aa1ca0702084490fa784f6726130ebb9",
                 "device_id": "b7a60658b7b24ba89ef9caa8f1cd1a63",
@@ -1350,23 +1333,6 @@
                 "original_icon": null
             },
             {
-                "entity_id": "sensor.kangtai_0091fc_1_rssi_numeric",
-                "config_entry_id": "aa1ca0702084490fa784f6726130ebb9",
-                "device_id": "cd56742307584d0da3f69f2ee2bcbff2",
-                "area_id": null,
-                "unique_id": "14_11_0091fc:1_Rssi numeric",
-                "platform": "rfxtrx",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": "signal_strength",
-                "unit_of_measurement": "dBm",
-                "original_name": "Kangtai 0091fc:1 Rssi numeric",
-                "original_icon": null
-            },
-            {
                 "entity_id": "sensor.ac_19f5d36_1_rssi_numeric",
                 "config_entry_id": "aa1ca0702084490fa784f6726130ebb9",
                 "device_id": "b7a60658b7b24ba89ef9caa8f1cd1a63",
@@ -1517,23 +1483,6 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "AC 1a36f92:3",
-                "original_icon": null
-            },
-            {
-                "entity_id": "switch.kangtai_0091fc_1",
-                "config_entry_id": "aa1ca0702084490fa784f6726130ebb9",
-                "device_id": "cd56742307584d0da3f69f2ee2bcbff2",
-                "area_id": null,
-                "unique_id": "14_11_0091fc:1",
-                "platform": "rfxtrx",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "Kangtai 0091fc:1",
                 "original_icon": null
             },
             {

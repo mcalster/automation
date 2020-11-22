@@ -185,6 +185,12 @@
                             ],
                             "title": "Zigbee Lights",
                             "type": "entities"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                "group.ute_belysning"
+                            ]
                         }
                     ]
                 },

@@ -169,21 +169,10 @@
     service: homeassistant.turn_off
   - entity_id: group.ute_belysning
     service: homeassistant.turn_off
-  - data:
-      cluster_id: 6
-      command: 0
-      group: 1
-    service: zha.issue_zigbee_group_command
-  - data:
-      cluster_id: 6
-      command: 0
-      group: 2
-    service: zha.issue_zigbee_group_command
-  - data:
-      cluster_id: 6
-      command: 0
-      group: 6
-    service: zha.issue_zigbee_group_command
+  - data: {}
+    service: homeassistant.turn_off
+    entity_id: light.outdoor_lights_zha_group_0x0004
+  mode: single
 - id: cb67ff6e29444b1cafd6b35dc148b42a
   alias: Turn off lights in Kids room if home
   trigger:

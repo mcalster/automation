@@ -186,7 +186,7 @@
   - entity_id: group.fonster_lampor_barn_rum
     service: homeassistant.turn_off
   - data: {}
-    entity_id: light.skyfacing_zha_group_0x0004
+    entity_id: light.skyfacing_zha_group_0x0002
     service: homeassistant.turn_off
   mode: single
 - alias: Turn off lights in bedroom if home
@@ -238,21 +238,10 @@
   action:
   - entity_id: group.fonster_lampor
     service: homeassistant.turn_on
-  - data:
-      cluster_id: 6
-      command: 1
-      group: 1
-    service: zha.issue_zigbee_group_command
-  - data:
-      cluster_id: 6
-      command: 1
-      group: 2
-    service: zha.issue_zigbee_group_command
-  - data:
-      cluster_id: 6
-      command: 1
-      group: 6
-    service: zha.issue_zigbee_group_command
+  - data: {}
+    service: homeassistant.turn_on
+    entity_id: light.outdoor_lights_zha_group_0x0004
+  mode: single
 - id: '1563627826205'
   alias: Shut Down Octopi when Print Complete
   trigger:
@@ -333,13 +322,7 @@
   condition: []
   action:
   - data: {}
-    entity_id: light.parking_zha_group_0x0001
-    service: homeassistant.turn_on
-  - data: {}
-    entity_id: light.front_door_zha_group_0x0002
-    service: homeassistant.turn_on
-  - data: {}
-    entity_id: light.garden_zha_group_0x0006
+    entity_id: light.outdoor_lights_zha_group_0x0004
     service: homeassistant.turn_on
   - data: {}
     entity_id: switch.nedre_belysning

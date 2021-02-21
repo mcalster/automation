@@ -1,0 +1,6 @@
+switch.nedre_belysning:
+  icon: hass:lightbulb
+switch.ovre_belysning:
+  icon: hass:lightbulb
+group.fonster_lampor_sovrum:
+  icon: hass:lightbulb

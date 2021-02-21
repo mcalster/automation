@@ -18,6 +18,12 @@
                         },
                         {
                             "entity": "sun.sun"
+                        },
+                        {
+                            "entity": "sensor.thr128_138_thc138_0e_01_temperature"
+                        },
+                        {
+                            "entity": "sensor.thr128_138_thc138_0e_01_battery_numeric"
                         }
                     ],
                     "cards": [
@@ -39,6 +45,9 @@
                         },
                         {
                             "entities": [
+                                {
+                                    "entity": "light.outdoor_lights_zha_group_0x0004"
+                                },
                                 {
                                     "entity": "switch.ovre_belysning"
                                 },
@@ -76,114 +85,6 @@
                             ],
                             "show_header_toggle": false,
                             "title": "Mysbelysning Barnen",
-                            "type": "entities"
-                        },
-                        {
-                            "cards": [
-                                {
-                                    "entity": "script.sonos_say",
-                                    "hold_action": {
-                                        "action": "call-service",
-                                        "service": "zha.issue_zigbee_group_command",
-                                        "service_data": {
-                                            "cluster_id": 6,
-                                            "command": 0,
-                                            "group": 1
-                                        }
-                                    },
-                                    "icon": "mdi:lightbulb-multiple-outline",
-                                    "name": "Lampor vid parkingen",
-                                    "show_icon": true,
-                                    "show_name": true,
-                                    "tap_action": {
-                                        "action": "call-service",
-                                        "service": "zha.issue_zigbee_group_command",
-                                        "service_data": {
-                                            "cluster_id": 6,
-                                            "command": 2,
-                                            "group": 1
-                                        }
-                                    },
-                                    "type": "entity-button"
-                                },
-                                {
-                                    "entity": "script.sonos_say",
-                                    "hold_action": {
-                                        "action": "call-service",
-                                        "service": "zha.issue_zigbee_group_command",
-                                        "service_data": {
-                                            "cluster_id": 6,
-                                            "command": 0,
-                                            "group": 2
-                                        }
-                                    },
-                                    "icon": "mdi:lightbulb-multiple-outline",
-                                    "name": "Lampor vid huvudd\u00f6rr",
-                                    "show_icon": true,
-                                    "show_name": true,
-                                    "tap_action": {
-                                        "action": "call-service",
-                                        "service": "zha.issue_zigbee_group_command",
-                                        "service_data": {
-                                            "cluster_id": 6,
-                                            "command": 2,
-                                            "group": 2
-                                        }
-                                    },
-                                    "type": "entity-button"
-                                },
-                                {
-                                    "entity": "script.sonos_say",
-                                    "hold_action": {
-                                        "action": "call-service",
-                                        "service": "zha.issue_zigbee_group_command",
-                                        "service_data": {
-                                            "cluster_id": 6,
-                                            "command": 0,
-                                            "group": 3
-                                        }
-                                    },
-                                    "icon": "mdi:lightbulb-multiple-outline",
-                                    "name": "Lampor mot tr\u00e4dg\u00e5rden",
-                                    "show_icon": true,
-                                    "show_name": true,
-                                    "tap_action": {
-                                        "action": "call-service",
-                                        "service": "zha.issue_zigbee_group_command",
-                                        "service_data": {
-                                            "cluster_id": 6,
-                                            "command": 2,
-                                            "group": 3
-                                        }
-                                    },
-                                    "type": "entity-button"
-                                }
-                            ],
-                            "title": "Utebelysning (Hus)",
-                            "type": "vertical-stack"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "light.all_skyfacing_zha_group_0x0005"
-                                },
-                                {
-                                    "entity": "light.estate_zha_group_0x0003"
-                                },
-                                {
-                                    "entity": "light.front_door_zha_group_0x0002"
-                                },
-                                {
-                                    "entity": "light.parking_zha_group_0x0001"
-                                },
-                                {
-                                    "entity": "light.garden_zha_group_0x0006"
-                                },
-                                {
-                                    "entity": "light.skyfacing_zha_group_0x0004"
-                                }
-                            ],
-                            "title": "Zigbee Lights",
                             "type": "entities"
                         }
                     ]

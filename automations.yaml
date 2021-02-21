@@ -52,7 +52,7 @@
   - entity_id: group.fonster_lampor_barn_rum
     service: homeassistant.turn_off
   - data: {}
-    entity_id: light.skyfacing_zha_group_0x0004
+    entity_id: light.skyfacing_zha_group_0x0002
     service: homeassistant.turn_off
   mode: single
 - alias: Turn off lights in bedroom when coming home late
@@ -129,7 +129,7 @@
   - entity_id: input_boolean.morning_mode
     service: input_boolean.turn_off
   - data: {}
-    entity_id: light.all_skyfacing_zha_group_0x0005
+    entity_id: light.all_skyfacing_zha_group_0x0003
     service: homeassistant.turn_off
   - data:
       message: Found some lights still on at 01:00 AM. Turning them off now...
@@ -153,13 +153,7 @@
   - entity_id: group.all_fonster_lampor
     service: homeassistant.turn_on
   - data: {}
-    entity_id: light.parking_zha_group_0x0001
-    service: homeassistant.turn_on
-  - data: {}
-    entity_id: light.front_door_zha_group_0x0002
-    service: homeassistant.turn_on
-  - data: {}
-    entity_id: light.garden_zha_group_0x0006
+    entity_id: light.outdoor_lights_zha_group_0x0004
     service: homeassistant.turn_on
   - entity_id: group.ute_belysning
     service: homeassistant.turn_on
@@ -175,21 +169,10 @@
     service: homeassistant.turn_off
   - entity_id: group.ute_belysning
     service: homeassistant.turn_off
-  - data:
-      cluster_id: 6
-      command: 0
-      group: 1
-    service: zha.issue_zigbee_group_command
-  - data:
-      cluster_id: 6
-      command: 0
-      group: 2
-    service: zha.issue_zigbee_group_command
-  - data:
-      cluster_id: 6
-      command: 0
-      group: 6
-    service: zha.issue_zigbee_group_command
+  - data: {}
+    service: homeassistant.turn_off
+    entity_id: light.outdoor_lights_zha_group_0x0004
+  mode: single
 - id: cb67ff6e29444b1cafd6b35dc148b42a
   alias: Turn off lights in Kids room if home
   trigger:
@@ -203,7 +186,7 @@
   - entity_id: group.fonster_lampor_barn_rum
     service: homeassistant.turn_off
   - data: {}
-    entity_id: light.skyfacing_zha_group_0x0004
+    entity_id: light.skyfacing_zha_group_0x0002
     service: homeassistant.turn_off
   mode: single
 - alias: Turn off lights in bedroom if home
@@ -255,21 +238,10 @@
   action:
   - entity_id: group.fonster_lampor
     service: homeassistant.turn_on
-  - data:
-      cluster_id: 6
-      command: 1
-      group: 1
-    service: zha.issue_zigbee_group_command
-  - data:
-      cluster_id: 6
-      command: 1
-      group: 2
-    service: zha.issue_zigbee_group_command
-  - data:
-      cluster_id: 6
-      command: 1
-      group: 6
-    service: zha.issue_zigbee_group_command
+  - data: {}
+    service: homeassistant.turn_on
+    entity_id: light.outdoor_lights_zha_group_0x0004
+  mode: single
 - id: '1563627826205'
   alias: Shut Down Octopi when Print Complete
   trigger:
@@ -350,16 +322,10 @@
   condition: []
   action:
   - data: {}
-    entity_id: light.parking_zha_group_0x0001
-    service: homeassistant.turn_on
-  - data: {}
-    entity_id: light.front_door_zha_group_0x0002
-    service: homeassistant.turn_on
-  - data: {}
-    entity_id: light.garden_zha_group_0x0006
-    service: homeassistant.turn_on
-  - data: {}
     entity_id: switch.nedre_belysning
+    service: homeassistant.turn_on
+  - data: {}
+    entity_id: light.outdoor_lights_zha_group_0x0004
     service: homeassistant.turn_on
   - brightness_pct: 43
     device_id: 3a0ef9aaf6834e0aaf02d39b08256b21

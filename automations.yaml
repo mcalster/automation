@@ -52,7 +52,7 @@
   - entity_id: group.fonster_lampor_barn_rum
     service: homeassistant.turn_off
   - data: {}
-    entity_id: light.skyfacing_zha_group_0x0004
+    entity_id: light.skyfacing_zha_group_0x0002
     service: homeassistant.turn_off
   mode: single
 - alias: Turn off lights in bedroom when coming home late

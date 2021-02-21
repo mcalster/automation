@@ -129,7 +129,7 @@
   - entity_id: input_boolean.morning_mode
     service: input_boolean.turn_off
   - data: {}
-    entity_id: light.all_skyfacing_zha_group_0x0005
+    entity_id: light.all_skyfacing_zha_group_0x0003
     service: homeassistant.turn_off
   - data:
       message: Found some lights still on at 01:00 AM. Turning them off now...

@@ -322,10 +322,10 @@
   condition: []
   action:
   - data: {}
-    entity_id: light.outdoor_lights_zha_group_0x0004
+    entity_id: switch.nedre_belysning
     service: homeassistant.turn_on
   - data: {}
-    entity_id: switch.nedre_belysning
+    entity_id: light.outdoor_lights_zha_group_0x0004
     service: homeassistant.turn_on
   - brightness_pct: 43
     device_id: 3a0ef9aaf6834e0aaf02d39b08256b21

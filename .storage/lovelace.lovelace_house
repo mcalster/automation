@@ -86,25 +86,6 @@
                             "show_header_toggle": false,
                             "title": "Mysbelysning Barnen",
                             "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "light.all_skyfacing_zha_group_0x0003"
-                                },
-                                {
-                                    "entity": "light.skyfacing_zha_group_0x0002"
-                                },
-                                {
-                                    "entity": "light.outdoor_lights_zha_group_0x0004"
-                                }
-                            ],
-                            "title": "Zigbee Lights",
-                            "type": "entities"
-                        },
-                        {
-                            "type": "media-control",
-                            "entity": "media_player.samsung_ue50ku6075"
                         }
                     ]
                 },

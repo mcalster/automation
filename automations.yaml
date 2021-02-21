@@ -153,13 +153,7 @@
   - entity_id: group.all_fonster_lampor
     service: homeassistant.turn_on
   - data: {}
-    entity_id: light.parking_zha_group_0x0001
-    service: homeassistant.turn_on
-  - data: {}
-    entity_id: light.front_door_zha_group_0x0002
-    service: homeassistant.turn_on
-  - data: {}
-    entity_id: light.garden_zha_group_0x0006
+    entity_id: light.outdoor_lights_zha_group_0x0004
     service: homeassistant.turn_on
   - entity_id: group.ute_belysning
     service: homeassistant.turn_on

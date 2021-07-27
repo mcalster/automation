@@ -86,6 +86,45 @@
                             "show_header_toggle": false,
                             "title": "Mysbelysning Barnen",
                             "type": "entities"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.kangtai_001111_17"
+                                },
+                                {
+                                    "entity": "binary_sensor.kangtai_005111_17"
+                                },
+                                {
+                                    "entity": "binary_sensor.kangtai_008111_17"
+                                },
+                                {
+                                    "entity": "binary_sensor.kangtai_009104_17"
+                                },
+                                {
+                                    "entity": "binary_sensor.kangtai_009111_17"
+                                },
+                                {
+                                    "entity": "binary_sensor.kangtai_009111_8"
+                                },
+                                {
+                                    "entity": "binary_sensor.kangtai_00951e_17"
+                                },
+                                {
+                                    "entity": "binary_sensor.kangtai_009811_17"
+                                },
+                                {
+                                    "entity": "binary_sensor.kangtai_009bc1_17"
+                                },
+                                {
+                                    "entity": "binary_sensor.kangtai_009d11_17"
+                                },
+                                {
+                                    "entity": "binary_sensor.kangtai_00d111_17"
+                                }
+                            ],
+                            "title": "Kantagtai"
                         }
                     ]
                 },

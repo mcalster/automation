@@ -225,7 +225,7 @@
 - id: 0c912f631cb54be18390f9886f3dc0d1
   alias: Turn on lights in the morning if before sunrise
   trigger:
-  - at: 06:30:00
+  - at: 06:30
     platform: time
   condition:
   - condition: and

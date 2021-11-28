@@ -239,11 +239,13 @@
       entity_id: binary_sensor.workday_sensor
       state: 'on'
   action:
-  - entity_id: group.fonster_lampor
-    service: homeassistant.turn_on
-  - data: {}
-    service: homeassistant.turn_on
-    entity_id: light.outdoor_lights_zha_group_0x0004
+  - service: homeassistant.turn_on
+    data: {}
+    target:
+      entity_id:
+      - group.fonster_lampor
+      - light.outdoor_lights_zha_group_0x0004
+      area_id: selmas_rum
   mode: single
 - id: '1563627826205'
   alias: Shut Down Octopi when Print Complete

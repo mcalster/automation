@@ -46,11 +46,14 @@
     - condition: state
       entity_id: input_select.home_status
       state: Home
-    - after: '19:30:00'
+    - after: '19:30'
       condition: time
   action:
-  - entity_id: group.fonster_lampor_barn_rum
-    service: homeassistant.turn_off
+  - service: homeassistant.turn_off
+    data: {}
+    target:
+      entity_id: group.fonster_lampor_barn_rum
+      area_id: selmas_rum
   - data: {}
     entity_id: light.skyfacing_zha_group_0x0002
     service: homeassistant.turn_off

@@ -81,6 +81,9 @@
                                 },
                                 {
                                     "entity": "switch.ac_1a36f92_1"
+                                },
+                                {
+                                    "entity": "switch.ikea_of_sweden_tradfri_control_outlet_75dc8bfe_on_off"
                                 }
                             ],
                             "show_header_toggle": false,

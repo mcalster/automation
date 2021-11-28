@@ -153,13 +153,10 @@
   - service: homeassistant.turn_on
     data: {}
     target:
-      entity_id: group.all_fonster_lampor
+      entity_id:
+      - group.all_fonster_lampor
+      - light.outdoor_lights_zha_group_0x0004
       area_id: selmas_rum
-  - data: {}
-    entity_id: light.outdoor_lights_zha_group_0x0004
-    service: homeassistant.turn_on
-  - entity_id: group.ute_belysning
-    service: homeassistant.turn_on
   mode: single
 - id: 367e8e9bcb0243b1b09bfeb44cb115e9
   alias: Turn off lights at sunsrise

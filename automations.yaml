@@ -117,15 +117,18 @@
 - id: ae163c926136455dab10ccb2a479d21d
   alias: Turn off all lights if it is very late and the lights are still on
   trigger:
-  - at: 01:00:00
+  - at: 01:00
     platform: time
   condition:
   - condition: state
     entity_id: group.all_fonster_lampor
     state: 'on'
   action:
-  - entity_id: group.all_fonster_lampor
-    service: homeassistant.turn_off
+  - service: homeassistant.turn_off
+    data: {}
+    target:
+      entity_id: group.all_fonster_lampor
+      area_id: selmas_rum
   - entity_id: input_boolean.morning_mode
     service: input_boolean.turn_off
   - data: {}

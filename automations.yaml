@@ -144,14 +144,17 @@
   condition:
   - condition: or
     conditions:
-    - before: '19:30:00'
+    - before: '19:30'
       condition: time
     - condition: state
       entity_id: input_select.home_status
       state: Away
   action:
-  - entity_id: group.all_fonster_lampor
-    service: homeassistant.turn_on
+  - service: homeassistant.turn_on
+    data: {}
+    target:
+      entity_id: group.all_fonster_lampor
+      area_id: selmas_rum
   - data: {}
     entity_id: light.outdoor_lights_zha_group_0x0004
     service: homeassistant.turn_on

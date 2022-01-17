@@ -400,3 +400,15 @@
         in {{ trigger.event.data.folder }}'
   - service: shell_command.commit_config
   mode: single
+- id: '1642445204462'
+  alias: Refresh Lets Encrypt Certs
+  description: ''
+  trigger:
+  - platform: time
+    at: 01:00
+  condition: []
+  action:
+  - service: hassio.addon_start
+    data:
+      addon: core_letsencrypt
+  mode: single

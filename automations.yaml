@@ -401,7 +401,7 @@
   - service: shell_command.commit_config
   mode: single
 - id: '1642445204462'
-  alias: Refresh Lets Encrypt Certs
+  alias: Refresh Let's Encrypt Certs
   description: ''
   trigger:
   - platform: time

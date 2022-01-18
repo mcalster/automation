@@ -412,3 +412,15 @@
     data:
       addon: core_letsencrypt
   mode: single
+- id: '1642538502984'
+  alias: Purge Database
+  description: ''
+  trigger:
+  - platform: time
+    at: 03:00
+  condition: []
+  action:
+  - service: recorder.purge
+    data:
+      keep_days: 90
+  mode: single

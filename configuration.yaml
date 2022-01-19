@@ -86,8 +86,8 @@ camera:
 # Notification
 notify: !include service/notify.yaml
 
-# Verisure
-verisure: !include verisure.yaml
+# Verisure - moved to UI integration
+#verisure: !include verisure.yaml
 
 group: !include groups.yaml
 

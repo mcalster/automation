@@ -383,6 +383,10 @@
                             "type": "entities"
                         },
                         {
+                            "type": "entity",
+                            "entity": "lock.hoveddor"
+                        },
+                        {
                             "entities": [
                                 "sensor.memory_free",
                                 "sensor.cpu_temp",
@@ -395,10 +399,6 @@
                             ],
                             "title": "System Data",
                             "type": "entities"
-                        },
-                        {
-                            "type": "entity",
-                            "entity": "lock.hoveddor"
                         }
                     ],
                     "icon": "mdi:home",

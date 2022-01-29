@@ -185,12 +185,12 @@
                             "type": "weather-forecast"
                         },
                         {
-                            "entity": "alarm_control_panel.skumparp_alarm",
-                            "type": "alarm-panel"
-                        },
-                        {
                             "type": "entity",
                             "entity": "lock.hoveddor"
+                        },
+                        {
+                            "entity": "alarm_control_panel.skumparp_alarm",
+                            "type": "alarm-panel"
                         },
                         {
                             "entities": [

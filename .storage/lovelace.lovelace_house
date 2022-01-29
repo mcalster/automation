@@ -189,6 +189,10 @@
                             "type": "alarm-panel"
                         },
                         {
+                            "type": "entity",
+                            "entity": "lock.hoveddor"
+                        },
+                        {
                             "entities": [
                                 {
                                     "entity": "device_tracker.caroline_glimberg_s_iphone"
@@ -287,10 +291,6 @@
                             "show_header_toggle": false,
                             "title": "Devices",
                             "type": "entities"
-                        },
-                        {
-                            "type": "entity",
-                            "entity": "lock.hoveddor"
                         },
                         {
                             "entities": [

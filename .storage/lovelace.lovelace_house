@@ -1,5 +1,6 @@
 {
     "version": 1,
+    "minor_version": 1,
     "key": "lovelace.lovelace_house",
     "data": {
         "config": {
@@ -394,6 +395,10 @@
                             ],
                             "title": "System Data",
                             "type": "entities"
+                        },
+                        {
+                            "type": "entity",
+                            "entity": "lock.hoveddor"
                         }
                     ],
                     "icon": "mdi:home",

@@ -129,6 +129,10 @@
                                 }
                             ],
                             "title": "Kantagtai"
+                        },
+                        {
+                            "type": "entity",
+                            "entity": "lock.hoveddor"
                         }
                     ]
                 },
@@ -181,12 +185,12 @@
                     "badges": [],
                     "cards": [
                         {
-                            "entity": "weather.home",
-                            "type": "weather-forecast"
-                        },
-                        {
                             "type": "entity",
                             "entity": "lock.hoveddor"
+                        },
+                        {
+                            "entity": "weather.home",
+                            "type": "weather-forecast"
                         },
                         {
                             "entity": "alarm_control_panel.skumparp_alarm",

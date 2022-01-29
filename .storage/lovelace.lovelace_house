@@ -92,6 +92,10 @@
                             "type": "entities"
                         },
                         {
+                            "type": "entity",
+                            "entity": "lock.hoveddor"
+                        },
+                        {
                             "type": "entities",
                             "entities": [
                                 {
@@ -129,10 +133,6 @@
                                 }
                             ],
                             "title": "Kantagtai"
-                        },
-                        {
-                            "type": "entity",
-                            "entity": "lock.hoveddor"
                         }
                     ]
                 },

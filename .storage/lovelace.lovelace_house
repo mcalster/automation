@@ -292,14 +292,27 @@
                         },
                         {
                             "entities": [
-                                "sensor.memory_free",
-                                "sensor.cpu_temp",
-                                "sensor.memory_use_percent",
-                                "sensor.processor_use",
-                                "sensor.disk_use_percent",
-                                "sensor.last_boot",
-                                "sensor.disk_free",
-                                "sensor.connection_type"
+                                {
+                                    "entity": "sensor.memory_free"
+                                },
+                                {
+                                    "entity": "sensor.cpu_temp"
+                                },
+                                {
+                                    "entity": "sensor.memory_use_percent"
+                                },
+                                {
+                                    "entity": "sensor.processor_use"
+                                },
+                                {
+                                    "entity": "sensor.disk_use_percent"
+                                },
+                                {
+                                    "entity": "sensor.last_boot"
+                                },
+                                {
+                                    "entity": "sensor.disk_free"
+                                }
                             ],
                             "title": "System Data",
                             "type": "entities"

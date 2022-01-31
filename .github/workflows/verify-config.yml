@@ -35,7 +35,9 @@ jobs:
           echo "$SECRETS_PROPERTIES" | base64 -d > ./secrets.yaml
           mkdir ./ssl
           echo "$SECRETS_FULLCHAIN" | base64 -d > ./ssl/fullchain.pem
+          chmod -R 755 /ssl/fullchain.pem
           echo "$PRIVKEY_PEM" | base64 -d > ./ssl/privkey.pem
+          chmod -R 755 ./ssl/privkey.pem
       - name: Start Hassio and check config
         run: |
           docker run -d --name="home-assistant" -v $GITHUB_WORKSPACE:/config --net=host homeassistant/home-assistant:stable

@@ -8,8 +8,8 @@ on:
     branches: [master]
   pull_request:
     branches: [master]
-  schedule:
-    - cron: 0 12 * * *
+#  schedule:
+ #   - cron: 0 12 * * *
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -32,13 +32,14 @@ jobs:
           SECRETS_FULLCHAIN: ${{ secrets.FULLCHAIN_PEM }}
           SECRETS_PRIVKEY: ${{ secrets.PRIVKEY_PEM }}
         run: |
+          echo "Prepare needed files"
           echo "$SECRETS_PROPERTIES" | base64 -d > ./secrets.yaml
           mkdir ./ssl
           echo "$SECRETS_FULLCHAIN" | base64 -d > ./ssl/fullchain.pem
           echo "$PRIVKEY_PEM" | base64 -d > ./ssl/privkey.pem
       - name: Start Hassio and check config
         run: |
-          docker run -d --name="home-assistant" -v $GITHUB_WORKSPACE:/config --net=host homeassistant/home-assistant:stable
+          docker run -d --name="home-assistant" -v $GITHUB_WORKSPACE:/config -v $GITHUB_WORKSPACE/ssl:/ssl --net=host homeassistant/home-assistant:stable
           docker exec home-assistant python -m homeassistant --script check_config --config /config
   notify-hassio:
     runs-on: ubuntu-latest

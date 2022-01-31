@@ -61,11 +61,11 @@ tts:
 stream:
 
 # Octopi
-octoprint:
-  host: !secret octopi_host
-  api_key: !secret octopi_api_key
-  bed: true
-  number_of_tools: 1
+#octoprint:
+#  host: !secret octopi_host
+#  api_key: !secret octopi_api_key
+#  bed: true
+#  number_of_tools: 1
 
 rest_command:
   shut_down_octoprint:

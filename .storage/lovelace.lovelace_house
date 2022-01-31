@@ -1,5 +1,6 @@
 {
     "version": 1,
+    "minor_version": 1,
     "key": "lovelace.lovelace_house",
     "data": {
         "config": {
@@ -27,6 +28,10 @@
                         }
                     ],
                     "cards": [
+                        {
+                            "type": "entity",
+                            "entity": "lock.hoveddor"
+                        },
                         {
                             "entities": [
                                 {
@@ -180,112 +185,16 @@
                     "badges": [],
                     "cards": [
                         {
+                            "type": "entity",
+                            "entity": "lock.hoveddor"
+                        },
+                        {
                             "entity": "weather.home",
                             "type": "weather-forecast"
                         },
                         {
-                            "entity": "alarm_control_panel.skumparp_alarm",
+                            "entity": "alarm_control_panel.verisure_alarm",
                             "type": "alarm-panel"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "device_tracker.caroline_glimberg_s_iphone"
-                                },
-                                {
-                                    "entity": "sensor.battery_level_2"
-                                },
-                                {
-                                    "entity": "sensor.distance_2"
-                                },
-                                {
-                                    "entity": "sensor.floors_ascended_2"
-                                },
-                                {
-                                    "entity": "sensor.battery_state_2"
-                                },
-                                {
-                                    "entity": "sensor.bssid_2"
-                                },
-                                {
-                                    "entity": "sensor.ssid_2"
-                                },
-                                {
-                                    "entity": "sensor.steps_2"
-                                },
-                                {
-                                    "entity": "sensor.connection_type_2"
-                                },
-                                {
-                                    "entity": "sensor.geocoded_location_2"
-                                },
-                                {
-                                    "entity": "sensor.sim_1_2"
-                                },
-                                {
-                                    "entity": "sensor.last_update_trigger_2"
-                                },
-                                {
-                                    "entity": "sensor.average_active_pace_2"
-                                },
-                                {
-                                    "entity": "sensor.floors_descended_2"
-                                },
-                                {
-                                    "entity": "sensor.activity_2"
-                                },
-                                {
-                                    "entity": "device_tracker.kim_alster_glimberg"
-                                },
-                                {
-                                    "entity": "sensor.average_active_pace"
-                                },
-                                {
-                                    "entity": "sensor.floors_ascended"
-                                },
-                                {
-                                    "entity": "sensor.floors_descended"
-                                },
-                                {
-                                    "entity": "sensor.sim_1"
-                                },
-                                {
-                                    "entity": "sensor.ssid"
-                                },
-                                {
-                                    "entity": "sensor.steps"
-                                },
-                                {
-                                    "entity": "sensor.activity"
-                                },
-                                {
-                                    "entity": "sensor.geocoded_location"
-                                },
-                                {
-                                    "entity": "sensor.last_update_trigger"
-                                },
-                                {
-                                    "entity": "sensor.battery_level"
-                                },
-                                {
-                                    "entity": "sensor.battery_state"
-                                },
-                                {
-                                    "entity": "sensor.distance"
-                                },
-                                {
-                                    "entity": "sensor.bssid"
-                                },
-                                {
-                                    "entity": "sensor.caroline_glimberg_s_iphone_activity"
-                                },
-                                {
-                                    "entity": "device_tracker.caroline_glimberg_s_iphone_2"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Devices",
-                            "type": "entities"
                         },
                         {
                             "entities": [
@@ -383,14 +292,27 @@
                         },
                         {
                             "entities": [
-                                "sensor.memory_free",
-                                "sensor.cpu_temp",
-                                "sensor.memory_use_percent",
-                                "sensor.processor_use",
-                                "sensor.disk_use_percent",
-                                "sensor.last_boot",
-                                "sensor.disk_free",
-                                "sensor.connection_type"
+                                {
+                                    "entity": "sensor.memory_free"
+                                },
+                                {
+                                    "entity": "sensor.cpu_temp"
+                                },
+                                {
+                                    "entity": "sensor.memory_use_percent"
+                                },
+                                {
+                                    "entity": "sensor.processor_use"
+                                },
+                                {
+                                    "entity": "sensor.disk_use_percent"
+                                },
+                                {
+                                    "entity": "sensor.last_boot"
+                                },
+                                {
+                                    "entity": "sensor.disk_free"
+                                }
                             ],
                             "title": "System Data",
                             "type": "entities"

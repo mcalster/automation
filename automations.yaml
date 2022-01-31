@@ -451,5 +451,5 @@
     target:
       device_id: 1c9b4a2a72fa7d149991f732bbddc260
     data:
-      code: '989898'
+      code: !secret verisure_pin
   mode: single

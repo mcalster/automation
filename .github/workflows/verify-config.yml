@@ -39,7 +39,7 @@ jobs:
           echo "Result ssl:"
           ls -al ./ssl
           echo "Result:"
-          ls -al          
+          ls -al
       - name: Start Hassio and check config
         run: |
           docker run -d --name="home-assistant" -v $GITHUB_WORKSPACE:/config --net=host homeassistant/home-assistant:stable

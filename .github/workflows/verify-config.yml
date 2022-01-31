@@ -42,7 +42,7 @@ jobs:
           ls -al
       - name: Start Hassio and check config
         run: |
-          docker run -d --name="home-assistant" -v $GITHUB_WORKSPACE:/config --net=host homeassistant/home-assistant:stable
+          docker run -d --name="home-assistant" -v $GITHUB_WORKSPACE:/config -v $GITHUB_WORKSPACE/ssl:/ssl --net=host homeassistant/home-assistant:stable
           docker exec home-assistant python -m homeassistant --script check_config --config /config
   notify-hassio:
     runs-on: ubuntu-latest

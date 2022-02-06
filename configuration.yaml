@@ -84,7 +84,9 @@ camera:
 # google_assistant: !include service/google_assistant.yaml
 
 # Google Calendars
-google: !include service/google.yaml
+google:
+  client_id: !secret google_cal_clientid
+  client_secret: !secret google_cal_clientsecret
 
 # Notification
 notify: !include service/notify.yaml

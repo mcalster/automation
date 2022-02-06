@@ -1,0 +1,11 @@
+- cal_id: "u43bp0hmdj8d3dinp7cbk2ucr8@group.calendar.google.com"
+  entities:
+  - device_id: vacation
+    name: Not Workday
+    track: true
+    #search: "#UnImportant"
+#  - device_id: test_important
+#    name: Important Stuff
+#    track: true
+#    search: "#Important"
+#    offset: "!!"

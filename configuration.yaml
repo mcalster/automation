@@ -47,8 +47,8 @@ http:
 # Allows you to issue voice commands from the frontend in enabled browsers
 #conversation:
 
-logger:
-  default: error
+#logger:
+#  default: error
 #  logs:
 #    homeassistant.components.zha: debug
 #    zigpy_deconz.zigbee: debug
@@ -60,13 +60,7 @@ tts:
 
 stream:
 
-# Octopi
-#octoprint:
-#  host: !secret octopi_host
-#  api_key: !secret octopi_api_key
-#  bed: true
-#  number_of_tools: 1
-
+# Octopi Shutdown
 rest_command:
   shut_down_octoprint:
     url: !secret octopi_shutdown_url
@@ -91,13 +85,9 @@ google:
 # Notification
 notify: !include service/notify.yaml
 
-# Verisure - moved to UI integration
-#verisure: !include verisure.yaml
-
 group: !include groups.yaml
-
+scenes: !include scenes.yaml
 automation: !include automations.yaml
-
 script: !include scripts.yaml
 
 # Entities

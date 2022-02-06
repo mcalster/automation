@@ -9,3 +9,45 @@
 #    track: true
 #    search: "#Important"
 #    offset: "!!"
+
+- cal_id: p#weeknum@group.v.calendar.google.com
+  entities:
+  - device_id: ugenumre
+    ignore_availability: true
+    name: Ugenumre
+    track: true
+
+- cal_id: addressbook#contacts@group.v.calendar.google.com
+  entities:
+  - device_id: fodselsdage
+    ignore_availability: true
+    name: "F\xF8dselsdage"
+    track: true
+
+- cal_id: da.danish#holiday@group.v.calendar.google.com
+  entities:
+  - device_id: helligdage_i_danmark
+    ignore_availability: true
+    name: Helligdage i Danmark
+    track: true
+
+- cal_id: da.swedish#holiday@group.v.calendar.google.com
+  entities:
+  - device_id: helligdage_i_sverige
+    ignore_availability: true
+    name: Helligdage i Sverige
+    track: true
+
+- cal_id: kimalster@gmail.com
+  entities:
+  - device_id: kim_alster_glimberg
+    ignore_availability: true
+    name: Kim Alster Glimberg
+    track: true
+
+- cal_id: family11435861495860980555@group.calendar.google.com
+  entities:
+  - device_id: familie
+    ignore_availability: true
+    name: Familie
+    track: true

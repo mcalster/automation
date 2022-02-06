@@ -86,7 +86,7 @@ google:
 notify: !include service/notify.yaml
 
 group: !include groups.yaml
-scenes: !include scenes.yaml
+scene: !include scenes.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 

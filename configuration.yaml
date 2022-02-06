@@ -83,6 +83,9 @@ camera:
 # Google Assistant
 # google_assistant: !include service/google_assistant.yaml
 
+# Google Calendars
+google: !include service/google.yaml
+
 # Notification
 notify: !include service/notify.yaml
 

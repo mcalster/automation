@@ -436,7 +436,7 @@
       state: 'on'
   icon: mdi:brightness-7
 - id: '1644349122310'
-  name: Window Light Dawn Mode
+  name: Window Lights Dawn Mode
   entities:
     switch.ovre_belysning:
       friendly_name: Övre belysning

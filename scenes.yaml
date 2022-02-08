@@ -1,5 +1,5 @@
 - id: '1644172416173'
-  name: Early Morning Lights
+  name: Outdoor Morning Mode
   entities:
     light.house_1_cc447bfe_level_on_off:
       supported_color_modes:
@@ -141,4 +141,13 @@
       device_class: update
       friendly_name: IKEA of Sweden TRADFRI bulb GU10 WW 400lm cb8450fe identify
       state: unknown
+    light.house_6_level_on_off:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 254
+      off_brightness:
+      friendly_name: house 6 level, on_off
+      supported_features: 41
+      state: 'on'
   icon: mdi:brightness-7

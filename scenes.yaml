@@ -142,28 +142,3 @@
       friendly_name: IKEA of Sweden TRADFRI bulb GU10 WW 400lm cb8450fe identify
       state: unknown
   icon: mdi:brightness-7
-- id: '1644172753307'
-  name: Lägg-dags
-  entities:
-    light.house_9_level_on_off:
-      supported_color_modes:
-      - brightness
-      off_brightness:
-      friendly_name: house 9 level, on_off
-      supported_features: 41
-      state: 'off'
-    light.house_11_b06453fe_level_on_off:
-      supported_color_modes:
-      - brightness
-      off_brightness:
-      friendly_name: house11
-      supported_features: 41
-      state: 'off'
-    light.house_1_cc447bfe_level_on_off:
-      supported_color_modes:
-      - brightness
-      off_brightness:
-      friendly_name: house1
-      supported_features: 41
-      state: 'off'
-  icon: mdi:chat-sleep

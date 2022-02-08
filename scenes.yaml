@@ -435,3 +435,36 @@
       supported_features: 41
       state: 'on'
   icon: mdi:brightness-7
+- id: '1644349122310'
+  name: Window Light Dawn Mode
+  entities:
+    switch.ovre_belysning:
+      friendly_name: Övre belysning
+      icon: hass:lightbulb
+      state: 'on'
+    switch.nedre_belysning:
+      friendly_name: Nedre belysning
+      icon: hass:lightbulb
+      state: 'on'
+    switch.ikea_of_sweden_tradfri_control_outlet_75dc8bfe_on_off:
+      icon: mdi:lightbulb
+      friendly_name: Selmas Fönster
+      state: 'off'
+    group.fonster_lampor_sovrum:
+      entity_id:
+      - switch.ac_1a36f92_3
+      - light.ikea_of_sweden_tradfri_bulb_e27_ws_opal_980lm_fe156ce1_1
+      order: 2
+      assumed_state: true
+      friendly_name: Fonster Lampor i sovrum
+      icon: hass:lightbulb
+      state: 'off'
+    switch.ac_08f26c2_3:
+      assumed_state: true
+      friendly_name: Saga Fönsterlampa
+      state: 'off'
+    switch.ac_1a36f92_1:
+      assumed_state: true
+      friendly_name: Sam's Fönsterlampor
+      state: 'off'
+  icon: mdi:window-closed-variant

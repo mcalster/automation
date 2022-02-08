@@ -4,10 +4,12 @@
     light.house_1_cc447bfe_level_on_off:
       supported_color_modes:
       - brightness
+      color_mode: brightness
+      brightness: 254
       off_brightness:
       friendly_name: house1
       supported_features: 41
-      state: 'off'
+      state: 'on'
     button.ikea_of_sweden_tradfri_bulb_gu10_ww_400lm_cc447bfe_identify:
       device_class: update
       friendly_name: IKEA of Sweden TRADFRI bulb GU10 WW 400lm cc447bfe identify
@@ -116,10 +118,12 @@
     light.house_11_b06453fe_level_on_off:
       supported_color_modes:
       - brightness
+      color_mode: brightness
+      brightness: 254
       off_brightness:
       friendly_name: house11
       supported_features: 41
-      state: 'off'
+      state: 'on'
     button.ikea_of_sweden_tradfri_bulb_gu10_ww_400lm_b06453fe_identify:
       device_class: update
       friendly_name: IKEA of Sweden TRADFRI bulb GU10 WW 400lm b06453fe identify

@@ -175,7 +175,7 @@
       supported_color_modes:
       - brightness
       color_mode: brightness
-      brightness: 223
+      brightness: 254
       off_brightness:
       friendly_name: house3
       supported_features: 41
@@ -227,7 +227,7 @@
       supported_color_modes:
       - brightness
       color_mode: brightness
-      brightness: 248
+      brightness: 128
       off_brightness:
       friendly_name: house 8
       supported_features: 41
@@ -275,7 +275,7 @@
       supported_color_modes:
       - brightness
       color_mode: brightness
-      brightness: 254
+      brightness: 128
       off_brightness:
       friendly_name: house12
       supported_features: 41

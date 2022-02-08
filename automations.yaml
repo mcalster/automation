@@ -393,11 +393,11 @@
     event_data:
       event_type: moved
   action:
-  - service: notify.notify
-    data:
-      title: File change captured!
-      message: 'Event: {{trigger.event.type}} File:  {{ trigger.event.data.file }}
-        in {{ trigger.event.data.folder }}'
+#  - service: notify.notify
+#    data:
+#      title: File change captured!
+#      message: 'Event: {{trigger.event.type}} File:  {{ trigger.event.data.file }}
+#        in {{ trigger.event.data.folder }}'
   - service: shell_command.commit_config
   mode: single
 - id: '1642445204462'

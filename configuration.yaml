@@ -61,18 +61,18 @@ tts:
 stream:
 
 # Octopi Shutdown
-rest_command:
-  shut_down_octoprint:
-    url: !secret octopi_shutdown_url
-    method: POST
-    headers:
-      X-Api-Key: !secret octopi_api_key
+#rest_command:
+#  shut_down_octoprint:
+#    url: !secret octopi_shutdown_url
+#    method: POST
+#    headers:
+#      X-Api-Key: !secret octopi_api_key
 
-camera:
-  - platform: mjpeg
-    name: OctoPrint
-    still_image_url: !secret octopi_still_image_url
-    mjpeg_url: !secret octopi_mjpeg_url
+#camera:
+#  - platform: mjpeg
+#    name: OctoPrint
+#    still_image_url: !secret octopi_still_image_url
+#    mjpeg_url: !secret octopi_mjpeg_url
 
 # Google Assistant
 # google_assistant: !include service/google_assistant.yaml
@@ -88,6 +88,7 @@ notify: !include service/notify.yaml
 group: !include groups.yaml
 scene: !include scenes.yaml
 automation: !include automations.yaml
+automation secret: !include secret_automations.yaml
 script: !include scripts.yaml
 
 # Entities

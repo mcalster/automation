@@ -441,7 +441,7 @@
     switch.ovre_belysning:
       friendly_name: Övre belysning
       icon: hass:lightbulb
-      state: 'on'
+      state: 'off'
     switch.nedre_belysning:
       friendly_name: Nedre belysning
       icon: hass:lightbulb

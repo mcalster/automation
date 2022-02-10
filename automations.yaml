@@ -393,11 +393,11 @@
     event_data:
       event_type: moved
   action:
-  - service: notify.notify
-    data:
-      title: File change captured!
-      message: 'Event: {{trigger.event.type}} File:  {{ trigger.event.data.file }}
-        in {{ trigger.event.data.folder }}'
+#  - service: notify.notify
+#    data:
+#      title: File change captured!
+#      message: 'Event: {{trigger.event.type}} File:  {{ trigger.event.data.file }}
+#        in {{ trigger.event.data.folder }}'
   - service: shell_command.commit_config
   mode: single
 - id: '1642445204462'
@@ -423,33 +423,4 @@
   - service: recorder.purge
     data:
       keep_days: 90
-  mode: single
-- id: '1643563522914'
-  alias: Disarm Alarm when lock is unlocked
-  description: ''
-  trigger:
-  - platform: device
-    device_id: 4c905d6f26185b312bb770039ff79099
-    domain: lock
-    entity_id: lock.hoveddor
-    type: unlocked
-  condition:
-  - condition: or
-    conditions:
-    - condition: device
-      device_id: 1c9b4a2a72fa7d149991f732bbddc260
-      domain: alarm_control_panel
-      entity_id: alarm_control_panel.verisure_alarm
-      type: is_armed_away
-    - condition: device
-      device_id: 1c9b4a2a72fa7d149991f732bbddc260
-      domain: alarm_control_panel
-      entity_id: alarm_control_panel.verisure_alarm
-      type: is_armed_home
-  action:
-  - service: alarm_control_panel.alarm_disarm
-    target:
-      device_id: 1c9b4a2a72fa7d149991f732bbddc260
-    data:
-      code: !secret verisure_pin
   mode: single

@@ -3,7 +3,7 @@ secrets.yaml
 *.log
 *.db
 *.db-*
-.uuid
+home-assistant.log.*
 .HA_VERSION
 ip_bans.yaml
 tts/
@@ -18,7 +18,7 @@ tts/
 .storage/person
 .storage/zha*
 .google.token
-.kimalster@gmail.com.august.conf
+.*.august.conf
 .storage/trace.saved_traces
 .storage/verisure_e3c51471de87b4a73120e365825c2f5c
 blueprints/

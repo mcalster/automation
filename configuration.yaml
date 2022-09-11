@@ -78,9 +78,9 @@ stream:
 # google_assistant: !include service/google_assistant.yaml
 
 # Google Calendars
-google:
-  client_id: !secret google_calendar_client_id
-  client_secret: !secret google_calendar_client_secret
+#google:
+#  client_id: !secret google_calendar_client_id
+#  client_secret: !secret google_calendar_client_secret
 
 # Notification
 notify: !include service/notify.yaml

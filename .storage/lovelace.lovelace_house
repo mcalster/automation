@@ -163,12 +163,12 @@
               "entity": "media_player.tv_the_frame"
             },
             {
-              "entity": "media_player.kokken",
-              "type": "media-control"
-            },
-            {
               "type": "media-control",
               "entity": "media_player.samsung_the_frame_55"
+            },
+            {
+              "entity": "media_player.kokken",
+              "type": "media-control"
             }
           ]
         },

@@ -447,5 +447,5 @@
   - service: aarlo.alarm_set_mode
     data:
       entity_id: alarm_control_panel.aarlo_backyard_east,alarm_control_panel.aarlo_backyard_west,alarm_control_panel.aarlo_parking,alarm_control_panel.aarlo_garage
-      mode: unarmed
+      mode: disarmed
   mode: single

@@ -200,12 +200,12 @@
               ]
             },
             {
-              "entity": "alarm_control_panel.verisure_alarm",
-              "type": "alarm-panel"
-            },
-            {
               "type": "entity",
               "entity": "lock.hoveddor"
+            },
+            {
+              "entity": "alarm_control_panel.verisure_alarm",
+              "type": "alarm-panel"
             },
             {
               "type": "custom:aarlo-glance",

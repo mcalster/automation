@@ -176,7 +176,7 @@
             },
             {
               "type": "media-control",
-              "entity": "media_player.samsung_the_frame_55"
+              "entity": "media_player.the_frame_vardagsrum"
             }
           ]
         },

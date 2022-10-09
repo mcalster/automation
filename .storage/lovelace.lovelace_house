@@ -297,6 +297,21 @@
               ]
             },
             {
+              "type": "custom:aarlo-glance",
+              "entity": "camera.aarlo_backyard_west",
+              "image_top": [
+                "name",
+                "date"
+              ],
+              "image_bottom": [
+                "motion",
+                "library",
+                "stream",
+                "snapshot",
+                "battery"
+              ]
+            },
+            {
               "entity": "alarm_control_panel.verisure_alarm",
               "type": "alarm-panel"
             },
@@ -326,21 +341,6 @@
               ],
               "title": "System Data",
               "type": "entities"
-            },
-            {
-              "type": "custom:aarlo-glance",
-              "entity": "camera.aarlo_backyard_west",
-              "image_top": [
-                "name",
-                "date"
-              ],
-              "image_bottom": [
-                "motion",
-                "library",
-                "stream",
-                "snapshot",
-                "battery"
-              ]
             },
             {
               "entities": [

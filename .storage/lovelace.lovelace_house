@@ -286,6 +286,21 @@
               "type": "alarm-panel"
             },
             {
+              "type": "custom:aarlo-glance",
+              "entity": "camera.aarlo_backyard_east",
+              "image_top": [
+                "name",
+                "date"
+              ],
+              "image_bottom": [
+                "motion",
+                "library",
+                "stream",
+                "snapshot",
+                "battery"
+              ]
+            },
+            {
               "entities": [
                 {
                   "entity": "sensor.memory_free"
@@ -311,21 +326,6 @@
               ],
               "title": "System Data",
               "type": "entities"
-            },
-            {
-              "type": "custom:aarlo-glance",
-              "entity": "camera.aarlo_backyard_east",
-              "image_top": [
-                "name",
-                "date"
-              ],
-              "image_bottom": [
-                "motion",
-                "library",
-                "stream",
-                "snapshot",
-                "battery"
-              ]
             },
             {
               "entities": [

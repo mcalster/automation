@@ -251,37 +251,6 @@
             {
               "entity": "alarm_control_panel.verisure_alarm",
               "type": "alarm-panel"
-            },
-            {
-              "entities": [
-                {
-                  "entity": "binary_sensor.kontor"
-                },
-                {
-                  "entity": "binary_sensor.verisure_ethernet_status"
-                },
-                {
-                  "entity": "binary_sensor.entre"
-                },
-                {
-                  "entity": "sensor.tvattstuga_temperature"
-                },
-                {
-                  "entity": "sensor.hall_plan2_temperature"
-                },
-                {
-                  "entity": "sensor.matplats_temperature"
-                },
-                {
-                  "entity": "sensor.tvattstuga_humidity"
-                },
-                {
-                  "entity": "sensor.hall_plan2_humidity"
-                }
-              ],
-              "show_header_toggle": true,
-              "title": "Hus-sensorer",
-              "type": "entities"
             }
           ],
           "icon": "mdi:home",

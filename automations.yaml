@@ -449,3 +449,25 @@
       entity_id: alarm_control_panel.aarlo_backyard_east,alarm_control_panel.aarlo_backyard_west,alarm_control_panel.aarlo_parking,alarm_control_panel.aarlo_garage
       mode: disarmed
   mode: single
+- id: '1665342120821'
+  alias: Turn off standby when nobody is home
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - alarm_control_panel.verisure_alarm
+  - platform: time
+    at: 00:00:00
+  condition: []
+  action:
+  - service: media_player.media_stop
+    data: {}
+    target:
+      device_id:
+      - c443a46b830cd7c583cc7bf2b2f2c5cc
+      - bee2a2e4235c7788a7a601e39afd8911
+  - service: homeassistant.turn_off
+    data: {}
+    target:
+      device_id: 5fd1e95ccbe3503b4e31c6f70ce48cd7
+  mode: single

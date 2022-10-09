@@ -178,6 +178,10 @@
                 "sensor.onhub_packets_s_sent"
               ],
               "type": "entities"
+            },
+            {
+              "type": "media-control",
+              "entity": "media_player.samsung_the_frame_55"
             }
           ]
         },

@@ -94,10 +94,6 @@
               "show_header_toggle": false,
               "title": "Mysbelysning Barnen",
               "type": "entities"
-            },
-            {
-              "type": "media-control",
-              "entity": "media_player.the_frame_vardagsrum"
             }
           ]
         },

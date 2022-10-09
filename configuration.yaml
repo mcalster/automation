@@ -75,6 +75,11 @@ aarlo:
   tfa_password: !secret gmail_app_password
   backend: sse
 
+alarm_control_panel:
+  - platform: aarlo
+    disarmed_mode_name: disarmed
+    away_mode_name: armed
+
 # Octopi Shutdown
 #rest_command:
 #  shut_down_octoprint:

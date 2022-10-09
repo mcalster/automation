@@ -474,3 +474,23 @@
       - 917009acf78247d5a114c2c5df5b13c0
       - b7a60658b7b24ba89ef9caa8f1cd1a63
   mode: single
+- id: '1665342520725'
+  alias: Enable Stand by whenever someone is home
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - alarm_control_panel.verisure_alarm
+    to: disarmed
+  - platform: time
+    at: 07:00:00
+  condition: []
+  action:
+  - service: homeassistant.turn_on
+    data: {}
+    target:
+      device_id:
+      - b7a60658b7b24ba89ef9caa8f1cd1a63
+      - 917009acf78247d5a114c2c5df5b13c0
+      - 5fd1e95ccbe3503b4e31c6f70ce48cd7
+  mode: single

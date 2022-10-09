@@ -215,10 +215,6 @@
               ]
             },
             {
-              "type": "entity",
-              "entity": "lock.hoveddor"
-            },
-            {
               "type": "custom:aarlo-glance",
               "entity": "camera.aarlo_backyard_west",
               "image_top": [
@@ -295,6 +291,10 @@
               ],
               "title": "Automation",
               "type": "entities"
+            },
+            {
+              "type": "entity",
+              "entity": "lock.hoveddor"
             },
             {
               "type": "custom:aarlo-glance",

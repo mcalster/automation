@@ -97,10 +97,6 @@
             },
             {
               "type": "media-control",
-              "entity": "media_player.samsung_ue50ku6075_2"
-            },
-            {
-              "type": "media-control",
               "entity": "media_player.the_frame_vardagsrum"
             }
           ]

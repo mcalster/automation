@@ -163,16 +163,16 @@
               "type": "media-control"
             },
             {
+              "type": "media-control",
+              "entity": "media_player.the_frame_vardagsrum"
+            },
+            {
               "entity": "media_player.playbar",
               "type": "media-control"
             },
             {
               "entity": "media_player.upstairs",
               "type": "media-control"
-            },
-            {
-              "type": "media-control",
-              "entity": "media_player.the_frame_vardagsrum"
             },
             {
               "entity": "media_player.kokken",

@@ -133,6 +133,10 @@
                 }
               ],
               "title": "Kantagtai"
+            },
+            {
+              "type": "media-control",
+              "entity": "media_player.sams_rum"
             }
           ]
         },

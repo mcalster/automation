@@ -147,11 +147,11 @@
               "type": "media-control"
             },
             {
-              "entity": "media_player.outside",
+              "entity": "media_player.samsung_ue50ku6075",
               "type": "media-control"
             },
             {
-              "entity": "media_player.samsung_ue50ku6075",
+              "entity": "media_player.outside",
               "type": "media-control"
             },
             {

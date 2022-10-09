@@ -20,6 +20,8 @@ homeassistant:
 # https://www.home-assistant.io/integrations/default_config
 default_config:
 
+#https://www.home-assistant.io/integrations/my/ prereqs for HACS
+my:
 http:
   ssl_certificate: !secret http_ssl_certificate
   ssl_key: !secret http_ssl_key

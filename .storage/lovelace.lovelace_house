@@ -137,6 +137,10 @@
             {
               "type": "media-control",
               "entity": "media_player.sams_rum"
+            },
+            {
+              "type": "media-control",
+              "entity": "media_player.samsung_ue50ku6075_2"
             }
           ]
         },

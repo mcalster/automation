@@ -273,6 +273,33 @@
             {
               "entities": [
                 {
+                  "entity": "sensor.memory_free"
+                },
+                {
+                  "entity": "sensor.cpu_temp"
+                },
+                {
+                  "entity": "sensor.memory_use_percent"
+                },
+                {
+                  "entity": "sensor.processor_use"
+                },
+                {
+                  "entity": "sensor.disk_use_percent"
+                },
+                {
+                  "entity": "sensor.last_boot"
+                },
+                {
+                  "entity": "sensor.disk_free"
+                }
+              ],
+              "title": "System Data",
+              "type": "entities"
+            },
+            {
+              "entities": [
+                {
                   "entity": "binary_sensor.kontor"
                 },
                 {
@@ -299,33 +326,6 @@
               ],
               "show_header_toggle": true,
               "title": "Hus-sensorer",
-              "type": "entities"
-            },
-            {
-              "entities": [
-                {
-                  "entity": "sensor.memory_free"
-                },
-                {
-                  "entity": "sensor.cpu_temp"
-                },
-                {
-                  "entity": "sensor.memory_use_percent"
-                },
-                {
-                  "entity": "sensor.processor_use"
-                },
-                {
-                  "entity": "sensor.disk_use_percent"
-                },
-                {
-                  "entity": "sensor.last_boot"
-                },
-                {
-                  "entity": "sensor.disk_free"
-                }
-              ],
-              "title": "System Data",
               "type": "entities"
             },
             {

@@ -185,10 +185,6 @@
           "badges": [],
           "cards": [
             {
-              "type": "entity",
-              "entity": "lock.hoveddor"
-            },
-            {
               "type": "custom:aarlo-glance",
               "entity": "camera.aarlo_parking",
               "image_top": [
@@ -206,6 +202,10 @@
             {
               "entity": "alarm_control_panel.verisure_alarm",
               "type": "alarm-panel"
+            },
+            {
+              "type": "entity",
+              "entity": "lock.hoveddor"
             },
             {
               "entities": [

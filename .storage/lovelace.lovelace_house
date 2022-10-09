@@ -143,15 +143,11 @@
           "badges": [],
           "cards": [
             {
-              "entity": "media_player.playbar",
-              "type": "media-control"
-            },
-            {
               "entity": "media_player.samsung_ue50ku6075",
               "type": "media-control"
             },
             {
-              "entity": "media_player.outside",
+              "entity": "media_player.playbar",
               "type": "media-control"
             },
             {
@@ -161,6 +157,10 @@
             {
               "type": "media-control",
               "entity": "media_player.samsung_the_frame_55"
+            },
+            {
+              "entity": "media_player.outside",
+              "type": "media-control"
             },
             {
               "entity": "media_player.upstairs",

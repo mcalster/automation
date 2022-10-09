@@ -204,10 +204,6 @@
               "entity": "lock.hoveddor"
             },
             {
-              "entity": "alarm_control_panel.verisure_alarm",
-              "type": "alarm-panel"
-            },
-            {
               "type": "custom:aarlo-glance",
               "entity": "camera.aarlo_garage",
               "image_top": [
@@ -284,6 +280,10 @@
               ],
               "title": "Automation",
               "type": "entities"
+            },
+            {
+              "entity": "alarm_control_panel.verisure_alarm",
+              "type": "alarm-panel"
             },
             {
               "entities": [

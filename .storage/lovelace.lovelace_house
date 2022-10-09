@@ -151,10 +151,6 @@
               "type": "media-control"
             },
             {
-              "entity": "media_player.upstairs",
-              "type": "media-control"
-            },
-            {
               "entity": "media_player.samsung_ue50ku6075",
               "type": "media-control"
             },
@@ -165,6 +161,10 @@
             {
               "type": "media-control",
               "entity": "media_player.samsung_the_frame_55"
+            },
+            {
+              "entity": "media_player.upstairs",
+              "type": "media-control"
             },
             {
               "entity": "media_player.kokken",

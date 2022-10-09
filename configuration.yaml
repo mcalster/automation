@@ -73,6 +73,7 @@ aarlo:
   tfa_host: imap.gmail.com
   tfa_username: !secret gmail_username
   tfa_password: !secret gmail_app_password
+
 # Octopi Shutdown
 #rest_command:
 #  shut_down_octoprint:

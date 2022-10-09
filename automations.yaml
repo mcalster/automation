@@ -469,5 +469,7 @@
   - service: homeassistant.turn_off
     data: {}
     target:
-      device_id: 5fd1e95ccbe3503b4e31c6f70ce48cd7
+      device_id:
+      - 5fd1e95ccbe3503b4e31c6f70ce48cd7
+      - 917009acf78247d5a114c2c5df5b13c0
   mode: single

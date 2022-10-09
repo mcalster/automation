@@ -189,10 +189,6 @@
               "entity": "lock.hoveddor"
             },
             {
-              "entity": "alarm_control_panel.verisure_alarm",
-              "type": "alarm-panel"
-            },
-            {
               "type": "custom:aarlo-glance",
               "entity": "camera.aarlo_parking",
               "image_top": [
@@ -206,6 +202,10 @@
                 "snapshot",
                 "battery"
               ]
+            },
+            {
+              "entity": "alarm_control_panel.verisure_alarm",
+              "type": "alarm-panel"
             },
             {
               "entities": [

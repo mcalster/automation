@@ -189,10 +189,6 @@
               "entity": "lock.hoveddor"
             },
             {
-              "entity": "weather.home",
-              "type": "weather-forecast"
-            },
-            {
               "entity": "alarm_control_panel.verisure_alarm",
               "type": "alarm-panel"
             },

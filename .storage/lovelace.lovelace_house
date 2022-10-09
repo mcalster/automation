@@ -171,12 +171,12 @@
               "type": "media-control"
             },
             {
-              "entity": "media_player.kokken",
-              "type": "media-control"
-            },
-            {
               "type": "media-control",
               "entity": "media_player.the_frame_vardagsrum"
+            },
+            {
+              "entity": "media_player.kokken",
+              "type": "media-control"
             }
           ]
         },

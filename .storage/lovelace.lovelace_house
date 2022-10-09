@@ -331,6 +331,21 @@
                 "snapshot",
                 "battery"
               ]
+            },
+            {
+              "type": "custom:aarlo-glance",
+              "entity": "camera.aarlo_garage",
+              "image_top": [
+                "name",
+                "date"
+              ],
+              "image_bottom": [
+                "motion",
+                "library",
+                "stream",
+                "snapshot",
+                "battery"
+              ]
             }
           ],
           "icon": "mdi:home",

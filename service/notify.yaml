@@ -6,7 +6,7 @@
   sender: kim@alster.dk
   encryption: starttls
   username: !secret gmail_username
-  password: !secret gmail_password
+  password: !secret gmail_app_password
   recipient:
     - kimalster@gmail.com
   sender_name: Glimbergs Home Assistant

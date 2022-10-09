@@ -21,8 +21,13 @@ tts/
 .storage/energy
 .storage/repairs.issue_registry
 .storage/verisure_*
+.storage/hacs*
+.storage/lovelace_resources
 .google.token
 .*.august.conf
 .storage/trace.saved_traces
 .storage/verisure_e3c51471de87b4a73120e365825c2f5c
 blueprints/
+custom_components
+.aarlo/
+www/*

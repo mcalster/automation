@@ -22,6 +22,7 @@ default_config:
 
 #https://www.home-assistant.io/integrations/my/ prereqs for HACS
 my:
+
 http:
   ssl_certificate: !secret http_ssl_certificate
   ssl_key: !secret http_ssl_key
@@ -62,6 +63,23 @@ tts:
 
 stream:
 
+aarlo:
+  username: !secret arlo_username
+  password: !secret arlo_password
+  refresh_devices_every: 2
+  stream_timeout: 120
+  tfa_source: imap
+  tfa_type: email
+  tfa_host: imap.gmail.com
+  tfa_username: !secret gmail_username
+  tfa_password: !secret gmail_app_password
+  backend: sse
+
+alarm_control_panel:
+  - platform: aarlo
+    disarmed_mode_name: disarmed
+    away_mode_name: armed
+
 # Octopi Shutdown
 #rest_command:
 #  shut_down_octoprint:
@@ -70,7 +88,8 @@ stream:
 #    headers:
 #      X-Api-Key: !secret octopi_api_key
 
-#camera:
+camera:
+  - platform: aarlo
 #  - platform: mjpeg
 #    name: OctoPrint
 #    still_image_url: !secret octopi_still_image_url
@@ -98,6 +117,11 @@ binary_sensor:
   - platform: workday
     country: DK
     workdays: [mon, tue, wed, thu, fri]
+  - platform: aarlo
+    monitored_conditions:
+    - motion
+    - sound
+    - connectivity
 
 # switch: !include_dir_merge_list switch
 

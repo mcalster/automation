@@ -167,19 +167,6 @@
               "type": "media-control"
             },
             {
-              "entities": [
-                "sensor.onhub_b_received",
-                "sensor.onhub_b_sent",
-                "sensor.onhub_kib_s_received",
-                "sensor.onhub_kib_s_sent",
-                "sensor.onhub_packets_received",
-                "sensor.onhub_packets_sent",
-                "sensor.onhub_packets_s_received",
-                "sensor.onhub_packets_s_sent"
-              ],
-              "type": "entities"
-            },
-            {
               "type": "media-control",
               "entity": "media_player.samsung_the_frame_55"
             }

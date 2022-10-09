@@ -245,69 +245,6 @@
               ]
             },
             {
-              "entities": [
-                {
-                  "entity": "automation.turn_on_lights_in_the_morning_if_before_sunrise"
-                },
-                {
-                  "entity": "automation.turn_off_game_and_tv_in_sams_room_when_not_home_and_when_between_8pm_and_9am"
-                },
-                {
-                  "entity": "automation.update_available_notifications"
-                },
-                {
-                  "entity": "automation.turn_off_all_lights_if_it_is_very_late_and_the_lights_are_still_on"
-                },
-                {
-                  "entity": "automation.change_state_to_home_when_alarm_is_disarmed"
-                },
-                {
-                  "entity": "automation.shut_down_octopi_when_print_complete"
-                },
-                {
-                  "entity": "automation.turn_on_lights_at_sunset"
-                },
-                {
-                  "entity": "automation.change_state_to_away_when_alarm_is_armed"
-                },
-                {
-                  "entity": "automation.turn_off_lights_at_sunsrise"
-                },
-                {
-                  "entity": "automation.turn_off_lights_in_kids_room_when_coming_home_late"
-                },
-                {
-                  "entity": "automation.turn_off_lights_in_kids_room_if_home"
-                },
-                {
-                  "entity": "automation.turn_off_lights_in_bedroom_when_coming_home_late"
-                },
-                {
-                  "entity": "automation.turn_off_lights_in_bedroom_if_home"
-                },
-                {
-                  "entity": "automation.turn_on_game_and_tv_in_sams_room_when_home_and_when_between_9am_and_8pm"
-                },
-                {
-                  "entity": "automation.turn_on_bedroom_lights_in_the_morning_if_before_sunrise"
-                },
-                {
-                  "entity": "script.shutdown_octoprint"
-                },
-                {
-                  "entity": "script.morning_routine"
-                },
-                {
-                  "entity": "script.sonos_say"
-                },
-                {
-                  "entity": "automation.turn_on_window_lights_at_sunset"
-                }
-              ],
-              "title": "Automation",
-              "type": "entities"
-            },
-            {
               "type": "entity",
               "entity": "lock.hoveddor"
             },

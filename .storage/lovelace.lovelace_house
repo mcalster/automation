@@ -200,10 +200,6 @@
               ]
             },
             {
-              "type": "entity",
-              "entity": "lock.hoveddor"
-            },
-            {
               "type": "custom:aarlo-glance",
               "entity": "camera.aarlo_garage",
               "image_top": [
@@ -217,6 +213,10 @@
                 "snapshot",
                 "battery"
               ]
+            },
+            {
+              "type": "entity",
+              "entity": "lock.hoveddor"
             },
             {
               "type": "custom:aarlo-glance",

@@ -143,10 +143,6 @@
           "badges": [],
           "cards": [
             {
-              "entity": "media_player.chromecast_vardagsrum",
-              "type": "media-control"
-            },
-            {
               "entity": "media_player.playbar",
               "type": "media-control"
             },

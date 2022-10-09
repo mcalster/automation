@@ -208,6 +208,21 @@
               "entity": "lock.hoveddor"
             },
             {
+              "type": "custom:aarlo-glance",
+              "entity": "camera.aarlo_garage",
+              "image_top": [
+                "name",
+                "date"
+              ],
+              "image_bottom": [
+                "motion",
+                "library",
+                "stream",
+                "snapshot",
+                "battery"
+              ]
+            },
+            {
               "entities": [
                 {
                   "entity": "automation.turn_on_lights_in_the_morning_if_before_sunrise"
@@ -269,21 +284,6 @@
               ],
               "title": "Automation",
               "type": "entities"
-            },
-            {
-              "type": "custom:aarlo-glance",
-              "entity": "camera.aarlo_garage",
-              "image_top": [
-                "name",
-                "date"
-              ],
-              "image_bottom": [
-                "motion",
-                "library",
-                "stream",
-                "snapshot",
-                "battery"
-              ]
             },
             {
               "entities": [

@@ -230,6 +230,21 @@
               ]
             },
             {
+              "type": "custom:aarlo-glance",
+              "entity": "camera.aarlo_backyard_east",
+              "image_top": [
+                "name",
+                "date"
+              ],
+              "image_bottom": [
+                "motion",
+                "library",
+                "stream",
+                "snapshot",
+                "battery"
+              ]
+            },
+            {
               "entities": [
                 {
                   "entity": "automation.turn_on_lights_in_the_morning_if_before_sunrise"
@@ -295,21 +310,6 @@
             {
               "type": "entity",
               "entity": "lock.hoveddor"
-            },
-            {
-              "type": "custom:aarlo-glance",
-              "entity": "camera.aarlo_backyard_east",
-              "image_top": [
-                "name",
-                "date"
-              ],
-              "image_bottom": [
-                "motion",
-                "library",
-                "stream",
-                "snapshot",
-                "battery"
-              ]
             },
             {
               "entity": "alarm_control_panel.verisure_alarm",

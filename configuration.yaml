@@ -68,7 +68,11 @@ aarlo:
   password: !secret arlo_password
   refresh_devices_every: 2
   stream_timeout: 120
-
+  tfa_source: imap
+  tfa_type: email
+  tfa_host: imap.gmail.com
+  tfa_username: !secret gmail_username
+  tfa_password: !secret gmail_app_password
 # Octopi Shutdown
 #rest_command:
 #  shut_down_octoprint:

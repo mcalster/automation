@@ -17,6 +17,10 @@ tts/
 .storage/onboarding
 .storage/person
 .storage/zha*
+.storage/application_credentials
+.storage/energy
+.storage/repairs.issue_registry
+.storage/verisure_*
 .google.token
 .*.august.conf
 .storage/trace.saved_traces

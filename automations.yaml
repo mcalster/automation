@@ -393,11 +393,6 @@
     event_data:
       event_type: moved
   action:
-#  - service: notify.notify
-#    data:
-#      title: File change captured!
-#      message: 'Event: {{trigger.event.type}} File:  {{ trigger.event.data.file }}
-#        in {{ trigger.event.data.folder }}'
   - service: shell_command.commit_config
   mode: single
 - id: '1642445204462'
@@ -423,4 +418,19 @@
   - service: recorder.purge
     data:
       keep_days: 90
+  mode: single
+- id: '1665325244287'
+  alias: Arm Cameras when door is locked
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - lock.hoveddor
+    to: locked
+  condition: []
+  action:
+  - service: aarlo.alarm_set_mode
+    data:
+      entity_id: alarm_control_panel.aarlo_backyard_east,alarm_control_panel.aarlo_backyard_west,alarm_control_panel.aarlo_parking,alarm_control_panel.aarlo_garage
+      mode: armed
   mode: single

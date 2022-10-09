@@ -156,10 +156,6 @@
           "cards": [
             {
               "type": "media-control",
-              "entity": "media_player.tv_the_frame"
-            },
-            {
-              "type": "media-control",
               "entity": "media_player.samsung_the_frame_55"
             },
             {

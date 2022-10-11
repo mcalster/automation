@@ -116,16 +116,16 @@
               "type": "media-control"
             },
             {
+              "type": "media-control",
+              "entity": "media_player.sams_rum"
+            },
+            {
               "entity": "media_player.playbar",
               "type": "media-control"
             },
             {
               "entity": "media_player.upstairs",
               "type": "media-control"
-            },
-            {
-              "type": "media-control",
-              "entity": "media_player.sams_rum"
             },
             {
               "entity": "media_player.kokken",

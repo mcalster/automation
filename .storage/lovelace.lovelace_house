@@ -124,12 +124,12 @@
               "type": "media-control"
             },
             {
-              "entity": "media_player.kokken",
-              "type": "media-control"
-            },
-            {
               "type": "media-control",
               "entity": "media_player.sams_rum"
+            },
+            {
+              "entity": "media_player.kokken",
+              "type": "media-control"
             }
           ]
         },

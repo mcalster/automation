@@ -112,12 +112,12 @@
               "entity": "media_player.the_frame_vardagsrum"
             },
             {
-              "entity": "media_player.outside",
-              "type": "media-control"
-            },
-            {
               "type": "media-control",
               "entity": "media_player.sams_rum"
+            },
+            {
+              "entity": "media_player.outside",
+              "type": "media-control"
             },
             {
               "entity": "media_player.playbar",

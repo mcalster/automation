@@ -460,6 +460,7 @@
   - platform: state
     entity_id:
     - alarm_control_panel.verisure_alarm
+    to: armed_away
   - platform: time
     at: 00:00:00
   condition: []

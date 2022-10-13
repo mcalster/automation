@@ -120,7 +120,7 @@
 - id: ae163c926136455dab10ccb2a479d21d
   alias: Turn off all lights if it is very late and the lights are still on
   trigger:
-  - at: 01:00:00
+  - at: 00:00:00
     platform: time
   condition:
   - condition: state

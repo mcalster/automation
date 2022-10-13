@@ -42,6 +42,9 @@
                 },
                 {
                   "entity": "switch.ac_1a36f92_2"
+                },
+                {
+                  "entity": "switch.tv_vardagsrum_socket_1"
                 }
               ],
               "show_header_toggle": false,

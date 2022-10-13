@@ -180,7 +180,8 @@
     service: homeassistant.turn_off
   - data: {}
     service: homeassistant.turn_off
-    entity_id: light.outdoor_lights_zha_group_0x0004
+    target:
+      device_id: 6fca75873368e10a98ab21a8da1ae5be
   mode: single
 - id: cb67ff6e29444b1cafd6b35dc148b42a
   alias: Turn off lights in Kids room if home

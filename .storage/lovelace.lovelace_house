@@ -35,16 +35,16 @@
             {
               "entities": [
                 {
-                  "entity": "switch.ac_19f5d36_1"
+                  "entity": "switch.tv_vardagsrum_socket_1"
                 },
                 {
                   "entity": "switch.ac_19f5d36_2"
                 },
                 {
-                  "entity": "switch.ac_1a36f92_2"
+                  "entity": "switch.ac_19f5d36_1"
                 },
                 {
-                  "entity": "switch.tv_vardagsrum_socket_1"
+                  "entity": "switch.ac_1a36f92_2"
                 }
               ],
               "show_header_toggle": false,

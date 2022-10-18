@@ -218,7 +218,7 @@
   alias: Turn on bedroom lights in the morning if before sunrise
   trigger:
   - platform: time
-    at: 06:45
+    at: 06:45:00
   - platform: state
     entity_id: input_boolean.morning_mode
     to: 'on'
@@ -234,10 +234,10 @@
   - service: homeassistant.turn_on
     data: {}
     target:
-      entity_id: group.fonster_lampor_barn_rum
+      entity_id:
+      - group.fonster_lampor_barn_rum
+      - group.fonster_lampor_sovrum
       area_id: selmas_rum
-  - service: homeassistant.turn_on
-    entity_id: group.fonster_lampor_sovrum
 - id: 0c912f631cb54be18390f9886f3dc0d1
   alias: Turn on lights in the morning if before sunrise
   trigger:

@@ -241,7 +241,7 @@
 - id: 0c912f631cb54be18390f9886f3dc0d1
   alias: Turn on lights in the morning if before sunrise
   trigger:
-  - at: 06:30
+  - at: 06:30:00
     platform: time
   condition:
   - condition: and
@@ -258,7 +258,6 @@
       entity_id:
       - group.fonster_lampor
       - light.outdoor_lights_zha_group_0x0004
-      area_id: selmas_rum
   mode: single
 - id: '1563627826205'
   alias: Shut Down Octopi when Print Complete

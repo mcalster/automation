@@ -180,6 +180,7 @@
       entity_id:
       - group.all_fonster_lampor
       - group.ute_belysning
+      - scene.outdoor_day_mode
       device_id: 6fca75873368e10a98ab21a8da1ae5be
   mode: single
 - id: cb67ff6e29444b1cafd6b35dc148b42a

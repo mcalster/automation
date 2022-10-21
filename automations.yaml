@@ -174,10 +174,13 @@
     offset: 00:45:00
     platform: sun
   action:
-  - entity_id: group.all_fonster_lampor
-    service: homeassistant.turn_off
-  - entity_id: group.ute_belysning
-    service: homeassistant.turn_off
+  - service: homeassistant.turn_off
+    data: {}
+    target:
+      entity_id:
+      - group.all_fonster_lampor
+      - group.ute_belysning
+      device_id: 6fca75873368e10a98ab21a8da1ae5be
   - data: {}
     service: homeassistant.turn_off
     target:

@@ -322,13 +322,13 @@
   - service: input_number.set_value
     data_template:
       entity_id: input_number.pool_analyzed_at
-      value: '{{as_timestamp(strptime(trigger.json.analyzedAt,"%B %d, %Y at %I:%M%p"))
+      value: '{{as_timestamp(strptime(trigger.json.analyzedAt,"%B %d, %Y at %I:%M%p"),0)
         | float}}'
   - service: input_number.set_value
     data_template:
       entity_id: input_number.blue_connect_time_delay
       value: '{{(as_timestamp(utcnow()) - as_timestamp(strptime(trigger.json.analyzedAt,"%B
-        %d, %Y at %I:%M%p")))/60| int}}'
+        %d, %Y at %I:%M%p"),0))/60| int}}'
 - id: '1587933664663'
   alias: Turn on window lights at sunset
   description: ''

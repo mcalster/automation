@@ -322,7 +322,7 @@
   - service: input_number.set_value
     data_template:
       entity_id: input_number.pool_analyzed_at
-      value: '{{as_timestamp(strptime(trigger.json.analyzedAt,"%B %d, %Y at %I:%M%p"),"0")
+      value: '{{as_timestamp(strptime(trigger.json.analyzedAt,"%B %d, %Y at %I:%M%p",0),0)
         | float}}'
   - service: input_number.set_value
     data_template:

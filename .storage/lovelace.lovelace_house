@@ -206,10 +206,6 @@
             {
               "entity": "alarm_control_panel.verisure_alarm",
               "type": "alarm-panel"
-            },
-            {
-              "type": "media-control",
-              "entity": "media_player.samsung_ue50ku6075_2"
             }
           ],
           "icon": "mdi:home",

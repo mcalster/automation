@@ -35,10 +35,13 @@
             {
               "entities": [
                 {
-                  "entity": "switch.ac_19f5d36_1"
+                  "entity": "switch.tv_vardagsrum_socket_1"
                 },
                 {
                   "entity": "switch.ac_19f5d36_2"
+                },
+                {
+                  "entity": "switch.ac_19f5d36_1"
                 },
                 {
                   "entity": "switch.ac_1a36f92_2"
@@ -94,45 +97,6 @@
               "show_header_toggle": false,
               "title": "Mysbelysning Barnen",
               "type": "entities"
-            },
-            {
-              "type": "entities",
-              "entities": [
-                {
-                  "entity": "binary_sensor.kangtai_001111_17"
-                },
-                {
-                  "entity": "binary_sensor.kangtai_005111_17"
-                },
-                {
-                  "entity": "binary_sensor.kangtai_008111_17"
-                },
-                {
-                  "entity": "binary_sensor.kangtai_009104_17"
-                },
-                {
-                  "entity": "binary_sensor.kangtai_009111_17"
-                },
-                {
-                  "entity": "binary_sensor.kangtai_009111_8"
-                },
-                {
-                  "entity": "binary_sensor.kangtai_00951e_17"
-                },
-                {
-                  "entity": "binary_sensor.kangtai_009811_17"
-                },
-                {
-                  "entity": "binary_sensor.kangtai_009bc1_17"
-                },
-                {
-                  "entity": "binary_sensor.kangtai_009d11_17"
-                },
-                {
-                  "entity": "binary_sensor.kangtai_00d111_17"
-                }
-              ],
-              "title": "Kantagtai"
             }
           ]
         },
@@ -143,15 +107,23 @@
           "badges": [],
           "cards": [
             {
-              "entity": "media_player.chromecast_vardagsrum",
+              "type": "media-control",
+              "entity": "media_player.samsung_the_frame_55"
+            },
+            {
+              "type": "media-control",
+              "entity": "media_player.the_frame_vardagsrum"
+            },
+            {
+              "type": "media-control",
+              "entity": "media_player.sams_rum"
+            },
+            {
+              "entity": "media_player.outside",
               "type": "media-control"
             },
             {
               "entity": "media_player.playbar",
-              "type": "media-control"
-            },
-            {
-              "entity": "media_player.outside",
               "type": "media-control"
             },
             {
@@ -161,23 +133,6 @@
             {
               "entity": "media_player.kokken",
               "type": "media-control"
-            },
-            {
-              "entity": "media_player.samsung_ue50ku6075",
-              "type": "media-control"
-            },
-            {
-              "entities": [
-                "sensor.onhub_b_received",
-                "sensor.onhub_b_sent",
-                "sensor.onhub_kib_s_received",
-                "sensor.onhub_kib_s_sent",
-                "sensor.onhub_packets_received",
-                "sensor.onhub_packets_sent",
-                "sensor.onhub_packets_s_received",
-                "sensor.onhub_packets_s_sent"
-              ],
-              "type": "entities"
             }
           ]
         },

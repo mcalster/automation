@@ -1,2 +1,0 @@
-username: !secret verisure_username
-password: !secret verisure_password
